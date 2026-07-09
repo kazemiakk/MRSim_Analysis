@@ -1,3 +1,5 @@
+import sys
+sys.path.append(r"C:\Users\uoflm\Desktop\lambda 4 code\codes\MRSimTracks")
 import pickle
 import h5py
 import numpy as np
@@ -36,7 +38,7 @@ def trajectory_segments(positions, reset):
     return tracks
 
 def main():
-    dp_name = "dp101"
+    dp_name = "dp150"
     geometry_path = rf"C:\Users\uoflm\Desktop\lambda 4 code\codes\PI-GNN(SR)\data\phantom\processed\{dp_name}\geometry.pkl"
     tracks_path = f"phantom_{dp_name}_tracks_10s.h5"
     

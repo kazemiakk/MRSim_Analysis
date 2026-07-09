@@ -1,3 +1,5 @@
+import sys
+sys.path.append(r"C:\Users\uoflm\Desktop\lambda 4 code\codes\MRSimTracks")
 import pickle
 import numpy as np
 import scipy.spatial
@@ -60,7 +62,7 @@ class PointCloudFlow:
         return interpolated_v, valid, np.zeros(len(points_xyz), dtype=np.int32)
 
 def main():
-    dp_name = "dp101"
+    dp_name = "dp150"
     base_dir = rf"C:\Users\uoflm\Desktop\lambda 4 code\codes\PI-GNN(SR)\data\phantom\processed\{dp_name}"
     geometry_path = rf"{base_dir}\geometry.pkl"
     velocity_path = rf"{base_dir}\velocities.npy"
