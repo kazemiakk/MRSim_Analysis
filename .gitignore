@@ -1,0 +1,18 @@
+# Medical and CFD Data (DO NOT COMMIT)
+*.vtu
+*.vtp
+*.h5
+*.npy
+*.pkl
+*.cas
+*.dat
+*.msh
+
+# Python cache and environment
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# MacOS
+.DS_Store
