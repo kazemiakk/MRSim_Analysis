@@ -3,10 +3,16 @@
 *.vtp
 *.h5
 *.npy
+*.npz
 *.pkl
 *.cas
 *.dat
 *.msh
+*.zip
+*.mp4
+*.webp
+*.jld2
+*.phantom
 
 # Python cache and environment
 __pycache__/
