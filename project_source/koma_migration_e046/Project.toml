@@ -1,0 +1,18 @@
+[deps]
+CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
+FFTW = "7a1cc6ca-52ef-59f5-83cd-3a7055c09341"
+HDF5 = "f67ccb44-e63f-5c2f-98bd-6dc0ccc4ba2f"
+JLD2 = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
+KomaMRI = "6a340f8b-2cdf-4c04-99be-4953d9b66d0a"
+KomaMRIBase = "d0bc0b20-b151-4d03-b2a4-6ca51751cb9c"
+KomaMRICore = "4baa4f4d-2ae9-40db-8331-a7d1080e3f4e"
+KomaMRIFiles = "fcf631a6-1c7e-4e88-9e64-b8888386d9dc"
+SHA = "ea8e919c-243c-51af-8825-aaa63cd721ce"
+Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
+
+[compat]
+julia = "1.12"
+KomaMRI = "=0.15.0"
+KomaMRIBase = "=0.15.2"
+KomaMRICore = "=0.14.0"
+KomaMRIFiles = "=0.12.0"

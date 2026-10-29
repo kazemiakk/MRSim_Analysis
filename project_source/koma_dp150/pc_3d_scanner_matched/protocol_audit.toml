@@ -1,0 +1,122 @@
+audit_script_sha256 = "fed301b5441d0a4ec6d7443382bd44ac06e9edf143fd57ff94eaf496659a5c10"
+audit_wrapper_sha256 = "fed301b5441d0a4ec6d7443382bd44ac06e9edf143fd57ff94eaf496659a5c10"
+bandwidth_tolerance_hz_per_pixel = 0.01
+generator_script_sha256 = "1dbeb3d6aabcd7bd31a22eb2ed37788347d85f75fdfc99f727cdd2a755c9bb4b"
+generator_wrapper_sha256 = "1dbeb3d6aabcd7bd31a22eb2ed37788347d85f75fdfc99f727cdd2a755c9bb4b"
+julia_version = "1.12.7"
+koma_mri_version = "0.13.1"
+protocol_match_scope = "matches 1.25x1.25x2.5 mm voxel size, 15 phase labels, TR, TE, flip angle, and bandwidth; VENC and model-containing matrix/FOV are explicitly adapted"
+protocol_report_file = "protocol_report.toml"
+protocol_report_sha256 = "a1beaaf2bbbd202d9ae3b7634b53b631956629e8e467c06d16014bea2d407925"
+provenance_schema_version = 1
+scanner_metadata_matrix = [64, 64]
+simulation_geometry = "geometry-adapted 400x64x32 matrix and 500x80x80 mm FOV; this does not reproduce the scanner matrix/FOV"
+source_metadata = "phantom_8_28_2025_metadeta.rtf"
+source_metadata_binding_scope = "the audit binds protocol_report.toml and serialized .seq files; restricted metadata is optional external provenance, is not copied, and is not required to execute the simulation"
+source_metadata_companion = "README.md"
+source_metadata_companion_sha256 = "a83fe4aa5b7514158814f6b614f0917514c8e59e3809f3f7f41190c88371b219"
+source_metadata_companion_status = "optional external de-identified metadata companion present and hash verified"
+source_metadata_sha256 = "fa27bb8ecaacdabc91c56f8be934401c5f91f864863bd11e035a2b30d0669a52"
+source_metadata_status = "optional external restricted scanner metadata present and hash verified"
+status = "PASS"
+te_readback_tolerance_ns = 1.0
+total_four_encoding_duration_s = 8292.17920000001
+venc_target_m_per_s = 4.5
+
+[encodings.REF]
+bandwidth_hz_per_pixel_readback = 349.9930001399972
+bytes = 12182096
+file = "ref.seq"
+flip_angle_degrees_definition = 8.0
+flip_angle_degrees_waveform = 8.0
+fov_mm = [500.0, 80.0, 80.0]
+hardware_check = "passed"
+matrix = [400, 64, 32]
+maximum_phase_interval_ms = 67.46666700000014
+minimum_phase_interval_ms = 67.46666599999985
+rr_ms = 1012.0000000000002
+sequence_duration_s = 2073.0448000000024
+sha256 = "4c009217d97fa2ed45271158346f1140670c2c966eecfc984d5b3582f556829d"
+te_ms_readback = 2.7399995000000343
+timing_check = "passed"
+tr_ms = 46.879999999999995
+venc_m_per_s_definition = 4.5
+voxel_size_mm = [1.25, 1.25, 2.5]
+
+[encodings.X]
+bandwidth_hz_per_pixel_readback = 349.9930001399972
+bytes = 12182146
+file = "x.seq"
+flip_angle_degrees_definition = 8.0
+flip_angle_degrees_waveform = 8.0
+fov_mm = [500.0, 80.0, 80.0]
+hardware_check = "passed"
+matrix = [400, 64, 32]
+maximum_phase_interval_ms = 67.46666700000014
+minimum_phase_interval_ms = 67.46666599999985
+rr_ms = 1012.0000000000002
+sequence_duration_s = 2073.0448000000024
+sha256 = "8d4afb945e9b8c49325707b5b65ca64852e22cf4ccd6c1ec01c0f0b189a45c63"
+te_ms_readback = 2.7399995000000343
+timing_check = "passed"
+tr_ms = 46.879999999999995
+venc_m_per_s_definition = 4.5
+voxel_size_mm = [1.25, 1.25, 2.5]
+
+[encodings.Y]
+bandwidth_hz_per_pixel_readback = 349.9930001399972
+bytes = 12182634
+file = "y.seq"
+flip_angle_degrees_definition = 8.0
+flip_angle_degrees_waveform = 8.0
+fov_mm = [500.0, 80.0, 80.0]
+hardware_check = "passed"
+matrix = [400, 64, 32]
+maximum_phase_interval_ms = 67.46666700000014
+minimum_phase_interval_ms = 67.46666599999985
+rr_ms = 1012.0000000000002
+sequence_duration_s = 2073.0448000000024
+sha256 = "7442baaf2649ee96de20acc63deea483f152f9ee055bfe2735dd4b63b4c48e02"
+te_ms_readback = 2.7399995000000343
+timing_check = "passed"
+tr_ms = 46.879999999999995
+venc_m_per_s_definition = 4.5
+voxel_size_mm = [1.25, 1.25, 2.5]
+
+[encodings.Z]
+bandwidth_hz_per_pixel_readback = 349.9930001399972
+bytes = 12182323
+file = "z.seq"
+flip_angle_degrees_definition = 8.0
+flip_angle_degrees_waveform = 8.0
+fov_mm = [500.0, 80.0, 80.0]
+hardware_check = "passed"
+matrix = [400, 64, 32]
+maximum_phase_interval_ms = 67.46666700000014
+minimum_phase_interval_ms = 67.46666599999985
+rr_ms = 1012.0000000000002
+sequence_duration_s = 2073.0448000000024
+sha256 = "41733cfdbe703e892a347b9905cf74958d5d1d15d967a85f390c415c70189a8b"
+te_ms_readback = 2.7399995000000343
+timing_check = "passed"
+tr_ms = 46.879999999999995
+venc_m_per_s_definition = 4.5
+voxel_size_mm = [1.25, 1.25, 2.5]
+
+[velocity_encoding.X]
+differential_m1_hz_s_per_m = [-0.11111111111389244, 0.0, 0.0]
+encoded_axis_absolute_m1_hz_s_per_m = 0.11111111111389244
+maximum_off_axis_absolute_m1_hz_s_per_m = 0.0
+waveform_derived_venc_m_per_s = 4.499999999887357
+
+[velocity_encoding.Y]
+differential_m1_hz_s_per_m = [0.0, -0.11111111110993194, 0.0]
+encoded_axis_absolute_m1_hz_s_per_m = 0.11111111110993194
+maximum_off_axis_absolute_m1_hz_s_per_m = 0.0
+waveform_derived_venc_m_per_s = 4.5000000000477565
+
+[velocity_encoding.Z]
+differential_m1_hz_s_per_m = [0.0, 0.0, -0.11111111111112004]
+encoded_axis_absolute_m1_hz_s_per_m = 0.11111111111112004
+maximum_off_axis_absolute_m1_hz_s_per_m = 0.0
+waveform_derived_venc_m_per_s = 4.4999999999996385

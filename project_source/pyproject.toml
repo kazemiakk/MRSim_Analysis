@@ -1,0 +1,92 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+exclude = [
+    "/example/*.vtu",
+    "/example/*.vtp",
+    "/tests/**",
+    "/**/__pycache__/**",
+    "/**/*.py[cod]",
+]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/mrsimtracks",
+    "/README.md",
+    "/CHANGELOG.md",
+    "/LICENSE",
+    "/pyproject.toml",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["mrsimtracks"]
+
+[project]
+name = "mrsimtracks"
+version = "0.2.2.dev0"
+description = "Generate CFD-derived particle trajectories for MR flow simulation."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [
+    { name = "Charles McGrath", email = "cmmcg@stanford.edu" },
+]
+keywords = [
+    "particle-tracking",
+    "cfd",
+    "flow-simulation",
+    "mr-simulation",
+    "mri",
+    "streamlines",
+    "pyvista",
+    "vtk",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "h5py>=3.16.0",
+    "joblib>=1.5.3",
+    "matplotlib>=3.11.0",
+    "numba>=0.65.1",
+    "numpy>=2.4.6",
+    "pyvista>=0.48.4",
+    "scipy>=1.17.1",
+    "tqdm>=4.68.2",
+    "vtk>=9.6.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/mcgrathcm/MRSimTracks"
+Repository = "https://github.com/mcgrathcm/MRSimTracks"
+Issues = "https://github.com/mcgrathcm/MRSimTracks/issues"
+Changelog = "https://github.com/mcgrathcm/MRSimTracks/blob/main/CHANGELOG.md"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=7.0",
+]
+docs = [
+    "mkdocs-material>=9.5",
+    "mkdocstrings[python]>=0.27",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "large: tests that require full-size Git LFS datasets",
+]
+
+[tool.coverage.run]
+omit = [
+    "mrsimtracks/dev/caps.py",
+]

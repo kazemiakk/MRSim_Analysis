@@ -1,0 +1,4113 @@
+{
+  "snapshot_date": "2026-10-29",
+  "scope": "MRSimTracks CFD to particle tracking to KomaMRI PC-MRI: stenotic phantom and aortic arch only",
+  "upstream_repository": "https://github.com/mcgrathcm/MRSimTracks",
+  "upstream_base_commit": "e3c0cae",
+  "source_files": 675,
+  "source_bytes": 6290575,
+  "validation": {
+    "python_syntax_pass": 429
+  },
+  "copy_identity_checks": 675,
+  "private_data_included": false,
+  "excluded": [
+    "TB CFD",
+    "cerebral aneurysm/ICA/angiography project",
+    "private scan data and scanner extraction E059",
+    "CFD/trajectory/image arrays",
+    "generated outputs",
+    "environment installations and caches",
+    "private governance journal and chat history"
+  ],
+  "limits": [
+    "A source-code backup, not a standalone data/environment release",
+    "No scientific simulations or completed controls rerun",
+    "Historical, failed, and proposed scripts remain distinct; presence is not a passing-gate certificate",
+    "Local absolute data paths remain in case scripts; inputs must be configured locally",
+    "Agent authorship is not inferred from filenames"
+  ],
+  "excluded_failed_attempts": [
+    {
+      "path": "experiments/static_background_e063/code/attempt1_plot_aorta_candycane_e063.py",
+      "source": "outputs/static_background_e063/code/attempt1_plot_aorta_candycane_e063.py",
+      "sha256": "fd4e959437ae3e3485d3930b5d3b0f1197eecfe5152a97562c3e9de07e404d53",
+      "reason": "Archived failed attempt with a known syntax error; original preserved locally, excluded from working-code publication"
+    },
+    {
+      "path": "experiments/static_background_e063/code/attempt2_build_static_geometry_e063.py",
+      "source": "outputs/static_background_e063/code/attempt2_build_static_geometry_e063.py",
+      "sha256": "8861726f54248872cb06927b92e470fd23e5093012e02b8c1d86ceabeb409073",
+      "reason": "Archived failed attempt with a known syntax error; original preserved locally, excluded from working-code publication"
+    },
+    {
+      "path": "experiments/static_background_e063/code/attempt2_syntaxerror_plot_phantom_candycane_e063.py",
+      "source": "outputs/static_background_e063/code/attempt2_syntaxerror_plot_phantom_candycane_e063.py",
+      "sha256": "276a662bb93f0b9caaba37fed862949bf963dd03f27b008fa5315b536629443d",
+      "reason": "Archived failed attempt with a known syntax error; original preserved locally, excluded from working-code publication"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/attempt10_syntaxerror_plot_e064.py",
+      "source": "outputs/aorta_aligned_e064/code/attempt10_syntaxerror_plot_e064.py",
+      "sha256": "689cbcba7f9787640ff6ed5d62897faa451cd7d479067bdfcd35924d13ac9031",
+      "reason": "Archived failed attempt with a known syntax error; original preserved locally, excluded from working-code publication"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/attempt2_plot_e064.py",
+      "source": "outputs/aorta_aligned_e064/code/attempt2_plot_e064.py",
+      "sha256": "2ee0102c6b2bea4de60e4901a0a5c32f86d938a5cf9f65c37e2cd1d68bdbe11b",
+      "reason": "Archived failed attempt with a known syntax error; original preserved locally, excluded from working-code publication"
+    }
+  ],
+  "files": [
+    {
+      "path": "project_source/mrsimtracks/__init__.py",
+      "source": "MRSimTracks/mrsimtracks/__init__.py",
+      "bytes": 850,
+      "sha256": "b948b0f5bb63ee417145474a975d2ee99cc5519f4a47e4106f5af1cd4348900d"
+    },
+    {
+      "path": "project_source/mrsimtracks/core.py",
+      "source": "MRSimTracks/mrsimtracks/core.py",
+      "bytes": 15026,
+      "sha256": "28d4f5373894f43f12849ff4f8cb6ff8a4fe281cf4181f161270c37535d9be3c"
+    },
+    {
+      "path": "project_source/mrsimtracks/dev/__init__.py",
+      "source": "MRSimTracks/mrsimtracks/dev/__init__.py",
+      "bytes": 135,
+      "sha256": "15b69063e324909a70b31bf2c4204d538f910fa3d535e9d9c3233aa2a6f0ce5f"
+    },
+    {
+      "path": "project_source/mrsimtracks/dev/caps.py",
+      "source": "MRSimTracks/mrsimtracks/dev/caps.py",
+      "bytes": 3418,
+      "sha256": "cee40a55f593a28ffe2a2d6ed2121982322199624aa380734d8b395640793c82"
+    },
+    {
+      "path": "project_source/mrsimtracks/hemodynamics.py",
+      "source": "MRSimTracks/mrsimtracks/hemodynamics.py",
+      "bytes": 16040,
+      "sha256": "733dff42c9b02989d30a076996fbf1de0205139cba0c5dafe444aec04c1665c4"
+    },
+    {
+      "path": "project_source/mrsimtracks/io.py",
+      "source": "MRSimTracks/mrsimtracks/io.py",
+      "bytes": 19459,
+      "sha256": "9c9570e7cae83dc03ee4de8663f2741d1cef47636fc393ea67b0e271e816b1bb"
+    },
+    {
+      "path": "project_source/mrsimtracks/parallel.py",
+      "source": "MRSimTracks/mrsimtracks/parallel.py",
+      "bytes": 7525,
+      "sha256": "d4c00c8c1ad936fce96e0627f56e4e660782e5c3e59bed983c379e03a0dbd00e"
+    },
+    {
+      "path": "project_source/mrsimtracks/pointcloud.py",
+      "source": "MRSimTracks/mrsimtracks/pointcloud.py",
+      "bytes": 8268,
+      "sha256": "bebfd0126ff60afb32cdeaf59ea2819446b797c6c3a6fe38c7e2eaf84d0d82e5"
+    },
+    {
+      "path": "project_source/mrsimtracks/pointcloud_inlet.py",
+      "source": "MRSimTracks/mrsimtracks/pointcloud_inlet.py",
+      "bytes": 3376,
+      "sha256": "f043a227576c7c7624a38d2bab12892463d01365cc54e90a0286a925522a4250"
+    },
+    {
+      "path": "project_source/mrsimtracks/reseeding.py",
+      "source": "MRSimTracks/mrsimtracks/reseeding.py",
+      "bytes": 9869,
+      "sha256": "1c5628f49d17cfcd160bb9245b362eb3e9fa9e459cc2342a762c1c29ffe9a980"
+    },
+    {
+      "path": "project_source/mrsimtracks/resolved_energy.py",
+      "source": "MRSimTracks/mrsimtracks/resolved_energy.py",
+      "bytes": 3464,
+      "sha256": "bd736d1bf4a4050c8a8226afbc51025889b28751f6396153b2175cdd1d14a12e"
+    },
+    {
+      "path": "project_source/mrsimtracks/sampler.py",
+      "source": "MRSimTracks/mrsimtracks/sampler.py",
+      "bytes": 20900,
+      "sha256": "50fd99f882bbbc6c5404637088a03417beb7400331a5e4f9c616cc1c73ff6b83"
+    },
+    {
+      "path": "project_source/mrsimtracks/seeding.py",
+      "source": "MRSimTracks/mrsimtracks/seeding.py",
+      "bytes": 5004,
+      "sha256": "a400b21ff512f2ca6b5dc10fe89b37a952fb4b492246171a2c081c13b466b60f"
+    },
+    {
+      "path": "project_source/mrsimtracks/wall_slip.py",
+      "source": "MRSimTracks/mrsimtracks/wall_slip.py",
+      "bytes": 5518,
+      "sha256": "a42bcaa85199c914bc02be1853cd5b8cc4b15423d9b2180b21bf25d3cf700d37"
+    },
+    {
+      "path": "project_source/scripts/analyze_3d_flow_control.py",
+      "source": "MRSimTracks/scripts/analyze_3d_flow_control.py",
+      "bytes": 16559,
+      "sha256": "4da4578ce9eafc188baa8cb56a0ca77d938938d1e196bc85a129418318dce480"
+    },
+    {
+      "path": "project_source/scripts/analyze_aorta_native_zero.py",
+      "source": "MRSimTracks/scripts/analyze_aorta_native_zero.py",
+      "bytes": 13945,
+      "sha256": "66526ab75049edc9d721662467d90b40463022eff1319fa18cb7b9e1927fc5ca"
+    },
+    {
+      "path": "project_source/scripts/analyze_dp150_scanner_reconstruction.py",
+      "source": "MRSimTracks/scripts/analyze_dp150_scanner_reconstruction.py",
+      "bytes": 39260,
+      "sha256": "7ca25ea026f5ee722498f3c5fb661de57ad196928250ba93b4c94982d79530f8"
+    },
+    {
+      "path": "project_source/scripts/analyze_koma_migration.py",
+      "source": "MRSimTracks/scripts/analyze_koma_migration.py",
+      "bytes": 20386,
+      "sha256": "4952df7ec6724cf5d3e08019a363ea0347c19869350808c5204abd56b5d2e1cd"
+    },
+    {
+      "path": "project_source/scripts/analyze_phantom_encoding.py",
+      "source": "MRSimTracks/scripts/analyze_phantom_encoding.py",
+      "bytes": 10369,
+      "sha256": "dca244f2078cc976a4e661d979d7650a6cde9502e25ca81d56529c071b27e84f"
+    },
+    {
+      "path": "project_source/scripts/analyze_phantom_local.py",
+      "source": "MRSimTracks/scripts/analyze_phantom_local.py",
+      "bytes": 9063,
+      "sha256": "4e830b666bc5f0db2486aa4b3d2f48634456b65c38123676ac5c56af9aa624c2"
+    },
+    {
+      "path": "project_source/scripts/analyze_phantom_precision.py",
+      "source": "MRSimTracks/scripts/analyze_phantom_precision.py",
+      "bytes": 16891,
+      "sha256": "1f63491f97af023e2451a8825d8adfdb8fa75f44733e9e28ee0bc61b6e116cfd"
+    },
+    {
+      "path": "project_source/scripts/analyze_remapped_confirmation.py",
+      "source": "MRSimTracks/scripts/analyze_remapped_confirmation.py",
+      "bytes": 21549,
+      "sha256": "dd0f6b25fda496d96660315a4dca4486770a33b94f9c6be36c9eb1a9338d592d"
+    },
+    {
+      "path": "project_source/scripts/animate_aorta_cardiac_bins.py",
+      "source": "MRSimTracks/scripts/animate_aorta_cardiac_bins.py",
+      "bytes": 18056,
+      "sha256": "3c6de6006b52d883edc677fd2a93ed20111d6372ca3d5ac2989474de4e7800fa"
+    },
+    {
+      "path": "project_source/scripts/aorta_hemodynamic_reference.py",
+      "source": "MRSimTracks/scripts/aorta_hemodynamic_reference.py",
+      "bytes": 8852,
+      "sha256": "e7800c44f8d74e6fb51bc165c885f7b050cefcf7dcdef6efcc7c4c2be91e5c8c"
+    },
+    {
+      "path": "project_source/scripts/aorta_inlet_picker/viewer.html",
+      "source": "MRSimTracks/scripts/aorta_inlet_picker/viewer.html",
+      "bytes": 17083,
+      "sha256": "9a94aa5451f5ee04504d465566261021b6a56103a1d3492e3ee9acde12a0b9e0"
+    },
+    {
+      "path": "project_source/scripts/audit_aorta_encoding.py",
+      "source": "MRSimTracks/scripts/audit_aorta_encoding.py",
+      "bytes": 2665,
+      "sha256": "a5d47ad1f7245010a059a2db1c71a2cac6fb9ea861d5d900f731fd5477e19e29"
+    },
+    {
+      "path": "project_source/scripts/audit_aorta_inlet_readiness.py",
+      "source": "MRSimTracks/scripts/audit_aorta_inlet_readiness.py",
+      "bytes": 9519,
+      "sha256": "208066a4da55ed03beb55738356fcd63b5a8fee4f23b986819dfd2149ff5b7a0"
+    },
+    {
+      "path": "project_source/scripts/audit_aorta_koma_branch_geometry.py",
+      "source": "MRSimTracks/scripts/audit_aorta_koma_branch_geometry.py",
+      "bytes": 32301,
+      "sha256": "8d1648e9f9ad5f851b4c33ed1ee0948624054212ade1354ab0eb4d7902456896"
+    },
+    {
+      "path": "project_source/scripts/audit_aorta_koma_temporal_response.py",
+      "source": "MRSimTracks/scripts/audit_aorta_koma_temporal_response.py",
+      "bytes": 18404,
+      "sha256": "9add8a0f2ac814371cc8cc9ec30140b2d454b0a736e4186a20b5b68a9d8d8902"
+    },
+    {
+      "path": "project_source/scripts/audit_aorta_motion_reconstruction.py",
+      "source": "MRSimTracks/scripts/audit_aorta_motion_reconstruction.py",
+      "bytes": 10323,
+      "sha256": "6a6dca18008411c4d54691b3271783bb3277a15ec585e03e9095083b8745d658"
+    },
+    {
+      "path": "project_source/scripts/audit_aorta_native_zero.py",
+      "source": "MRSimTracks/scripts/audit_aorta_native_zero.py",
+      "bytes": 3415,
+      "sha256": "c9347a4bf9d004a8081501deecdf4fceedd15acbd7c6d284f2e6bfc9c7093c7c"
+    },
+    {
+      "path": "project_source/scripts/audit_aorta_pilot_subset.py",
+      "source": "MRSimTracks/scripts/audit_aorta_pilot_subset.py",
+      "bytes": 6510,
+      "sha256": "18909add492f907d8615a47ee85565e1bb1e581a154ad82ad1f471b59dcb708b"
+    },
+    {
+      "path": "project_source/scripts/audit_aorta_replenishment_mri.py",
+      "source": "MRSimTracks/scripts/audit_aorta_replenishment_mri.py",
+      "bytes": 8346,
+      "sha256": "fbbbac295f56561292e5af6e9911bc140b370d44f1e64c753b5cad3251ef95d2"
+    },
+    {
+      "path": "project_source/scripts/audit_aorta_static_reconstruction.py",
+      "source": "MRSimTracks/scripts/audit_aorta_static_reconstruction.py",
+      "bytes": 4493,
+      "sha256": "9f1ba3ab19215731f5f9192cd6e417c66498d0cfc2fdd5f1074f05fce70c8ac6"
+    },
+    {
+      "path": "project_source/scripts/audit_aorta_tracking.py",
+      "source": "MRSimTracks/scripts/audit_aorta_tracking.py",
+      "bytes": 8828,
+      "sha256": "b46d82c1d2f5c905978088b170679ea824fb46a91667f0125d03455571f7abec"
+    },
+    {
+      "path": "project_source/scripts/audit_aorta_uniform_seeding.py",
+      "source": "MRSimTracks/scripts/audit_aorta_uniform_seeding.py",
+      "bytes": 17048,
+      "sha256": "016f35e0cb93d42e9f7b16047e38b6c082e8a1cf6641177acf277b391bbfb8d0"
+    },
+    {
+      "path": "project_source/scripts/audit_dp150_cyclic_jump_gate.py",
+      "source": "MRSimTracks/scripts/audit_dp150_cyclic_jump_gate.py",
+      "bytes": 23347,
+      "sha256": "5416204ead9274ea74cb4a9997380bc22ded89edb8193e0b3e812ab2b118ee6a"
+    },
+    {
+      "path": "project_source/scripts/audit_dp150_exact_section_flux.py",
+      "source": "MRSimTracks/scripts/audit_dp150_exact_section_flux.py",
+      "bytes": 10678,
+      "sha256": "69465cbc01c566f181c8ae6f2678dccc13c310a58ebb19b4044f9b48428a7c28"
+    },
+    {
+      "path": "project_source/scripts/audit_dp150_mri_closure.py",
+      "source": "MRSimTracks/scripts/audit_dp150_mri_closure.py",
+      "bytes": 13503,
+      "sha256": "259019a8a144b9a5bdfa4fd657fedb3a4488197f6611c9c7f054011ccda552e6"
+    },
+    {
+      "path": "project_source/scripts/audit_dp150_wall_pressure_feasibility.py",
+      "source": "MRSimTracks/scripts/audit_dp150_wall_pressure_feasibility.py",
+      "bytes": 13293,
+      "sha256": "99126238c1eabb4f06acea08807ff4a6c085277a4d96bc31238a08ebb13202c9"
+    },
+    {
+      "path": "project_source/scripts/audit_phantom_adc_times.py",
+      "source": "MRSimTracks/scripts/audit_phantom_adc_times.py",
+      "bytes": 3208,
+      "sha256": "c6c69370b8e330a45b586fa2a16f16e72b4226ca88d385e7a20395905845f611"
+    },
+    {
+      "path": "project_source/scripts/audit_phantom_reference.py",
+      "source": "MRSimTracks/scripts/audit_phantom_reference.py",
+      "bytes": 12113,
+      "sha256": "6f810807b7ca8a41983042e0fe7521a84b229ce1ac6a42a1b1262f43cb15f8d6"
+    },
+    {
+      "path": "project_source/scripts/bound_phantom_adc_offset.py",
+      "source": "MRSimTracks/scripts/bound_phantom_adc_offset.py",
+      "bytes": 3818,
+      "sha256": "36abef9d47d0a4cbff04b9fcb6421c3da3368e7b28d6b281f142ae8e79f313c8"
+    },
+    {
+      "path": "project_source/scripts/build_aorta_hemodynamic_report.py",
+      "source": "MRSimTracks/scripts/build_aorta_hemodynamic_report.py",
+      "bytes": 9071,
+      "sha256": "be147978c6cb2a6136351dd1b29baea6e4aa0616bd7214287295dcb33eb2076a"
+    },
+    {
+      "path": "project_source/scripts/build_aorta_inlet_picker.py",
+      "source": "MRSimTracks/scripts/build_aorta_inlet_picker.py",
+      "bytes": 6706,
+      "sha256": "0a679bd620416168156f01653db57bfbc1691d577357c8ede980dc8d096fefe4"
+    },
+    {
+      "path": "project_source/scripts/build_aorta_tracking_bin_preview.py",
+      "source": "MRSimTracks/scripts/build_aorta_tracking_bin_preview.py",
+      "bytes": 12647,
+      "sha256": "a62778becfc1a93113e794ca59fb7ec9d02d75900f35fa6a5050840f48bd1244"
+    },
+    {
+      "path": "project_source/scripts/build_dp150_hemodynamic_report_app.py",
+      "source": "MRSimTracks/scripts/build_dp150_hemodynamic_report_app.py",
+      "bytes": 16119,
+      "sha256": "1839484c1f2c4bfc86b80b5c533d25b6b48b7186b6727fcb04ce104859aba4c8"
+    },
+    {
+      "path": "project_source/scripts/build_dp150_mri_static.py",
+      "source": "MRSimTracks/scripts/build_dp150_mri_static.py",
+      "bytes": 12712,
+      "sha256": "92f643f47f45b6557ea37419f7f0de6b4d0f382103281e5b038e5b5e0bc65ecf"
+    },
+    {
+      "path": "project_source/scripts/build_dp150_periodic_flow.py",
+      "source": "MRSimTracks/scripts/build_dp150_periodic_flow.py",
+      "bytes": 9484,
+      "sha256": "30ab1c9966e7653b607a3e75c46efc5b6392a0700d80dc9d51a15b88d844a135"
+    },
+    {
+      "path": "project_source/scripts/build_evidence_release.py",
+      "source": "MRSimTracks/scripts/build_evidence_release.py",
+      "bytes": 17423,
+      "sha256": "4a44630af1c1d0f5099dd26eef4bc7934f13aaef30fe2cb6d8a7989df347cc51"
+    },
+    {
+      "path": "project_source/scripts/build_migration_cycle_maps.py",
+      "source": "MRSimTracks/scripts/build_migration_cycle_maps.py",
+      "bytes": 5096,
+      "sha256": "f087f7f63991bc912657e4a4ca5f999063b2967ea8e8a014ee31fb40236b908b"
+    },
+    {
+      "path": "project_source/scripts/check_3d_flow_prefix.py",
+      "source": "MRSimTracks/scripts/check_3d_flow_prefix.py",
+      "bytes": 1992,
+      "sha256": "ebf6b28a3f5ea74792dd23717d80b190453ef14d2d37d726ea5efe3336b63561"
+    },
+    {
+      "path": "project_source/scripts/check_aorta_branch_figures.mjs",
+      "source": "MRSimTracks/scripts/check_aorta_branch_figures.mjs",
+      "bytes": 3099,
+      "sha256": "8c3cf3f6de06d57efd0b982f8c879f0fb1bd1acad89979b630247c962a80a80a"
+    },
+    {
+      "path": "project_source/scripts/check_aorta_inlet_picker.mjs",
+      "source": "MRSimTracks/scripts/check_aorta_inlet_picker.mjs",
+      "bytes": 8445,
+      "sha256": "8f021aa2ac4181e721fe7de5919e031a8ef0d524ff2b37b65516ee5435a31be7"
+    },
+    {
+      "path": "project_source/scripts/check_e041_report.mjs",
+      "source": "MRSimTracks/scripts/check_e041_report.mjs",
+      "bytes": 6366,
+      "sha256": "5c42cacffb0c3c573719717168ebc415d8871a77a06454b28ed341514b399983"
+    },
+    {
+      "path": "project_source/scripts/check_e042_figures.mjs",
+      "source": "MRSimTracks/scripts/check_e042_figures.mjs",
+      "bytes": 3006,
+      "sha256": "5b89db82c782730a67a6dc0dc1dce4a753f96542b57db40c744b434decf987f8"
+    },
+    {
+      "path": "project_source/scripts/check_phantom_signal_mixing.py",
+      "source": "MRSimTracks/scripts/check_phantom_signal_mixing.py",
+      "bytes": 3196,
+      "sha256": "1fbb859f0b578ca0647621cf5c1c5b9b37320d6035c1ef7d9a696d828089258b"
+    },
+    {
+      "path": "project_source/scripts/check_project_image_review.mjs",
+      "source": "MRSimTracks/scripts/check_project_image_review.mjs",
+      "bytes": 6233,
+      "sha256": "cad564081e146574d34425584ad5e55905760acdfc64fe89ebc344b8ac81e0c1"
+    },
+    {
+      "path": "project_source/scripts/collect_project_images.py",
+      "source": "MRSimTracks/scripts/collect_project_images.py",
+      "bytes": 11052,
+      "sha256": "99ca7638b94db787599a652baeb69ae7e8608693290fb7e1ae51fcb037041f10"
+    },
+    {
+      "path": "project_source/scripts/compare_aorta_hemodynamics.py",
+      "source": "MRSimTracks/scripts/compare_aorta_hemodynamics.py",
+      "bytes": 26732,
+      "sha256": "427d2f61b9749df8740b34002dc448f4ca3b5b00741e33a8b7b83fbdebcd71f3"
+    },
+    {
+      "path": "project_source/scripts/compare_dp150_cfd_koma_flow_waveform.py",
+      "source": "MRSimTracks/scripts/compare_dp150_cfd_koma_flow_waveform.py",
+      "bytes": 62236,
+      "sha256": "18c7571715c3ace154f4d75b570209deadb3b56a94a1e3304bb238587c46a841"
+    },
+    {
+      "path": "project_source/scripts/compare_dp150_hemodynamics.py",
+      "source": "MRSimTracks/scripts/compare_dp150_hemodynamics.py",
+      "bytes": 33994,
+      "sha256": "3977b294b272678c2f5fc13836e5ab09207b15b1f5ce64dc0e138bc3f84aa0e6"
+    },
+    {
+      "path": "project_source/scripts/complete_advanced_comparisons.py",
+      "source": "MRSimTracks/scripts/complete_advanced_comparisons.py",
+      "bytes": 22726,
+      "sha256": "6a272aaa389fcac3ea16e7a58534df0a6adb9041a02ff14846010b95d112ec98"
+    },
+    {
+      "path": "project_source/scripts/convert_dp150_fluent_cff.py",
+      "source": "MRSimTracks/scripts/convert_dp150_fluent_cff.py",
+      "bytes": 16481,
+      "sha256": "a28b0f56207384a6570c3a31cc4bc26ae1e69c7f4ac47c76cc8bd32c7cd6bd57"
+    },
+    {
+      "path": "project_source/scripts/diagnose_aorta_inlet_coverage.py",
+      "source": "MRSimTracks/scripts/diagnose_aorta_inlet_coverage.py",
+      "bytes": 12898,
+      "sha256": "8e68339c046a168ca69dd1de442c92485af321ea15bb5792f4e2ef5b3f307e46"
+    },
+    {
+      "path": "project_source/scripts/diagnose_aorta_inlet_signal.py",
+      "source": "MRSimTracks/scripts/diagnose_aorta_inlet_signal.py",
+      "bytes": 11688,
+      "sha256": "655e1f0f73a384085079f3f321c90376aa2820011d146236b03377d4b5a40a08"
+    },
+    {
+      "path": "project_source/scripts/diagnose_phantom_encoding_kernel.py",
+      "source": "MRSimTracks/scripts/diagnose_phantom_encoding_kernel.py",
+      "bytes": 8973,
+      "sha256": "f1af10aadd6bf2ba3a72e780f4d029b17a7e7829db1a0847c991958983490a4e"
+    },
+    {
+      "path": "project_source/scripts/diagnose_phantom_signal.py",
+      "source": "MRSimTracks/scripts/diagnose_phantom_signal.py",
+      "bytes": 11888,
+      "sha256": "ab113d667bccb995f2abd685968d23e43f8ab8c51bd4eb10d689a7feaf8ec248"
+    },
+    {
+      "path": "project_source/scripts/dp150_hemodynamic_reference.py",
+      "source": "MRSimTracks/scripts/dp150_hemodynamic_reference.py",
+      "bytes": 23699,
+      "sha256": "9855ca9f1680dfda2e9a39a5f90b652fbf6e6009739b32ff30ff29ed83a89450"
+    },
+    {
+      "path": "project_source/scripts/extend_hemodynamic_comparisons.py",
+      "source": "MRSimTracks/scripts/extend_hemodynamic_comparisons.py",
+      "bytes": 25984,
+      "sha256": "af7de55dedbfcbf91cd14468c5cee922630a00be08ea6796e93f76c732d9734e"
+    },
+    {
+      "path": "project_source/scripts/finalize_3d_flow_control.py",
+      "source": "MRSimTracks/scripts/finalize_3d_flow_control.py",
+      "bytes": 6787,
+      "sha256": "aaf8dc3a35971e528713ef4f7de7ff37c57b6ab73c2fe2d1137dee429110a163"
+    },
+    {
+      "path": "project_source/scripts/finalize_koma_migration.py",
+      "source": "MRSimTracks/scripts/finalize_koma_migration.py",
+      "bytes": 17485,
+      "sha256": "e1682fd433defd9a4f94160d95f1f9e1343a765e86222e79669684aeb4aea7aa"
+    },
+    {
+      "path": "project_source/scripts/finalize_phantom_diagnosis.py",
+      "source": "MRSimTracks/scripts/finalize_phantom_diagnosis.py",
+      "bytes": 4534,
+      "sha256": "ae16485dd134c2e7e165a128a3ff019dbd8feac001051d76e1f4684921614479"
+    },
+    {
+      "path": "project_source/scripts/finalize_phantom_encoding.py",
+      "source": "MRSimTracks/scripts/finalize_phantom_encoding.py",
+      "bytes": 4196,
+      "sha256": "6ba97528b720d56fc858e80a888a0e036a4a87c70f32675f27e469ecffb35ca5"
+    },
+    {
+      "path": "project_source/scripts/finalize_remapped_confirmation.py",
+      "source": "MRSimTracks/scripts/finalize_remapped_confirmation.py",
+      "bytes": 3224,
+      "sha256": "e9556ae9db659ed4eb71918dcc085fe5f64d81d0ac1918ec8edfa54dcec5c183"
+    },
+    {
+      "path": "project_source/scripts/ground_truth.py",
+      "source": "MRSimTracks/scripts/ground_truth.py",
+      "bytes": 12587,
+      "sha256": "630da809e4c7f497683b9cbc32058475b57b6524e04b79494208073b8d892d10"
+    },
+    {
+      "path": "project_source/scripts/initialize_d_storage.ps1",
+      "source": "MRSimTracks/scripts/initialize_d_storage.ps1",
+      "bytes": 5634,
+      "sha256": "63130bc819f76ef1fc46cf7eafd4c73edd198417c5d5734d557902b8df7082ec"
+    },
+    {
+      "path": "project_source/scripts/integrate_aorta_inlet_complex.py",
+      "source": "MRSimTracks/scripts/integrate_aorta_inlet_complex.py",
+      "bytes": 13567,
+      "sha256": "778475d4f85278a02ae046fca52618107efc35e8f62268c94db6b8d2d5cbaca5"
+    },
+    {
+      "path": "project_source/scripts/inventory_additional_phantom_cfd.py",
+      "source": "MRSimTracks/scripts/inventory_additional_phantom_cfd.py",
+      "bytes": 4411,
+      "sha256": "a1c664db0eba21fe2e62ac769808d628de2de6fb13c22daf93215502a012dd80"
+    },
+    {
+      "path": "project_source/scripts/plot_3d_flow_control_review.py",
+      "source": "MRSimTracks/scripts/plot_3d_flow_control_review.py",
+      "bytes": 6409,
+      "sha256": "16ff0079d9ffd41a160417f2ba47f2ef7078a411ffd7f2f7a1d67f8e74778b38"
+    },
+    {
+      "path": "project_source/scripts/plot_aorta_branch_views.py",
+      "source": "MRSimTracks/scripts/plot_aorta_branch_views.py",
+      "bytes": 18287,
+      "sha256": "31a06792c4bde99439e8c2295dd8ec9570db081c70b66c0a688f1653fecc31e6"
+    },
+    {
+      "path": "project_source/scripts/plot_aorta_extended_comparison.py",
+      "source": "MRSimTracks/scripts/plot_aorta_extended_comparison.py",
+      "bytes": 21719,
+      "sha256": "d5c52e37a71e498952680192510d1bcd08e5cdc26a37a9247a2bb80a4013d3e9"
+    },
+    {
+      "path": "project_source/scripts/plot_aorta_hemodynamic_comparison.py",
+      "source": "MRSimTracks/scripts/plot_aorta_hemodynamic_comparison.py",
+      "bytes": 4346,
+      "sha256": "e99f2581a3263ab1757278d38937943e30ce3dbb02ce9665a309ea987821772e"
+    },
+    {
+      "path": "project_source/scripts/plot_aorta_inlet_complex.py",
+      "source": "MRSimTracks/scripts/plot_aorta_inlet_complex.py",
+      "bytes": 5680,
+      "sha256": "a7628e9e25ebf6faf0175682e58405235972cea391a88c629becd597bdf6265e"
+    },
+    {
+      "path": "project_source/scripts/plot_aorta_inlet_readiness.py",
+      "source": "MRSimTracks/scripts/plot_aorta_inlet_readiness.py",
+      "bytes": 8034,
+      "sha256": "52348b6f23f67b816aa8e0bd180d8f306a93d600ea80d9c08152619cec1e0975"
+    },
+    {
+      "path": "project_source/scripts/plot_aorta_koma_reconstruction.py",
+      "source": "MRSimTracks/scripts/plot_aorta_koma_reconstruction.py",
+      "bytes": 15440,
+      "sha256": "00e2f8533a00ae9f553028bc4500da7376f1eca12574ad575d3acd96fc18d113"
+    },
+    {
+      "path": "project_source/scripts/plot_aorta_replenishment_pilot.py",
+      "source": "MRSimTracks/scripts/plot_aorta_replenishment_pilot.py",
+      "bytes": 4642,
+      "sha256": "988b1fb5b08f26780fd2a420123e93a03f5a0ba67c5b58fe3083ff40d7217701"
+    },
+    {
+      "path": "project_source/scripts/plot_complete_advanced_comparisons.py",
+      "source": "MRSimTracks/scripts/plot_complete_advanced_comparisons.py",
+      "bytes": 7403,
+      "sha256": "361c7207dfcc1709fb4815bbb39a2671b7d2946d6a1eabca71a36f35217f6ac7"
+    },
+    {
+      "path": "project_source/scripts/plot_dp150_koma_clean.py",
+      "source": "MRSimTracks/scripts/plot_dp150_koma_clean.py",
+      "bytes": 24005,
+      "sha256": "1b419eb6c6d952559a9d29db311ed6768a27f4348541bb72c4cdd47a23086f02"
+    },
+    {
+      "path": "project_source/scripts/plot_dp150_koma_publication.py",
+      "source": "MRSimTracks/scripts/plot_dp150_koma_publication.py",
+      "bytes": 37432,
+      "sha256": "378babb108914cc0790d2ad9150bfcc41f9920acbac82c61d6d52b1345546cc2"
+    },
+    {
+      "path": "project_source/scripts/plot_dp150_koma_reconstruction.py",
+      "source": "MRSimTracks/scripts/plot_dp150_koma_reconstruction.py",
+      "bytes": 9681,
+      "sha256": "1bfd00e6c3522643c842743028dd171207fd4f58b7435ec2f68de2abb47fc33e"
+    },
+    {
+      "path": "project_source/scripts/plot_koma_migration_images.py",
+      "source": "MRSimTracks/scripts/plot_koma_migration_images.py",
+      "bytes": 4636,
+      "sha256": "da483e2c68d67e3753f0208c77de94c63104c193f5af72681c25bf3c000aef1a"
+    },
+    {
+      "path": "project_source/scripts/plot_matched_profiles_sensitivities.py",
+      "source": "MRSimTracks/scripts/plot_matched_profiles_sensitivities.py",
+      "bytes": 24315,
+      "sha256": "f5f329c4fe326b2760f8eec79d908fd430b39b034a2fc43297b00891a31e266b"
+    },
+    {
+      "path": "project_source/scripts/plot_phantom_diagnosis.py",
+      "source": "MRSimTracks/scripts/plot_phantom_diagnosis.py",
+      "bytes": 10470,
+      "sha256": "2d2e64b0e65dce8361a9bf86478b54e5dec9d953710b03f36e1006733265b9e8"
+    },
+    {
+      "path": "project_source/scripts/plot_profiles_coverage.py",
+      "source": "MRSimTracks/scripts/plot_profiles_coverage.py",
+      "bytes": 24698,
+      "sha256": "3f7970fb6fedc20caa471ac51ed04eeab1013b11ca6a81550d5652644eb50839"
+    },
+    {
+      "path": "project_source/scripts/plot_publication_slices.py",
+      "source": "MRSimTracks/scripts/plot_publication_slices.py",
+      "bytes": 15361,
+      "sha256": "2fcf7fae02ea1fc408989b58e19ea23b02ffb55f224b4a4725303f20bffb1e43"
+    },
+    {
+      "path": "project_source/scripts/preflight_phantom_precision_analysis.py",
+      "source": "MRSimTracks/scripts/preflight_phantom_precision_analysis.py",
+      "bytes": 3152,
+      "sha256": "f14410b06f8310da2a4ba2532920667536fda83214ea11dcb1d3b19ba405ae8e"
+    },
+    {
+      "path": "project_source/scripts/prepare_3d_flow_control.py",
+      "source": "MRSimTracks/scripts/prepare_3d_flow_control.py",
+      "bytes": 9480,
+      "sha256": "74b187eca8e61df3400d10d95ff83d44770ecce081eddf232d759ee6c08883b1"
+    },
+    {
+      "path": "project_source/scripts/prepare_e040_review_report.py",
+      "source": "MRSimTracks/scripts/prepare_e040_review_report.py",
+      "bytes": 6997,
+      "sha256": "23c6a22d0d61ab740d574728170e354e5c4005465b250beaa5aa43f3094345de"
+    },
+    {
+      "path": "project_source/scripts/prepare_koma_migration.py",
+      "source": "MRSimTracks/scripts/prepare_koma_migration.py",
+      "bytes": 2931,
+      "sha256": "8267ff70419889c54488a091d4dbae60db15d3c13120aae3e298999c16daeb2e"
+    },
+    {
+      "path": "project_source/scripts/prepare_phantom_encoding.py",
+      "source": "MRSimTracks/scripts/prepare_phantom_encoding.py",
+      "bytes": 8884,
+      "sha256": "0191648e41123e0a15f5134c4fffbaa67f8c82bf96ccb919b4a1e72e3f07c4f2"
+    },
+    {
+      "path": "project_source/scripts/prepare_remapped_confirmation.py",
+      "source": "MRSimTracks/scripts/prepare_remapped_confirmation.py",
+      "bytes": 2309,
+      "sha256": "89b820e5bbd5b2dc3f1f9cdb5b447039f7e986d59e7551d48e60bc5ba9abd0b2"
+    },
+    {
+      "path": "project_source/scripts/project_image_viewer.html",
+      "source": "MRSimTracks/scripts/project_image_viewer.html",
+      "bytes": 6542,
+      "sha256": "281aceeed2582bd29f8e202fc253cd470c3697a0b87fdc3f05b87a10c829c7a0"
+    },
+    {
+      "path": "project_source/scripts/reconstruct_dp150_seam_safe_support_phase.py",
+      "source": "MRSimTracks/scripts/reconstruct_dp150_seam_safe_support_phase.py",
+      "bytes": 36790,
+      "sha256": "46f780315091711a62d8275362a92cab950a5576d16fb0cdcfcc274d996125ae"
+    },
+    {
+      "path": "project_source/scripts/reconstruct_dp150_support_constrained_phase.py",
+      "source": "MRSimTracks/scripts/reconstruct_dp150_support_constrained_phase.py",
+      "bytes": 51512,
+      "sha256": "78f83574d55a4eaad80451369d00eebeca9f8bd1909b396f264f748525a081fe"
+    },
+    {
+      "path": "project_source/scripts/render_dp150_one_cycle_gif.py",
+      "source": "MRSimTracks/scripts/render_dp150_one_cycle_gif.py",
+      "bytes": 24491,
+      "sha256": "44630ce840ce3fea002124f187c60f79d865f8e2a4bb10146ce0b04a1ede4780"
+    },
+    {
+      "path": "project_source/scripts/render_dp150_phase_boundary_qc.py",
+      "source": "MRSimTracks/scripts/render_dp150_phase_boundary_qc.py",
+      "bytes": 34404,
+      "sha256": "e98df773cd0f60933569ed37f2e26af2c3fc4e9bef352503d3968c1bbe8d9fcb"
+    },
+    {
+      "path": "project_source/scripts/render_dp150_phase_stable_mask_clean.py",
+      "source": "MRSimTracks/scripts/render_dp150_phase_stable_mask_clean.py",
+      "bytes": 45249,
+      "sha256": "51a6a4897adf0f60deaf52a6c1c63b0d886e642b9f5c595cacff4c6d1e33824c"
+    },
+    {
+      "path": "project_source/scripts/render_dp150_projection_slices_magnitude_phase.py",
+      "source": "MRSimTracks/scripts/render_dp150_projection_slices_magnitude_phase.py",
+      "bytes": 20462,
+      "sha256": "fe8d1ad6d7652647f52a958ece6b4b3c0949f2529e41dc54c7c452199342215d"
+    },
+    {
+      "path": "project_source/scripts/render_dp150_seam_safe_magnitude_phase.py",
+      "source": "MRSimTracks/scripts/render_dp150_seam_safe_magnitude_phase.py",
+      "bytes": 24000,
+      "sha256": "67de8a0cef61a5196d78516df6570563970998a506ff11ed65aaaed4bcb5951a"
+    },
+    {
+      "path": "project_source/scripts/render_dp150_xyz_magnitude_phase.py",
+      "source": "MRSimTracks/scripts/render_dp150_xyz_magnitude_phase.py",
+      "bytes": 28856,
+      "sha256": "fdf228bf1ba2d9bfed09288ad684bfdaf9cc4334a2ecf9506cc51f60ab3bc01d"
+    },
+    {
+      "path": "project_source/scripts/render_phantom_readme_style.py",
+      "source": "MRSimTracks/scripts/render_phantom_readme_style.py",
+      "bytes": 6740,
+      "sha256": "2af44642b41446944bfc9c457a02d2e401269ce1e99baddc8981bc7780cf1042"
+    },
+    {
+      "path": "project_source/scripts/render_phantom_tracks.py",
+      "source": "MRSimTracks/scripts/render_phantom_tracks.py",
+      "bytes": 15726,
+      "sha256": "4a224b25dca92361ad8c10d7cbdf4b36de2f61027a7aca0c2077e0198ff97c1c"
+    },
+    {
+      "path": "project_source/scripts/render_readme_assets.py",
+      "source": "MRSimTracks/scripts/render_readme_assets.py",
+      "bytes": 20898,
+      "sha256": "00c4724001d2d81d3d1db1a61f655a6f03f7b37bedce74dc6af0e00499393195"
+    },
+    {
+      "path": "project_source/scripts/review_aorta_origin_inlet.py",
+      "source": "MRSimTracks/scripts/review_aorta_origin_inlet.py",
+      "bytes": 9951,
+      "sha256": "3602e35d692f254d3efa2c81a9d0559cf5ed4b0b57c011990e49f98e25503a39"
+    },
+    {
+      "path": "project_source/scripts/review_aorta_rim_plane.py",
+      "source": "MRSimTracks/scripts/review_aorta_rim_plane.py",
+      "bytes": 9506,
+      "sha256": "fbdbaf679ea49e8c4cea6415443a9c75c3f1889ec8393f1875556e81bf2b4491"
+    },
+    {
+      "path": "project_source/scripts/serve_aorta_inlet_picker.py",
+      "source": "MRSimTracks/scripts/serve_aorta_inlet_picker.py",
+      "bytes": 6017,
+      "sha256": "8195ce67b2338427a46524587d6f30ffe6672de1af78bf8224df3c775f335cb1"
+    },
+    {
+      "path": "project_source/scripts/subset_dp150_motion_hdf5.py",
+      "source": "MRSimTracks/scripts/subset_dp150_motion_hdf5.py",
+      "bytes": 12240,
+      "sha256": "2238fecb7b54ec6a5f535504eddccdee57abfc9938458d56b5ded7c2353f3da8"
+    },
+    {
+      "path": "project_source/scripts/summarize_remapped_confirmation.py",
+      "source": "MRSimTracks/scripts/summarize_remapped_confirmation.py",
+      "bytes": 4953,
+      "sha256": "21f0d26ef46df1578796196275986befb83cdf4971874f48d27cd5144c0c534c"
+    },
+    {
+      "path": "project_source/scripts/track_aorta_inlet_pilot.py",
+      "source": "MRSimTracks/scripts/track_aorta_inlet_pilot.py",
+      "bytes": 6068,
+      "sha256": "ce053b1f8f2fe29f984a16c150a39d010b046a8b072bf3c9cc579d3aa1e5d43b"
+    },
+    {
+      "path": "project_source/scripts/track_aorta_native_zero.py",
+      "source": "MRSimTracks/scripts/track_aorta_native_zero.py",
+      "bytes": 5628,
+      "sha256": "ebb2ca415413c083c3eb077e41e8df2ff413c185d9f172b71d9804af95f4d003"
+    },
+    {
+      "path": "project_source/scripts/track_dp150_mri_full.py",
+      "source": "MRSimTracks/scripts/track_dp150_mri_full.py",
+      "bytes": 23029,
+      "sha256": "5d2b077eaebdb0f3a188f6083f8f74171befd93bb7907df3c2993a74f5674041"
+    },
+    {
+      "path": "project_source/scripts/track_dp150_one_cycle_pilot.py",
+      "source": "MRSimTracks/scripts/track_dp150_one_cycle_pilot.py",
+      "bytes": 25304,
+      "sha256": "9bb03eefa61f8b536552a9c6f001dfaab66d2c1d078f5ebd06b0e0391c462762"
+    },
+    {
+      "path": "project_source/scripts/validate_3d_flow_control.py",
+      "source": "MRSimTracks/scripts/validate_3d_flow_control.py",
+      "bytes": 5760,
+      "sha256": "eb0a5994eb154f4dca418ae522904240313086af58609fbabdf2816884db9938"
+    },
+    {
+      "path": "project_source/scripts/validate_aorta_branch_views.py",
+      "source": "MRSimTracks/scripts/validate_aorta_branch_views.py",
+      "bytes": 5081,
+      "sha256": "6bb82d40f507410d98c9035bb6fafc78a1d11e09d6eb786ef008fcd8b5b8f7b8"
+    },
+    {
+      "path": "project_source/scripts/validate_aorta_extended_figures.py",
+      "source": "MRSimTracks/scripts/validate_aorta_extended_figures.py",
+      "bytes": 5761,
+      "sha256": "f65d8660de5b75e44add9b56129aa9d5c9a2ab1432c5b09e22cfdf63f0823bbf"
+    },
+    {
+      "path": "project_source/scripts/validate_aorta_hemodynamics.py",
+      "source": "MRSimTracks/scripts/validate_aorta_hemodynamics.py",
+      "bytes": 5184,
+      "sha256": "9ce1f47a997cc504d3dbede6abc44c6082f9ba644ed75b342550a573002e55e2"
+    },
+    {
+      "path": "project_source/scripts/validate_aorta_inlet_complex.py",
+      "source": "MRSimTracks/scripts/validate_aorta_inlet_complex.py",
+      "bytes": 6822,
+      "sha256": "397d7aca8534d931ff51013e197e0be51be885c16c69f5b2acde786acc843305"
+    },
+    {
+      "path": "project_source/scripts/validate_aorta_inlet_coverage.py",
+      "source": "MRSimTracks/scripts/validate_aorta_inlet_coverage.py",
+      "bytes": 5048,
+      "sha256": "368d8db9c47165a176ff6d84af2408cda3ff462bfbf88aea05000f0cb4ea5aa8"
+    },
+    {
+      "path": "project_source/scripts/validate_aorta_native_zero.py",
+      "source": "MRSimTracks/scripts/validate_aorta_native_zero.py",
+      "bytes": 7754,
+      "sha256": "7050f7c8f11134568a2eca1314958da2e4a0844fccedc6d48f0ca201e5f70a27"
+    },
+    {
+      "path": "project_source/scripts/validate_aorta_replenishment.py",
+      "source": "MRSimTracks/scripts/validate_aorta_replenishment.py",
+      "bytes": 3363,
+      "sha256": "27dd71dad26cf982d5ad31d66d18f5cd6cc2cdcdb11065932cf98c284b48e5b1"
+    },
+    {
+      "path": "project_source/scripts/validate_aorta_replenishment_mri.py",
+      "source": "MRSimTracks/scripts/validate_aorta_replenishment_mri.py",
+      "bytes": 9029,
+      "sha256": "29aa5621edb8731aa0e2543a23222c0d327ced7776414d9c62ef0c9bbbc13c7e"
+    },
+    {
+      "path": "project_source/scripts/validate_aorta_report_snapshot.py",
+      "source": "MRSimTracks/scripts/validate_aorta_report_snapshot.py",
+      "bytes": 7931,
+      "sha256": "e691bfb397781a9079242bf85e0d9b57abdbacc803a12eb36ad28837120f3f1b"
+    },
+    {
+      "path": "project_source/scripts/validate_complete_advanced_comparisons.py",
+      "source": "MRSimTracks/scripts/validate_complete_advanced_comparisons.py",
+      "bytes": 13240,
+      "sha256": "b29ac2214d747d923fffd5f813a5831db369fdf88f9af8fa65c2c8128051364a"
+    },
+    {
+      "path": "project_source/scripts/validate_dp150_tracking_convergence.py",
+      "source": "MRSimTracks/scripts/validate_dp150_tracking_convergence.py",
+      "bytes": 17878,
+      "sha256": "9edd136f672f7a588db2fa4ab568603bcff50c17a2689e1533d542a852229f3b"
+    },
+    {
+      "path": "project_source/scripts/validate_dp150_uniform_seeding.py",
+      "source": "MRSimTracks/scripts/validate_dp150_uniform_seeding.py",
+      "bytes": 17632,
+      "sha256": "53a20b01577e3aeb0dcfc1a042c8b7211a118e2745acf7707ff94b016bb88135"
+    },
+    {
+      "path": "project_source/scripts/validate_hemodynamic_extension.py",
+      "source": "MRSimTracks/scripts/validate_hemodynamic_extension.py",
+      "bytes": 9427,
+      "sha256": "1fd8020db03d37a9ec8864c608e78b126a1c3d08da14924263972cac62e63215"
+    },
+    {
+      "path": "project_source/scripts/validate_koma_migration.py",
+      "source": "MRSimTracks/scripts/validate_koma_migration.py",
+      "bytes": 10489,
+      "sha256": "e182e0e3b2eb37dee2aefe0849556908fddc9b6b64b87beb57b06a48e4911648"
+    },
+    {
+      "path": "project_source/scripts/validate_matched_profiles_sensitivities.py",
+      "source": "MRSimTracks/scripts/validate_matched_profiles_sensitivities.py",
+      "bytes": 9772,
+      "sha256": "356e714fc22c434bb3557abe9c460cdf85fcb2605529e9d23a6ee3a862fde2ed"
+    },
+    {
+      "path": "project_source/scripts/validate_phantom_diagnosis.py",
+      "source": "MRSimTracks/scripts/validate_phantom_diagnosis.py",
+      "bytes": 15293,
+      "sha256": "96bf780f6da6d6fee4d9475521ecb4c129146a5a3748a427915c3d317caca6a9"
+    },
+    {
+      "path": "project_source/scripts/validate_phantom_encoding.py",
+      "source": "MRSimTracks/scripts/validate_phantom_encoding.py",
+      "bytes": 8281,
+      "sha256": "22ca836c69bb25d4e81a99ab6f4a9aeb87483f956a579596fee2a3a6772636fa"
+    },
+    {
+      "path": "project_source/scripts/validate_phantom_precision.py",
+      "source": "MRSimTracks/scripts/validate_phantom_precision.py",
+      "bytes": 4370,
+      "sha256": "9c778ab2f064693b118830090208682d26240132a635334041ce5482457209c8"
+    },
+    {
+      "path": "project_source/scripts/validate_profiles_coverage.py",
+      "source": "MRSimTracks/scripts/validate_profiles_coverage.py",
+      "bytes": 10249,
+      "sha256": "770b52b50b241277ec4edb3c86a279bf2a8c25d4eaefaa230fbbecc8d8a1ab61"
+    },
+    {
+      "path": "project_source/scripts/validate_publication_slices.py",
+      "source": "MRSimTracks/scripts/validate_publication_slices.py",
+      "bytes": 4126,
+      "sha256": "0b63db974535d68537ce922e8b107d5ff123e7c0e837a7ba02a1b280e346133f"
+    },
+    {
+      "path": "project_source/scripts/validate_remapped_confirmation.py",
+      "source": "MRSimTracks/scripts/validate_remapped_confirmation.py",
+      "bytes": 7488,
+      "sha256": "f24e7bc8445576c40af8fb7856786b49cbdd0ec33a399d8cb054a9a1dff2d711"
+    },
+    {
+      "path": "project_source/scripts/validate_sampling_equivalence.py",
+      "source": "MRSimTracks/scripts/validate_sampling_equivalence.py",
+      "bytes": 2151,
+      "sha256": "2b69b57a427b7fd08d0fb50819ff0adc3e6ade2fc42c60dcdba5b5d2735f939c"
+    },
+    {
+      "path": "project_source/tests/check_d_storage.ps1",
+      "source": "MRSimTracks/tests/check_d_storage.ps1",
+      "bytes": 1679,
+      "sha256": "d43b817d9d221b55f165950f6e9a96ed55a3d23b52a982937096452bf02659e8"
+    },
+    {
+      "path": "project_source/tests/diagnostics.py",
+      "source": "MRSimTracks/tests/diagnostics.py",
+      "bytes": 5117,
+      "sha256": "b69357677f23ad7fdabcb8b32711e39e32b95abaea6163c1d3258f871974531a"
+    },
+    {
+      "path": "project_source/tests/fixture_paths.py",
+      "source": "MRSimTracks/tests/fixture_paths.py",
+      "bytes": 1286,
+      "sha256": "778a1b160b62b47931b4192adf6e997442521a3f3bcdd8c6d1f9d4699138dd11"
+    },
+    {
+      "path": "project_source/tests/test_3d_flow_control.py",
+      "source": "MRSimTracks/tests/test_3d_flow_control.py",
+      "bytes": 3776,
+      "sha256": "4a8997e384ef92abaeeff744ec71f160fd7f5050da7c5ee0f16d3266bc0d77d8"
+    },
+    {
+      "path": "project_source/tests/test_aorta_branch_views.py",
+      "source": "MRSimTracks/tests/test_aorta_branch_views.py",
+      "bytes": 2060,
+      "sha256": "2c9f5961207ffed7b53711c57e27e5ce427ca22af5089b5e5b4d2673b9f98ff2"
+    },
+    {
+      "path": "project_source/tests/test_aorta_hemodynamic_reference.py",
+      "source": "MRSimTracks/tests/test_aorta_hemodynamic_reference.py",
+      "bytes": 3084,
+      "sha256": "a4ad5ca882b9ea38ff24e8ba5cddd88680f08556b53f2f853c8e3a0244e07e98"
+    },
+    {
+      "path": "project_source/tests/test_aorta_inlet_picker.py",
+      "source": "MRSimTracks/tests/test_aorta_inlet_picker.py",
+      "bytes": 2404,
+      "sha256": "19ddc5501a48bdac541a87348453b6092eb42aa877c54edef88337430cc01d92"
+    },
+    {
+      "path": "project_source/tests/test_aorta_input_safety.py",
+      "source": "MRSimTracks/tests/test_aorta_input_safety.py",
+      "bytes": 4875,
+      "sha256": "c8dea3e45977a4a4238bbefb8989fb849e4e6dbd4ce556228d05dbee8b5c615f"
+    },
+    {
+      "path": "project_source/tests/test_aorta_koma_temporal_response.py",
+      "source": "MRSimTracks/tests/test_aorta_koma_temporal_response.py",
+      "bytes": 1376,
+      "sha256": "7711f0ecb2707c773df998ca9e69a7115d73a051d2261b8ba1a7256ea5d75e05"
+    },
+    {
+      "path": "project_source/tests/test_aorta_multibin_preview.py",
+      "source": "MRSimTracks/tests/test_aorta_multibin_preview.py",
+      "bytes": 2545,
+      "sha256": "7a49140dc0d01a89d1fdeba9ed5e5657d122bcc9a25e035efcd5b4c388ff236b"
+    },
+    {
+      "path": "project_source/tests/test_aorta_native_zero.py",
+      "source": "MRSimTracks/tests/test_aorta_native_zero.py",
+      "bytes": 2451,
+      "sha256": "dd11690b7dd2208af14b17c9e42e932b1004b31c02a129738dd117939b91190a"
+    },
+    {
+      "path": "project_source/tests/test_aorta_pilot_subset.py",
+      "source": "MRSimTracks/tests/test_aorta_pilot_subset.py",
+      "bytes": 905,
+      "sha256": "dba73cd1200f818fffe35a19419c22135bcb3383522de8703826462f3025fcdd"
+    },
+    {
+      "path": "project_source/tests/test_audit_aorta_encoding.py",
+      "source": "MRSimTracks/tests/test_audit_aorta_encoding.py",
+      "bytes": 600,
+      "sha256": "af12eba19c5d46f22dca5799d9a784c45a3bc2352d1c01cdb8447ea5506372c3"
+    },
+    {
+      "path": "project_source/tests/test_audit_aorta_inlet_readiness.py",
+      "source": "MRSimTracks/tests/test_audit_aorta_inlet_readiness.py",
+      "bytes": 1063,
+      "sha256": "b18d2663f3682fe97aff613fd94fcc252d04edc25f571b4b0326c744197b96c9"
+    },
+    {
+      "path": "project_source/tests/test_audit_aorta_replenishment_mri.py",
+      "source": "MRSimTracks/tests/test_audit_aorta_replenishment_mri.py",
+      "bytes": 1787,
+      "sha256": "ff2a98490a06305ca342149650085076a0fb30a27cab10e95f53f9a579b5d13a"
+    },
+    {
+      "path": "project_source/tests/test_audit_dp150_cyclic_jump_gate.py",
+      "source": "MRSimTracks/tests/test_audit_dp150_cyclic_jump_gate.py",
+      "bytes": 3678,
+      "sha256": "700bc101e9fd2be1a62627be46bf06167a2073030b76a75e25431ff9f342782b"
+    },
+    {
+      "path": "project_source/tests/test_audit_dp150_exact_section_flux.py",
+      "source": "MRSimTracks/tests/test_audit_dp150_exact_section_flux.py",
+      "bytes": 1533,
+      "sha256": "c1c59f5ff470ef988ed06d4af9dd9152b6147a20800c2621519df67f7e5bcc32"
+    },
+    {
+      "path": "project_source/tests/test_audit_dp150_wall_pressure_feasibility.py",
+      "source": "MRSimTracks/tests/test_audit_dp150_wall_pressure_feasibility.py",
+      "bytes": 2224,
+      "sha256": "a8ee0f8a2030b2d1d1192052589c78ee4275517f203df56635f5466de56c0baa"
+    },
+    {
+      "path": "project_source/tests/test_build_evidence_release.py",
+      "source": "MRSimTracks/tests/test_build_evidence_release.py",
+      "bytes": 3693,
+      "sha256": "486b84ea3b2c33dedd9901263ac0c2556d42316c4ded536125493a3d017ff0de"
+    },
+    {
+      "path": "project_source/tests/test_collect_project_images.py",
+      "source": "MRSimTracks/tests/test_collect_project_images.py",
+      "bytes": 1997,
+      "sha256": "8f56c86dc655774791d11e273ddf0cec1bbdda0197366de2957bb06367dee0d3"
+    },
+    {
+      "path": "project_source/tests/test_compare_aorta_hemodynamics.py",
+      "source": "MRSimTracks/tests/test_compare_aorta_hemodynamics.py",
+      "bytes": 1195,
+      "sha256": "ceca5796b23d9c51a96f08ae87a6c93417bef4efe88abc6f16b4cd4b45d19349"
+    },
+    {
+      "path": "project_source/tests/test_compare_dp150_cfd_koma_flow_waveform.py",
+      "source": "MRSimTracks/tests/test_compare_dp150_cfd_koma_flow_waveform.py",
+      "bytes": 7616,
+      "sha256": "b5b2d41a452b19492baaa8739f7985163af064c322d384448d11b1ef6ec4d706"
+    },
+    {
+      "path": "project_source/tests/test_compare_dp150_hemodynamics.py",
+      "source": "MRSimTracks/tests/test_compare_dp150_hemodynamics.py",
+      "bytes": 8205,
+      "sha256": "fb05a4f2851e08ec2515eb23f2a71725289471a0b4dbbfa446d73e8588f403e3"
+    },
+    {
+      "path": "project_source/tests/test_complete_advanced_comparisons.py",
+      "source": "MRSimTracks/tests/test_complete_advanced_comparisons.py",
+      "bytes": 3375,
+      "sha256": "fba7adf206f4d983b8fe8e0f720bc15805bfc94579b37a65833310d994a1941c"
+    },
+    {
+      "path": "project_source/tests/test_diagnose_aorta_inlet_coverage.py",
+      "source": "MRSimTracks/tests/test_diagnose_aorta_inlet_coverage.py",
+      "bytes": 985,
+      "sha256": "d8993a1cedea0d9eb7712a36455ea4b9180af5406d4da5523e36728b3f9424c3"
+    },
+    {
+      "path": "project_source/tests/test_diagnose_aorta_inlet_signal.py",
+      "source": "MRSimTracks/tests/test_diagnose_aorta_inlet_signal.py",
+      "bytes": 877,
+      "sha256": "d217bef86c86764b0830e5158f729d0c2c0670de8d4312bac0c5405889651b1b"
+    },
+    {
+      "path": "project_source/tests/test_dp150_hemodynamic_reference.py",
+      "source": "MRSimTracks/tests/test_dp150_hemodynamic_reference.py",
+      "bytes": 7516,
+      "sha256": "53bcd63f9326965bfee8f4a856d3ec8ce8b81d10d24608e2fa8bb3c2f2bf74be"
+    },
+    {
+      "path": "project_source/tests/test_example_data.py",
+      "source": "MRSimTracks/tests/test_example_data.py",
+      "bytes": 4969,
+      "sha256": "a9a8800049fdc68a95d5acb59b1f0815370ce4c4580a756007422e4979e367c8"
+    },
+    {
+      "path": "project_source/tests/test_extend_hemodynamic_comparisons.py",
+      "source": "MRSimTracks/tests/test_extend_hemodynamic_comparisons.py",
+      "bytes": 1805,
+      "sha256": "550012aea7aed18e761df5afc2b8d230ce627ebf743adc40ab3fc4a02629ef43"
+    },
+    {
+      "path": "project_source/tests/test_ground_truth_regression.py",
+      "source": "MRSimTracks/tests/test_ground_truth_regression.py",
+      "bytes": 5221,
+      "sha256": "67af8a69e3f488488ee7e044dc00c7bcf1ee6ee082c4e5fb44e17cccf2bbfbc5"
+    },
+    {
+      "path": "project_source/tests/test_hemodynamics.py",
+      "source": "MRSimTracks/tests/test_hemodynamics.py",
+      "bytes": 8135,
+      "sha256": "12f7ffb2485a8e074f3c2af1cf2ae30c2998b0ba84620f43c97bff1a40fb6efb"
+    },
+    {
+      "path": "project_source/tests/test_integrate_aorta_inlet_complex.py",
+      "source": "MRSimTracks/tests/test_integrate_aorta_inlet_complex.py",
+      "bytes": 1508,
+      "sha256": "d46ab926738a0b98184fe1cfb0689c774c3c02b482ce1e8c68af16f1aa8af3fd"
+    },
+    {
+      "path": "project_source/tests/test_inventory_additional_phantom_cfd.py",
+      "source": "MRSimTracks/tests/test_inventory_additional_phantom_cfd.py",
+      "bytes": 1007,
+      "sha256": "7a31b770a23829a83eca8e4080d050997143aeb9fa05139407c68fc05ad9a542"
+    },
+    {
+      "path": "project_source/tests/test_koma_migration_analysis.py",
+      "source": "MRSimTracks/tests/test_koma_migration_analysis.py",
+      "bytes": 1777,
+      "sha256": "390bf8d9fcfab9c65d8774736d85480f04a82622bf389bb7ccbd9f47bb32be3d"
+    },
+    {
+      "path": "project_source/tests/test_mesh_conditioning.py",
+      "source": "MRSimTracks/tests/test_mesh_conditioning.py",
+      "bytes": 4101,
+      "sha256": "fad99d5d44691084faba63b8b430d81a4d8faf9585281121339cc96b7b99978c"
+    },
+    {
+      "path": "project_source/tests/test_parallel.py",
+      "source": "MRSimTracks/tests/test_parallel.py",
+      "bytes": 4118,
+      "sha256": "1053b096c57df25b524321243fd0e947c4c2403ba4f0d93f560ba9209c1648f8"
+    },
+    {
+      "path": "project_source/tests/test_phantom_diagnosis.py",
+      "source": "MRSimTracks/tests/test_phantom_diagnosis.py",
+      "bytes": 4233,
+      "sha256": "336ed3ae0610394fcaff3cd9ebf662a21983903dfa3b37dade82c91be7619bb7"
+    },
+    {
+      "path": "project_source/tests/test_phantom_encoding.py",
+      "source": "MRSimTracks/tests/test_phantom_encoding.py",
+      "bytes": 2291,
+      "sha256": "2cfbf1a6d14c825952bf02222338f74e2d0c07d96b7955a3944293a364cdb80e"
+    },
+    {
+      "path": "project_source/tests/test_phantom_precision.py",
+      "source": "MRSimTracks/tests/test_phantom_precision.py",
+      "bytes": 2576,
+      "sha256": "8e285f5a0087a412e739854f9090d353734ca7e041077ff925d979ce7e57fac5"
+    },
+    {
+      "path": "project_source/tests/test_plot_aorta_extended_comparison.py",
+      "source": "MRSimTracks/tests/test_plot_aorta_extended_comparison.py",
+      "bytes": 2048,
+      "sha256": "93c468a4284e595a2bfef690dd95d455ebfe101b59032a237b2128ecec91b632"
+    },
+    {
+      "path": "project_source/tests/test_plot_aorta_inlet_complex.py",
+      "source": "MRSimTracks/tests/test_plot_aorta_inlet_complex.py",
+      "bytes": 1806,
+      "sha256": "9dd485c217b74cc7ea727595af0fc3c061fbab76f9cb13d3758869317e7b2d69"
+    },
+    {
+      "path": "project_source/tests/test_plot_aorta_inlet_readiness.py",
+      "source": "MRSimTracks/tests/test_plot_aorta_inlet_readiness.py",
+      "bytes": 1824,
+      "sha256": "64661cb169d42a5bc48d9b4d9e6a74a0f089028cb2ecc84beba2129e2ac5181c"
+    },
+    {
+      "path": "project_source/tests/test_plot_aorta_koma_reconstruction.py",
+      "source": "MRSimTracks/tests/test_plot_aorta_koma_reconstruction.py",
+      "bytes": 1626,
+      "sha256": "d7030e0c8e7ef9514d2ed38a62391d5b21dfcde580b907e8a0340cc9fddded13"
+    },
+    {
+      "path": "project_source/tests/test_plot_aorta_replenishment_pilot.py",
+      "source": "MRSimTracks/tests/test_plot_aorta_replenishment_pilot.py",
+      "bytes": 824,
+      "sha256": "0bcc6153be9dd668a7c503e89b4baf9776a7d4bd59a6254e5efdd1d2074dfdc0"
+    },
+    {
+      "path": "project_source/tests/test_plot_dp150_koma_clean.py",
+      "source": "MRSimTracks/tests/test_plot_dp150_koma_clean.py",
+      "bytes": 1870,
+      "sha256": "a7eba68ef6c2ad9c492c7153ed50e76a54e7dce0b002e23faba0864e82ccf6d5"
+    },
+    {
+      "path": "project_source/tests/test_plot_dp150_koma_publication.py",
+      "source": "MRSimTracks/tests/test_plot_dp150_koma_publication.py",
+      "bytes": 3164,
+      "sha256": "c6a49ed73e10f568848e8cf93603ce11d4b21db6f75e96420e4a7bb965374687"
+    },
+    {
+      "path": "project_source/tests/test_plot_matched_profiles_sensitivities.py",
+      "source": "MRSimTracks/tests/test_plot_matched_profiles_sensitivities.py",
+      "bytes": 2304,
+      "sha256": "a2f12df83271213ef9aea44a31c1cfe4536282733c8a26d4b26aa0050fe91b23"
+    },
+    {
+      "path": "project_source/tests/test_plot_profiles_coverage.py",
+      "source": "MRSimTracks/tests/test_plot_profiles_coverage.py",
+      "bytes": 2641,
+      "sha256": "3875bb190b52434e962c6976fd22f135a5be659c13514e39df9f7f1618690515"
+    },
+    {
+      "path": "project_source/tests/test_pointcloud.py",
+      "source": "MRSimTracks/tests/test_pointcloud.py",
+      "bytes": 1995,
+      "sha256": "eaeba773fd5d3044207718c3da8a5a3610fccb87fba781c0f2e63ccb5beb78e9"
+    },
+    {
+      "path": "project_source/tests/test_pointcloud_inlet.py",
+      "source": "MRSimTracks/tests/test_pointcloud_inlet.py",
+      "bytes": 1062,
+      "sha256": "ece8ceab20d8acfc07bf7fcf6c8a0285f70def908818685eb78719d3ad14d698"
+    },
+    {
+      "path": "project_source/tests/test_public_api.py",
+      "source": "MRSimTracks/tests/test_public_api.py",
+      "bytes": 3046,
+      "sha256": "8ff9da00728c63cf0c0465962967a3f728d15f63a7b8fc97bd1fd06a44aabf7f"
+    },
+    {
+      "path": "project_source/tests/test_publication_slices.py",
+      "source": "MRSimTracks/tests/test_publication_slices.py",
+      "bytes": 1812,
+      "sha256": "5abb0868399344be1a0c0afd25265f96003a4460724b453d3a11a7f3403b5bc8"
+    },
+    {
+      "path": "project_source/tests/test_reconstruct_dp150_seam_safe_support_phase.py",
+      "source": "MRSimTracks/tests/test_reconstruct_dp150_seam_safe_support_phase.py",
+      "bytes": 1502,
+      "sha256": "66fe381b883aed4d0835535b5612660959353bc0283790cd8d0f8a3b088228f1"
+    },
+    {
+      "path": "project_source/tests/test_reconstruct_dp150_support_constrained_phase.py",
+      "source": "MRSimTracks/tests/test_reconstruct_dp150_support_constrained_phase.py",
+      "bytes": 5083,
+      "sha256": "dea7c4acc4e5cb46b90dfd78062521dec8924e2394c23cb4bc537eb43c38af33"
+    },
+    {
+      "path": "project_source/tests/test_release_validation.py",
+      "source": "MRSimTracks/tests/test_release_validation.py",
+      "bytes": 3566,
+      "sha256": "df8faf6185da4c55c7b58574f0ea06d8dc9d77a04047fbcaac1370423d8d6933"
+    },
+    {
+      "path": "project_source/tests/test_remapped_confirmation.py",
+      "source": "MRSimTracks/tests/test_remapped_confirmation.py",
+      "bytes": 2114,
+      "sha256": "bb2406ad62cf010afe031ca7f3c0a4091188b04dd6de30b4fb2bc7dad0b903ee"
+    },
+    {
+      "path": "project_source/tests/test_render_dp150_phase_boundary_qc.py",
+      "source": "MRSimTracks/tests/test_render_dp150_phase_boundary_qc.py",
+      "bytes": 4491,
+      "sha256": "915c0a9297bd337377eb322f38b741648c07500286620faff0f18af31f7e0fd6"
+    },
+    {
+      "path": "project_source/tests/test_render_dp150_phase_stable_mask_clean.py",
+      "source": "MRSimTracks/tests/test_render_dp150_phase_stable_mask_clean.py",
+      "bytes": 6387,
+      "sha256": "d659f6f7ee33f8793420d41ffc5b711c0ea2d22a4e09036f8ddd167f5f17322f"
+    },
+    {
+      "path": "project_source/tests/test_render_dp150_projection_slices_magnitude_phase.py",
+      "source": "MRSimTracks/tests/test_render_dp150_projection_slices_magnitude_phase.py",
+      "bytes": 806,
+      "sha256": "47cb738b6d4b5279b8ea86b2c44946510220a7e764211db243255155bed3be2a"
+    },
+    {
+      "path": "project_source/tests/test_render_dp150_seam_safe_magnitude_phase.py",
+      "source": "MRSimTracks/tests/test_render_dp150_seam_safe_magnitude_phase.py",
+      "bytes": 4311,
+      "sha256": "1722a0e417011016657645684ea28ab55d99f3c55ae8082f72bd629fd39186fe"
+    },
+    {
+      "path": "project_source/tests/test_resolved_energy.py",
+      "source": "MRSimTracks/tests/test_resolved_energy.py",
+      "bytes": 2611,
+      "sha256": "8c2c8d3583d20c44dded187da6f65d7e7394af81b13187425d9e4a0c768eb344"
+    },
+    {
+      "path": "project_source/tests/test_review_aorta_origin_inlet.py",
+      "source": "MRSimTracks/tests/test_review_aorta_origin_inlet.py",
+      "bytes": 987,
+      "sha256": "642609a0bb1638ebee98db51147c815bc02eaf9f7fabfd7fbb5cd180f8943798"
+    },
+    {
+      "path": "project_source/tests/test_review_aorta_rim_plane.py",
+      "source": "MRSimTracks/tests/test_review_aorta_rim_plane.py",
+      "bytes": 2242,
+      "sha256": "4d576a7cc95205fa8a779b02fba1cb4a01423308e7ff5fc544b42025f6140163"
+    },
+    {
+      "path": "project_source/tests/test_sampler.py",
+      "source": "MRSimTracks/tests/test_sampler.py",
+      "bytes": 3888,
+      "sha256": "9bfdf8e1784172893d308cd0af8835d1b49f3fb139bf41c7546a2251eab64c19"
+    },
+    {
+      "path": "project_source/tests/test_seeding.py",
+      "source": "MRSimTracks/tests/test_seeding.py",
+      "bytes": 2454,
+      "sha256": "39fbd41196f8766f7f1e8f1c814df9bd0f010dccb7da939e74dcc1361636b09d"
+    },
+    {
+      "path": "project_source/tests/test_small_behavior.py",
+      "source": "MRSimTracks/tests/test_small_behavior.py",
+      "bytes": 2229,
+      "sha256": "7f05ccf4071fa8af55a9f6c3fab47214748f7bfaca860242a5f932cbacd05ac3"
+    },
+    {
+      "path": "project_source/tests/test_time_interp.py",
+      "source": "MRSimTracks/tests/test_time_interp.py",
+      "bytes": 4678,
+      "sha256": "46769dd350604134591ce1308d12ec75620cd54b6ab7986b3ece24170cedd74c"
+    },
+    {
+      "path": "project_source/tests/test_wall_slip.py",
+      "source": "MRSimTracks/tests/test_wall_slip.py",
+      "bytes": 3775,
+      "sha256": "3ec8e60106185f94cb3d066204a20d5f7d556071da4da8e2ec77bb90c198e040"
+    },
+    {
+      "path": "project_source/koma_aorta/build_motion_phantom.jl",
+      "source": "MRSimTracks/koma_aorta/build_motion_phantom.jl",
+      "bytes": 7157,
+      "sha256": "0bb01b662ebc317b33065f8f3c029cd7f046d58fdd63cfd0f7004f7b08ced055"
+    },
+    {
+      "path": "project_source/koma_aorta/build_static_phantom.jl",
+      "source": "MRSimTracks/koma_aorta/build_static_phantom.jl",
+      "bytes": 4084,
+      "sha256": "85f6e39f39101aea1f38a2c2da337996a93fcc46669eb03daafab99b93a6707e"
+    },
+    {
+      "path": "project_source/koma_aorta/cartesian.jl",
+      "source": "MRSimTracks/koma_aorta/cartesian.jl",
+      "bytes": 1246,
+      "sha256": "6f343dc97cdf5cbd09d05dc757117583663ffee44e93cc89dc61b9441c792d13"
+    },
+    {
+      "path": "project_source/koma_aorta/debug_inlet_keys.jl",
+      "source": "MRSimTracks/koma_aorta/debug_inlet_keys.jl",
+      "bytes": 955,
+      "sha256": "34386875da4ffe549c7cafb430a39fe6ae4c619929ef15db022e6b32b9788fe0"
+    },
+    {
+      "path": "project_source/koma_aorta/excitation.jl",
+      "source": "MRSimTracks/koma_aorta/excitation.jl",
+      "bytes": 6068,
+      "sha256": "b2d19068612f3d55947cc76ebf3d073968e27cc482f5aff3cfed667f15ce538f"
+    },
+    {
+      "path": "project_source/koma_aorta/gradient_design.jl",
+      "source": "MRSimTracks/koma_aorta/gradient_design.jl",
+      "bytes": 1083,
+      "sha256": "b87ef5e63e750c238b3c85fe0ff90685c5d4c887f0e924927c353ff970a1a71f"
+    },
+    {
+      "path": "project_source/koma_aorta/gre.jl",
+      "source": "MRSimTracks/koma_aorta/gre.jl",
+      "bytes": 15860,
+      "sha256": "cf8a0d1a2a3d64989328c618c64de15dbb2663733dbde3b187085e427ab5cc2e"
+    },
+    {
+      "path": "project_source/koma_aorta/inlet_replenishment_pilot.jl",
+      "source": "MRSimTracks/koma_aorta/inlet_replenishment_pilot.jl",
+      "bytes": 16917,
+      "sha256": "c686a6f6bb28fe12cde6abe46920999e6795c0288f9d26f2ff6d286068ea61cf"
+    },
+    {
+      "path": "project_source/koma_aorta/Manifest.toml",
+      "source": "MRSimTracks/koma_aorta/Manifest.toml",
+      "bytes": 92156,
+      "sha256": "b188c4b9311f61941cf000aa24daee1e0bdbd880bc0b1d6be4c71ffc6b719013"
+    },
+    {
+      "path": "project_source/koma_aorta/native_zero_pilot.jl",
+      "source": "MRSimTracks/koma_aorta/native_zero_pilot.jl",
+      "bytes": 18127,
+      "sha256": "4a2f8a9371252014aa5b6def287d0bf1163c29df9c072ef7ab24284ca30d1d00"
+    },
+    {
+      "path": "project_source/koma_aorta/native_zero_sequences.jl",
+      "source": "MRSimTracks/koma_aorta/native_zero_sequences.jl",
+      "bytes": 4909,
+      "sha256": "32e2522870d2e7aff61eadf5609895f0bee8ebcdc6a77ee5e2cde829d73c8db5"
+    },
+    {
+      "path": "project_source/koma_aorta/PC.jl",
+      "source": "MRSimTracks/koma_aorta/PC.jl",
+      "bytes": 13622,
+      "sha256": "e54b8de0c6b840da61d263c5cd1848b1dfe58ba7574e17f6f07e23399b976eab"
+    },
+    {
+      "path": "project_source/koma_aorta/pc_3d/generate.jl",
+      "source": "MRSimTracks/koma_aorta/pc_3d/generate.jl",
+      "bytes": 4091,
+      "sha256": "7c3f58e5fa1b6ca10f30299a187efe1f359d38a53c81f40bf5aaf43a5cd2ab97"
+    },
+    {
+      "path": "project_source/koma_aorta/pc_3d/README.md",
+      "source": "MRSimTracks/koma_aorta/pc_3d/README.md",
+      "bytes": 1315,
+      "sha256": "b8c0f80950e1937ef990d5d7e88b9a8f8e497993fcf8f4f895e5ef904f4243d9"
+    },
+    {
+      "path": "project_source/koma_aorta/perfect_spoiling.jl",
+      "source": "MRSimTracks/koma_aorta/perfect_spoiling.jl",
+      "bytes": 1662,
+      "sha256": "f7264b65d2641d58cb3e8019d16c3b4c95e62bdd3e054744e54c0ba9aea47a51"
+    },
+    {
+      "path": "project_source/koma_aorta/Project.toml",
+      "source": "MRSimTracks/koma_aorta/Project.toml",
+      "bytes": 459,
+      "sha256": "4d7be1db649cf3bd65529eb59182652062802528077dad0a3205e4170e25c7d9"
+    },
+    {
+      "path": "project_source/koma_aorta/provenance.jl",
+      "source": "MRSimTracks/koma_aorta/provenance.jl",
+      "bytes": 1511,
+      "sha256": "b61badb089d7b5a8b485671962e9e15592b50da0a3d834293df9bef5fb2c018b"
+    },
+    {
+      "path": "project_source/koma_aorta/reconstruct_inlet_pilot.jl",
+      "source": "MRSimTracks/koma_aorta/reconstruct_inlet_pilot.jl",
+      "bytes": 5784,
+      "sha256": "e66d9db619e292ca3048211f43766389283f148f4c7d2eac7dfe35d89d3e1752"
+    },
+    {
+      "path": "project_source/koma_aorta/run_motion_1m_8bin.ps1",
+      "source": "MRSimTracks/koma_aorta/run_motion_1m_8bin.ps1",
+      "bytes": 15969,
+      "sha256": "81785caa90806b9f72a106cf04c0d814b6299d015567b132f6ffdad365ae9659"
+    },
+    {
+      "path": "project_source/koma_aorta/run_motion_all.jl",
+      "source": "MRSimTracks/koma_aorta/run_motion_all.jl",
+      "bytes": 588,
+      "sha256": "76e796832906f2119a29c5294a6c22eb2550cbb7ccf5297fe35aeef88c60429d"
+    },
+    {
+      "path": "project_source/koma_aorta/run_motion_batched.jl",
+      "source": "MRSimTracks/koma_aorta/run_motion_batched.jl",
+      "bytes": 143,
+      "sha256": "4cfb410472da8c4788647ae93719111392718af6f20b31aed563f118fde81e11"
+    },
+    {
+      "path": "project_source/koma_aorta/run_static_ref.jl",
+      "source": "MRSimTracks/koma_aorta/run_static_ref.jl",
+      "bytes": 586,
+      "sha256": "a702f415dc7267624c9d5e16bfa8c59e465366140234cfdffe779a42d3281496"
+    },
+    {
+      "path": "project_source/koma_aorta/simulate_pc.jl",
+      "source": "MRSimTracks/koma_aorta/simulate_pc.jl",
+      "bytes": 28889,
+      "sha256": "a9cce28cf2107bafd986b8130e25eeaea5dfcb2a7ff49813b8d440d974ce4024"
+    },
+    {
+      "path": "project_source/koma_aorta/test_inlet_partition.jl",
+      "source": "MRSimTracks/koma_aorta/test_inlet_partition.jl",
+      "bytes": 2874,
+      "sha256": "103fc68338d21dba4cfc9cb7e9144d20ede9898ecc6d9ed0f615a9b471074776"
+    },
+    {
+      "path": "project_source/koma_aorta/test_native_zero_partition.jl",
+      "source": "MRSimTracks/koma_aorta/test_native_zero_partition.jl",
+      "bytes": 2866,
+      "sha256": "2f907bf874a79c7f4ae5f22ba8f600ddeeae7d220d0c14b52fb54eedc82487b1"
+    },
+    {
+      "path": "project_source/koma_aorta/test_provenance.jl",
+      "source": "MRSimTracks/koma_aorta/test_provenance.jl",
+      "bytes": 1461,
+      "sha256": "ad377640768b5abf4cbdc470f5ec36f45b6e80287430068fe65c4e40ea4e632f"
+    },
+    {
+      "path": "project_source/koma_aorta/utils.jl",
+      "source": "MRSimTracks/koma_aorta/utils.jl",
+      "bytes": 911,
+      "sha256": "5271de7d0365bdaa5e460c85c8db8c07e7ccf4b3ded3cf7560d8c79b1d64fb9d"
+    },
+    {
+      "path": "project_source/koma_dp150/audit_completed_run.jl",
+      "source": "MRSimTracks/koma_dp150/audit_completed_run.jl",
+      "bytes": 10126,
+      "sha256": "ed1d5f51a3441f2adaf63627e771c4f453e65b7f091de6b41ed22259b7d2e93c"
+    },
+    {
+      "path": "project_source/koma_dp150/audit_motion_timing.jl",
+      "source": "MRSimTracks/koma_dp150/audit_motion_timing.jl",
+      "bytes": 45205,
+      "sha256": "3d931c85ba27ef111b9be9a0e4a25a7a9308c2d1b4b8a817f822aa3d3b002a00"
+    },
+    {
+      "path": "project_source/koma_dp150/bootstrap_environment.jl",
+      "source": "MRSimTracks/koma_dp150/bootstrap_environment.jl",
+      "bytes": 175,
+      "sha256": "70bdd5a489fa85f89faf33bd238bf85888c1efe3572141b0b99d163f356b0ebd"
+    },
+    {
+      "path": "project_source/koma_dp150/build_motion_phantom.jl",
+      "source": "MRSimTracks/koma_dp150/build_motion_phantom.jl",
+      "bytes": 6314,
+      "sha256": "7d7d8058a44169d9b5d7d8285bb629854461eded4526aa2bdbb3668170b91da5"
+    },
+    {
+      "path": "project_source/koma_dp150/build_static_phantom.jl",
+      "source": "MRSimTracks/koma_dp150/build_static_phantom.jl",
+      "bytes": 3735,
+      "sha256": "911c8a8e4138776d27623772f06dc76be49df10c93adc8741b31de42fb37f6e3"
+    },
+    {
+      "path": "project_source/koma_dp150/cartesian.jl",
+      "source": "MRSimTracks/koma_dp150/cartesian.jl",
+      "bytes": 1246,
+      "sha256": "6f343dc97cdf5cbd09d05dc757117583663ffee44e93cc89dc61b9441c792d13"
+    },
+    {
+      "path": "project_source/koma_dp150/excitation.jl",
+      "source": "MRSimTracks/koma_dp150/excitation.jl",
+      "bytes": 7004,
+      "sha256": "e137ea8f2334ace02e00b6d0a741b68b4240c21e348583ad211cc227bb093699"
+    },
+    {
+      "path": "project_source/koma_dp150/gradient_design.jl",
+      "source": "MRSimTracks/koma_dp150/gradient_design.jl",
+      "bytes": 1083,
+      "sha256": "b87ef5e63e750c238b3c85fe0ff90685c5d4c887f0e924927c353ff970a1a71f"
+    },
+    {
+      "path": "project_source/koma_dp150/gre.jl",
+      "source": "MRSimTracks/koma_dp150/gre.jl",
+      "bytes": 16018,
+      "sha256": "25bffd5d65c914fde91595e24fdfc7ba88b720fb7cf42bb9109468c8294b100b"
+    },
+    {
+      "path": "project_source/koma_dp150/Manifest.toml",
+      "source": "MRSimTracks/koma_dp150/Manifest.toml",
+      "bytes": 92156,
+      "sha256": "b188c4b9311f61941cf000aa24daee1e0bdbd880bc0b1d6be4c71ffc6b719013"
+    },
+    {
+      "path": "project_source/koma_dp150/motion_timing.jl",
+      "source": "MRSimTracks/koma_dp150/motion_timing.jl",
+      "bytes": 29397,
+      "sha256": "dac01d9d63439077668ae0f9b6bce11bbd82250b5aca9aa4106229797e2c5c5b"
+    },
+    {
+      "path": "project_source/koma_dp150/PC.jl",
+      "source": "MRSimTracks/koma_dp150/PC.jl",
+      "bytes": 26630,
+      "sha256": "d2b66d740786675a8797eb10a1695b361d9f3a0493651deb037900593803c65d"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d/generate.jl",
+      "source": "MRSimTracks/koma_dp150/pc_3d/generate.jl",
+      "bytes": 1240,
+      "sha256": "8de16ef8b20afc15470f3aad9bae6fc19cf57c212552c58fa69867c8645cf889"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d/README.md",
+      "source": "MRSimTracks/koma_dp150/pc_3d/README.md",
+      "bytes": 1349,
+      "sha256": "064be40536eec54941b68bb492ae834846b260d79af1ba82135ece64423c1b69"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched/audit_protocol.jl",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched/audit_protocol.jl",
+      "bytes": 11138,
+      "sha256": "fed301b5441d0a4ec6d7443382bd44ac06e9edf143fd57ff94eaf496659a5c10"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched/generate.jl",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched/generate.jl",
+      "bytes": 4958,
+      "sha256": "1dbeb3d6aabcd7bd31a22eb2ed37788347d85f75fdfc99f727cdd2a755c9bb4b"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched/probe_timing.jl",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched/probe_timing.jl",
+      "bytes": 1656,
+      "sha256": "3e3bd7361f15ea41c6c9fd027ed8b0c3f9206e2b0a32460f6fbac4d965d6d42f"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched/probe_venc.jl",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched/probe_venc.jl",
+      "bytes": 1056,
+      "sha256": "28fb6cd0930eca0575a6cf1d2f49e538dbfe3d61389cc2d2b27b249f2233b226"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched/protocol_audit.toml",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched/protocol_audit.toml",
+      "bytes": 5055,
+      "sha256": "1d701f69f5378b5a3823b4be6bde2867196de7efc23a15ebcf892b5a2604ae3a"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched/protocol_report.toml",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched/protocol_report.toml",
+      "bytes": 749,
+      "sha256": "a1beaaf2bbbd202d9ae3b7634b53b631956629e8e467c06d16014bea2d407925"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched/README.md",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched/README.md",
+      "bytes": 3521,
+      "sha256": "e73482f66b1d2e9dbab98528033de8764d6cfc8a105a0400569b31817efdabb3"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched/simulate.jl",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched/simulate.jl",
+      "bytes": 387,
+      "sha256": "676c7e6cb79d124ed0b878c78816bd8217b0801d264ffb51549526b43d9f0556"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched/test_motion_timing.jl",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched/test_motion_timing.jl",
+      "bytes": 1746,
+      "sha256": "73a18e974ebe24502fa835c83b19d5684b0975969e45cde545928115d0f246fb"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched/test_parse_simulation.jl",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched/test_parse_simulation.jl",
+      "bytes": 214,
+      "sha256": "1e6ef4c58ef711c80c4beb8ddd0096f858b3be0e823b4aa7e105171fe268ca87"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched_venc5/audit_protocol.jl",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched_venc5/audit_protocol.jl",
+      "bytes": 277,
+      "sha256": "14d96e66bfdaf5d43385b9ecfecb3ca42a6172e103df3d033bd266e30882893a"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched_venc5/benchmark_cpu.jl",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched_venc5/benchmark_cpu.jl",
+      "bytes": 9155,
+      "sha256": "9159f2718ca6a9733f2f0e459009d8d0d75ed9740bb4611ab8a33564786263eb"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched_venc5/generate.jl",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched_venc5/generate.jl",
+      "bytes": 204,
+      "sha256": "f21dffe0ae3bfc08adf0e3321908a6f51fc3d5e13457b975aeb1745220c71818"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched_venc5/launch_100k_dual_when_gpus_idle.ps1",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched_venc5/launch_100k_dual_when_gpus_idle.ps1",
+      "bytes": 17444,
+      "sha256": "0870bcb4a2aacda484496029f8c57287ebf3920425704a839d70ed2db0aa3bc3"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched_venc5/launch_1m_dual_when_gpus_idle.ps1",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched_venc5/launch_1m_dual_when_gpus_idle.ps1",
+      "bytes": 17495,
+      "sha256": "174a3ec55166de773f6ab02eb1dda996c9095b6bcd9e22dd26a290e8cb34383a"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched_venc5/launch_when_gpu_idle.ps1",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched_venc5/launch_when_gpu_idle.ps1",
+      "bytes": 12556,
+      "sha256": "ad21b8acea4ee3a0a3d5b9a2bed0f0340492396dc139cddb52a8f0983b341c82"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched_venc5/launcher_common.ps1",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched_venc5/launcher_common.ps1",
+      "bytes": 29458,
+      "sha256": "86f7a10b8cdf8a42c3daf85df568aed419419b0c04b94f9c4d2de2f700b4727c"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched_venc5/protocol_audit.toml",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched_venc5/protocol_audit.toml",
+      "bytes": 5050,
+      "sha256": "16089ef68b8c54bc372ff09e321f0d56b9e14c645656efb2b78e645b5701b268"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched_venc5/protocol_report.toml",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched_venc5/protocol_report.toml",
+      "bytes": 717,
+      "sha256": "1f71e4033b91678236378edc404dfe714d077182fd6d6c08ec54583574b96d08"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched_venc5/README.md",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched_venc5/README.md",
+      "bytes": 3531,
+      "sha256": "1c7e0c4f0f5c0a4844a65b87bbaadffb963b9c783d548b8628523c554d399fe1"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched_venc5/resume_1m_after_migration.ps1",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched_venc5/resume_1m_after_migration.ps1",
+      "bytes": 1229,
+      "sha256": "878d898280806d19d29882cdff7292ba8eff8a433ae7579a0a933b96d8f626c5"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched_venc5/run_100k_worker.ps1",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched_venc5/run_100k_worker.ps1",
+      "bytes": 6815,
+      "sha256": "29004a569298523ed7421830a220674bf09ca668f92ac36b90a3202ef8769966"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched_venc5/run_1m_worker.ps1",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched_venc5/run_1m_worker.ps1",
+      "bytes": 6798,
+      "sha256": "a379a6835406365d600a22195a29a6d214d6462685248bea7b1154379d946d20"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched_venc5/simulate.jl",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched_venc5/simulate.jl",
+      "bytes": 657,
+      "sha256": "83369bcde2f00af3609f3869dfd121cf8ac4a66f3d01b4d8c10fefc475f958ad"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched_venc5/simulate_100k.jl",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched_venc5/simulate_100k.jl",
+      "bytes": 919,
+      "sha256": "f590a22089ef881787aff5956846cd83acdbedf7aa6b3e363b5a314872d6ffdf"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched_venc5/simulate_100k_seam_safe.jl",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched_venc5/simulate_100k_seam_safe.jl",
+      "bytes": 1244,
+      "sha256": "67ee50c9a57547d54160387eae2ac21757de0a20d586594713e0a2794bc91136"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched_venc5/simulate_1m_seam_safe.jl",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched_venc5/simulate_1m_seam_safe.jl",
+      "bytes": 1219,
+      "sha256": "b86d8b81c6a872dbe58e763884a390ad1530dba35625994819b8462d2b0fb8e5"
+    },
+    {
+      "path": "project_source/koma_dp150/pc_3d_scanner_matched_venc5/test_parse_simulation.jl",
+      "source": "MRSimTracks/koma_dp150/pc_3d_scanner_matched_venc5/test_parse_simulation.jl",
+      "bytes": 866,
+      "sha256": "5731ed486e2c99eb81602061ea35fdaba6302ffb8c28dc42f2a7b63a9e9e31f5"
+    },
+    {
+      "path": "project_source/koma_dp150/perfect_spoiling.jl",
+      "source": "MRSimTracks/koma_dp150/perfect_spoiling.jl",
+      "bytes": 1662,
+      "sha256": "f7264b65d2641d58cb3e8019d16c3b4c95e62bdd3e054744e54c0ba9aea47a51"
+    },
+    {
+      "path": "project_source/koma_dp150/Project.toml",
+      "source": "MRSimTracks/koma_dp150/Project.toml",
+      "bytes": 459,
+      "sha256": "4d7be1db649cf3bd65529eb59182652062802528077dad0a3205e4170e25c7d9"
+    },
+    {
+      "path": "project_source/koma_dp150/provenance.jl",
+      "source": "MRSimTracks/koma_dp150/provenance.jl",
+      "bytes": 2520,
+      "sha256": "987e19456d27926dda7c16fed3fb444ac09facd365afa90f526e1c8097d20fed"
+    },
+    {
+      "path": "project_source/koma_dp150/simulate_pc.jl",
+      "source": "MRSimTracks/koma_dp150/simulate_pc.jl",
+      "bytes": 44912,
+      "sha256": "79852404e07c3217b79a44fd31c0652aa00f9b466cbca6daad9447beb30f4c00"
+    },
+    {
+      "path": "project_source/koma_dp150/test_motion_timing_audit.jl",
+      "source": "MRSimTracks/koma_dp150/test_motion_timing_audit.jl",
+      "bytes": 4200,
+      "sha256": "de481933672eb7685b18d7ddeb0c316529bb7333288730f21466633b4cce163a"
+    },
+    {
+      "path": "project_source/koma_dp150/test_protocol_audit_binding.jl",
+      "source": "MRSimTracks/koma_dp150/test_protocol_audit_binding.jl",
+      "bytes": 2652,
+      "sha256": "1ecdde9edfa18ceca116dce349dfc4c4a371f195d301e44b691ebcd5dd47dc74"
+    },
+    {
+      "path": "project_source/koma_dp150/test_provenance.jl",
+      "source": "MRSimTracks/koma_dp150/test_provenance.jl",
+      "bytes": 1269,
+      "sha256": "bd41d483d28b014e8c3c3fc14a94fa25fb9e0e9827ae43bd9662b6efb014b557"
+    },
+    {
+      "path": "project_source/koma_dp150/test_seam_safe_motion.jl",
+      "source": "MRSimTracks/koma_dp150/test_seam_safe_motion.jl",
+      "bytes": 2342,
+      "sha256": "83bbaedb21ac24d431d424dbbde84b62d32c2b80ce297158eb76294fa43dbc87"
+    },
+    {
+      "path": "project_source/koma_dp150/utils.jl",
+      "source": "MRSimTracks/koma_dp150/utils.jl",
+      "bytes": 911,
+      "sha256": "5271de7d0365bdaa5e460c85c8db8c07e7ccf4b3ded3cf7560d8c79b1d64fb9d"
+    },
+    {
+      "path": "project_source/koma_dp150/validate_batched_signal.jl",
+      "source": "MRSimTracks/koma_dp150/validate_batched_signal.jl",
+      "bytes": 2383,
+      "sha256": "ef4b54d6030b4d5651ddf738aadf4942c1ac1bcd5006778a9464f607fe1e0351"
+    },
+    {
+      "path": "project_source/koma_dp150/validate_pc_velocity_sign.jl",
+      "source": "MRSimTracks/koma_dp150/validate_pc_velocity_sign.jl",
+      "bytes": 3960,
+      "sha256": "451c88ca4901a3713abc256a2c183ab23ec4a6b2238c94099179c66774217896"
+    },
+    {
+      "path": "project_source/koma_migration_e046/analyze_aorta_frozen_v3.py",
+      "source": "MRSimTracks/koma_migration_e046/analyze_aorta_frozen_v3.py",
+      "bytes": 20265,
+      "sha256": "52ca2f9f4f4749170cf297fe41902a68d75cc1993ed3c7a2378e4b6075b01838"
+    },
+    {
+      "path": "project_source/koma_migration_e046/compress_control_e051.ps1",
+      "source": "MRSimTracks/koma_migration_e046/compress_control_e051.ps1",
+      "bytes": 2142,
+      "sha256": "4f6df1970ccef22f2b9d59c06d46749d8183eb48902ab9e9fc42e75b8d5bdc17"
+    },
+    {
+      "path": "project_source/koma_migration_e046/direct_sort.jl",
+      "source": "MRSimTracks/koma_migration_e046/direct_sort.jl",
+      "bytes": 909,
+      "sha256": "a5c5752ba657994e031741c93bfd5c8024edb6df9636480929b6e6d97385c7f9"
+    },
+    {
+      "path": "project_source/koma_migration_e046/encoding_controls_e049.jl",
+      "source": "MRSimTracks/koma_migration_e046/encoding_controls_e049.jl",
+      "bytes": 4485,
+      "sha256": "73b2113d6f1bdbe577f3fb743a271a1dda8cf613d9795801e23d14c4199f9fdf"
+    },
+    {
+      "path": "project_source/koma_migration_e046/export_100k_e047.jl",
+      "source": "MRSimTracks/koma_migration_e046/export_100k_e047.jl",
+      "bytes": 5965,
+      "sha256": "58f00f5b1ad827d5e7e8de23aa15dd7e41bd5075d27afc64e5dc77cb307508fd"
+    },
+    {
+      "path": "project_source/koma_migration_e046/export_controls.jl",
+      "source": "MRSimTracks/koma_migration_e046/export_controls.jl",
+      "bytes": 9028,
+      "sha256": "0f9cc0529333b2da9998039e3711fa049a6d508b7e970d66990368c8d2da19c5"
+    },
+    {
+      "path": "project_source/koma_migration_e046/export_controls_fast.jl",
+      "source": "MRSimTracks/koma_migration_e046/export_controls_fast.jl",
+      "bytes": 412,
+      "sha256": "69f347c51a500ec09401dadfb7fc9e25766827c67ef025c70bcdb00772545ea4"
+    },
+    {
+      "path": "project_source/koma_migration_e046/install.jl",
+      "source": "MRSimTracks/koma_migration_e046/install.jl",
+      "bytes": 1202,
+      "sha256": "36d766296a457e19cc47d580d6f18e0c80b8278d00bafa1afc61e507672968a7"
+    },
+    {
+      "path": "project_source/koma_migration_e046/install_report.toml",
+      "source": "MRSimTracks/koma_migration_e046/install_report.toml",
+      "bytes": 1476,
+      "sha256": "7d762a6335b021ea5d24b1a8997d54c1ef380eeaf02b35fc65c5a7eeeac952f1"
+    },
+    {
+      "path": "project_source/koma_migration_e046/known_flow_3d_e051.jl",
+      "source": "MRSimTracks/koma_migration_e046/known_flow_3d_e051.jl",
+      "bytes": 7756,
+      "sha256": "7561630be0ed43ebddca9aca9c653939c7a52905d7f1b8e1e932d19783c640c3"
+    },
+    {
+      "path": "project_source/koma_migration_e046/Manifest.toml",
+      "source": "MRSimTracks/koma_migration_e046/Manifest.toml",
+      "bytes": 71917,
+      "sha256": "c8ef1e476db1ae2de86239b28bb682b58795058dd35b22f2745a7b466d0c60a6"
+    },
+    {
+      "path": "project_source/koma_migration_e046/perfect_spoiling.jl",
+      "source": "MRSimTracks/koma_migration_e046/perfect_spoiling.jl",
+      "bytes": 2100,
+      "sha256": "1230931b605aacb0979ef5216d2d446120d15f44e0e0817f3debaefc81302379"
+    },
+    {
+      "path": "project_source/koma_migration_e046/precision_confirmation_e050.jl",
+      "source": "MRSimTracks/koma_migration_e046/precision_confirmation_e050.jl",
+      "bytes": 12103,
+      "sha256": "9e939e6ac25ccfb4613b312cf30aee6d09b1f5f9602a6a09f834d185f271c26a"
+    },
+    {
+      "path": "project_source/koma_migration_e046/probe_encoding_timing_e049.jl",
+      "source": "MRSimTracks/koma_migration_e046/probe_encoding_timing_e049.jl",
+      "bytes": 526,
+      "sha256": "866c0c7701b608412f680d834cc73d73ebd8163235dbacd660dfdde8b4359e6c"
+    },
+    {
+      "path": "project_source/koma_migration_e046/probe_sequence_cost.jl",
+      "source": "MRSimTracks/koma_migration_e046/probe_sequence_cost.jl",
+      "bytes": 479,
+      "sha256": "b4f17093e24a01bc01bd25bcfc5ec21615745088640fb03fd3410a1c62e105f4"
+    },
+    {
+      "path": "project_source/koma_migration_e046/Project.toml",
+      "source": "MRSimTracks/koma_migration_e046/Project.toml",
+      "bytes": 612,
+      "sha256": "7e94dca6f95b08800900926b4e93d0ca46df52b160b0b50adca7f79179355978"
+    },
+    {
+      "path": "project_source/koma_migration_e046/run_100k_e047.jl",
+      "source": "MRSimTracks/koma_migration_e046/run_100k_e047.jl",
+      "bytes": 6309,
+      "sha256": "024000eb8fd90cacd14d0aacbc9a9f307d2927e654fa3b4f051d1bb4cbb2a093"
+    },
+    {
+      "path": "project_source/koma_migration_e046/run_control.jl",
+      "source": "MRSimTracks/koma_migration_e046/run_control.jl",
+      "bytes": 7169,
+      "sha256": "e5bb71fcd9dd89cb39513f64fdae94f4a5fd01771c3604fa8db207d33825c642"
+    },
+    {
+      "path": "project_source/koma_migration_e046/run_control_legacy_frozen.jl",
+      "source": "MRSimTracks/koma_migration_e046/run_control_legacy_frozen.jl",
+      "bytes": 6815,
+      "sha256": "f2cffbb5bd8535a856d66fe60cf92fcfb42c1098bdfb022514e145a1229da20a"
+    },
+    {
+      "path": "project_source/koma_migration_e046/run_phantom_control.jl",
+      "source": "MRSimTracks/koma_migration_e046/run_phantom_control.jl",
+      "bytes": 1679,
+      "sha256": "b2470654fe40cefac37d9f19c67c5ab191216eb7b066d2cdff1604ca581f420e"
+    },
+    {
+      "path": "project_source/koma_migration_e046/run_precision_e050.ps1",
+      "source": "MRSimTracks/koma_migration_e046/run_precision_e050.ps1",
+      "bytes": 4880,
+      "sha256": "0c72ecbf16fcef5966805daff50ff0eda13c714500e1b6f7d63e7fb7137967d1"
+    },
+    {
+      "path": "project_source/koma_migration_e046/sorted_event_lookup.jl",
+      "source": "MRSimTracks/koma_migration_e046/sorted_event_lookup.jl",
+      "bytes": 720,
+      "sha256": "afaef3a2f651a53005e47d72cb77868f33e77d968a694161bf78a55ab6852ce3"
+    },
+    {
+      "path": "project_source/koma_migration_e046/synthetic_controls.jl",
+      "source": "MRSimTracks/koma_migration_e046/synthetic_controls.jl",
+      "bytes": 4158,
+      "sha256": "97a2e5580ba3ffef1bd0f74943f121f641c4e37e19518b0c231c766a51f6c3a6"
+    },
+    {
+      "path": "project_source/koma_migration_e046/test_direct_sort.jl",
+      "source": "MRSimTracks/koma_migration_e046/test_direct_sort.jl",
+      "bytes": 1048,
+      "sha256": "5741b0e6b59965940ff785f635f2fe3f5db5255002370b81171b9cbd85c9ad2a"
+    },
+    {
+      "path": "project_source/koma_migration_e046/test_encoding_clock_e049.jl",
+      "source": "MRSimTracks/koma_migration_e046/test_encoding_clock_e049.jl",
+      "bytes": 5024,
+      "sha256": "462fc2563cd412a6fd529a32ec22a3dfbe13be67470a694526df194e9a7bc436"
+    },
+    {
+      "path": "project_source/koma_migration_e046/test_environment.jl",
+      "source": "MRSimTracks/koma_migration_e046/test_environment.jl",
+      "bytes": 1967,
+      "sha256": "14a2f7468934b0aaca9e7be544faf7197cb177fdcf8eae585013eb63927b684f"
+    },
+    {
+      "path": "project_source/koma_migration_e046/test_marker_equivalence.jl",
+      "source": "MRSimTracks/koma_migration_e046/test_marker_equivalence.jl",
+      "bytes": 651,
+      "sha256": "237d78ce8a8b3a313536aa500b3d4a4700b0bbc40d15513d4204096fdce589a6"
+    },
+    {
+      "path": "project_source/koma_migration_e046/test_reset_events.jl",
+      "source": "MRSimTracks/koma_migration_e046/test_reset_events.jl",
+      "bytes": 1624,
+      "sha256": "420a60e8b79a131ba251802632d409ae3278eac4e72fdcec011ed1ce8d7194fe"
+    },
+    {
+      "path": "project_source/koma_migration_e046/test_sorted_event_lookup.jl",
+      "source": "MRSimTracks/koma_migration_e046/test_sorted_event_lookup.jl",
+      "bytes": 2810,
+      "sha256": "9a18984ce586ff0e6cc569e5366253ee717dacde48d94cbd355874b8a216d0cc"
+    },
+    {
+      "path": "project_source/pyproject.toml",
+      "source": "MRSimTracks/pyproject.toml",
+      "bytes": 2009,
+      "sha256": "d52a69be93cc31b915ea11b6d527e14c13b7c0c647f053810d31e52a17390e95"
+    },
+    {
+      "path": "project_source/uv.lock",
+      "source": "MRSimTracks/uv.lock",
+      "bytes": 269798,
+      "sha256": "f93990113a039286c13a4365a9402d2a6d33df726c7c3e6ac3a3db9e0cfa103d"
+    },
+    {
+      "path": "project_source/README.md",
+      "source": "MRSimTracks/README.md",
+      "bytes": 10285,
+      "sha256": "23578c8634fe7dad4aaeda9b8d7483657c08e7721e77da2679e557bc11999438"
+    },
+    {
+      "path": "project_source/LICENSE",
+      "source": "MRSimTracks/LICENSE",
+      "bytes": 1093,
+      "sha256": "3a4a213f805eb0f911bbb5df3ad188f5734483a0083b4fcf90783dc2d5b93fba"
+    },
+    {
+      "path": "project_source/CHANGELOG.md",
+      "source": "MRSimTracks/CHANGELOG.md",
+      "bytes": 6280,
+      "sha256": "11c1eeef34ca9be05d7ddc37ee4d5cfddaf803bde0555a9c4ad9f8c2b9f31098"
+    },
+    {
+      "path": "experiments/stenosis_controls_e054/code/analyze_controls.py",
+      "source": "outputs/stenosis_controls_e054/code/analyze_controls.py",
+      "bytes": 7597,
+      "sha256": "3dcb3c46b17aa7fa0da8fa3edcd7e0d5daeccd2100c36657ff65e70bd160cc2a"
+    },
+    {
+      "path": "experiments/stenosis_controls_e054/code/prepare_controls.py",
+      "source": "outputs/stenosis_controls_e054/code/prepare_controls.py",
+      "bytes": 4299,
+      "sha256": "5694ff42ec081816c60b1ebb455c20ec41f5ecb8624f6c0ce90c064074266cbb"
+    },
+    {
+      "path": "experiments/stenosis_controls_e054/code/PROTOCOL.md",
+      "source": "outputs/stenosis_controls_e054/code/PROTOCOL.md",
+      "bytes": 4063,
+      "sha256": "ccb72a1b7a29ebeb7c91d8929bbe2e5daf29c97dae9b19ebcdcf28f507203862"
+    },
+    {
+      "path": "experiments/stenosis_controls_e054/code/run_controls.jl",
+      "source": "outputs/stenosis_controls_e054/code/run_controls.jl",
+      "bytes": 4609,
+      "sha256": "37e691a71618c4e26deaf8e3da0af86795cdbac67cee4b85cdd6794a8481fb1c"
+    },
+    {
+      "path": "experiments/stenosis_controls_e054/code/run_e054.ps1",
+      "source": "outputs/stenosis_controls_e054/code/run_e054.ps1",
+      "bytes": 2447,
+      "sha256": "15d07818ac0626bbaf3ac62cfa745cd0a2691a3eeffc2c3a16ae97c43edb3729"
+    },
+    {
+      "path": "experiments/stenosis_controls_e054/code/validate_controls.py",
+      "source": "outputs/stenosis_controls_e054/code/validate_controls.py",
+      "bytes": 4154,
+      "sha256": "0171283a0a9df39ff8b130a16d3e8754f8094678d28eca59def8bf3fdae84f9b"
+    },
+    {
+      "path": "experiments/phantom_density_e055/code/analyze_300k.py",
+      "source": "outputs/phantom_density_e055/code/analyze_300k.py",
+      "bytes": 11946,
+      "sha256": "64c3b6ca49e7463874248516bbfe42032da346931a4cc11066fd5f25479de4d9"
+    },
+    {
+      "path": "experiments/phantom_density_e055/code/analyze_300k_v2.py",
+      "source": "outputs/phantom_density_e055/code/analyze_300k_v2.py",
+      "bytes": 12762,
+      "sha256": "bbee00f2bce14a99e1540f3890676f5c54011f442ddaba01a5af06ef22b90549"
+    },
+    {
+      "path": "experiments/phantom_density_e055/code/attempt1_analyze_300k.py",
+      "source": "outputs/phantom_density_e055/code/attempt1_analyze_300k.py",
+      "bytes": 10789,
+      "sha256": "b85bcf7039b7d43d2148a05b1bcf043486a4f889bbcaa72b84c4f379772e452d"
+    },
+    {
+      "path": "experiments/phantom_density_e055/code/attempt1_run_300k.jl",
+      "source": "outputs/phantom_density_e055/code/attempt1_run_300k.jl",
+      "bytes": 12605,
+      "sha256": "a3c202d8f4faec127b343bc71d7afb0479c7e6aa8c396d601880a14e6502b810"
+    },
+    {
+      "path": "experiments/phantom_density_e055/code/attempt2_analyze_300k.py",
+      "source": "outputs/phantom_density_e055/code/attempt2_analyze_300k.py",
+      "bytes": 10838,
+      "sha256": "3b2d5293a418072768f3b43db0b733b6dad21e0e2065a4f6b3b092754cb0b732"
+    },
+    {
+      "path": "experiments/phantom_density_e055/code/attempt3_analyze_300k.py",
+      "source": "outputs/phantom_density_e055/code/attempt3_analyze_300k.py",
+      "bytes": 11049,
+      "sha256": "1491c29e9345b4de02747207efa6819ab5a31412e2aa0e91d2cfa2b769d07eec"
+    },
+    {
+      "path": "experiments/phantom_density_e055/code/attempt3_validate_300k.py",
+      "source": "outputs/phantom_density_e055/code/attempt3_validate_300k.py",
+      "bytes": 5344,
+      "sha256": "6c0d4a74ba4c10c0c910be3cbd4cd06dc84b3c6c03b5f3ae471e3db363952566"
+    },
+    {
+      "path": "experiments/phantom_density_e055/code/attempt4_analyze_300k.py",
+      "source": "outputs/phantom_density_e055/code/attempt4_analyze_300k.py",
+      "bytes": 11579,
+      "sha256": "9c3a2fe4ce70a41fddbfbbe3dde399d3a8952b6b02474626db51756cb5873356"
+    },
+    {
+      "path": "experiments/phantom_density_e055/code/check_analysis_baseline.py",
+      "source": "outputs/phantom_density_e055/code/check_analysis_baseline.py",
+      "bytes": 3006,
+      "sha256": "03f15bc75da96f71febe606781175ddec987a80b2fcb52e08bfcd1242ae871f7"
+    },
+    {
+      "path": "experiments/phantom_density_e055/code/check_phase_identity.py",
+      "source": "outputs/phantom_density_e055/code/check_phase_identity.py",
+      "bytes": 1157,
+      "sha256": "ddea75c240b5d247831ea30514c72bbc359e25d1fa8ebef6ad2a005f1ac9a91f"
+    },
+    {
+      "path": "experiments/phantom_density_e055/code/evaluate_stenosis.py",
+      "source": "outputs/phantom_density_e055/code/evaluate_stenosis.py",
+      "bytes": 7194,
+      "sha256": "2b18ef60289f58437bf0e1c302b0139d4cbe1e1b2b74f8b04c6bf9902f95efc0"
+    },
+    {
+      "path": "experiments/phantom_density_e055/code/prepare_300k.py",
+      "source": "outputs/phantom_density_e055/code/prepare_300k.py",
+      "bytes": 8546,
+      "sha256": "e1fea60f8015a8587cabf3882610065772447b911d234a88f3fa3c62a5b5bec3"
+    },
+    {
+      "path": "experiments/phantom_density_e055/code/PROTOCOL.md",
+      "source": "outputs/phantom_density_e055/code/PROTOCOL.md",
+      "bytes": 4190,
+      "sha256": "8f446b28b4c9dfb435aadcc6ea57b6a97d906ee041a204aa4f34673c11617145"
+    },
+    {
+      "path": "experiments/phantom_density_e055/code/run_300k.jl",
+      "source": "outputs/phantom_density_e055/code/run_300k.jl",
+      "bytes": 12585,
+      "sha256": "8bb6c66b1cbdfc7ac8305de84abdc7ecf501dcfb280d741e9b38fceb6d2aa926"
+    },
+    {
+      "path": "experiments/phantom_density_e055/code/run_e055.ps1",
+      "source": "outputs/phantom_density_e055/code/run_e055.ps1",
+      "bytes": 3004,
+      "sha256": "f30fd475b28b8e1f14e4ad68f6ce15f1d5662d5b1b0497f710563c93826f235e"
+    },
+    {
+      "path": "experiments/phantom_density_e055/code/validate_300k.py",
+      "source": "outputs/phantom_density_e055/code/validate_300k.py",
+      "bytes": 7282,
+      "sha256": "93fe7b7a2a2f353efdba7a91da1bf71e5f729946aa43964c8bd63bf1dde92eb6"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/analyze_physics.py",
+      "source": "outputs/acquisition_physics_e056/code/analyze_physics.py",
+      "bytes": 26784,
+      "sha256": "a4e7a858aed9e1b8d2990550b519a0383bc706eee959572937a57c09c6bdf740"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/analyze_sensitivity.py",
+      "source": "outputs/acquisition_physics_e056/code/analyze_sensitivity.py",
+      "bytes": 7129,
+      "sha256": "4c82588509af278fdd261f2e9247f5211f6e41bf8ca5482ee33906e3abeceb9e"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/analyze_sequence_response.py",
+      "source": "outputs/acquisition_physics_e056/code/analyze_sequence_response.py",
+      "bytes": 3507,
+      "sha256": "2b9833cfbc8c91a345ce18222cfeec901671b5a37d869acbae03a3f837de4fa2"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt1_PC.jl",
+      "source": "outputs/acquisition_physics_e056/code/attempt1_PC.jl",
+      "bytes": 26833,
+      "sha256": "434fe3e086734cdc06787c1db218ba1b56dca962743b48af920f48f88f2b75ad"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt1_verify_results.py",
+      "source": "outputs/acquisition_physics_e056/code/attempt1_verify_results.py",
+      "bytes": 8209,
+      "sha256": "1cc77f531a1ad7064d1826063319a2dd7a43d24c471bdf1bbbef0773b2ef1926"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt2_analyze_physics.py",
+      "source": "outputs/acquisition_physics_e056/code/attempt2_analyze_physics.py",
+      "bytes": 20599,
+      "sha256": "ebd897e70748ba5b4ec8d2e64c6d63fd815b85234b613d0c63644193bd67908e"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt2_prepare_sequences.jl",
+      "source": "outputs/acquisition_physics_e056/code/attempt2_prepare_sequences.jl",
+      "bytes": 11482,
+      "sha256": "34064a6f473b6d247e7437697744ee421d8a9e10a821874ad7179306df1f544e"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt2_PROTOCOL.md",
+      "source": "outputs/acquisition_physics_e056/code/attempt2_PROTOCOL.md",
+      "bytes": 5649,
+      "sha256": "92be023c729ffe4e53dd55c5240848ca057846d4ccffc045cc23ba84e6c1f8f8"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt3_prepare_sequences.jl",
+      "source": "outputs/acquisition_physics_e056/code/attempt3_prepare_sequences.jl",
+      "bytes": 12304,
+      "sha256": "e73dac2bea0ecdbeb43415a544996a8e52c7b9ca06ffce8128bf624c99bb87b1"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt3_PROTOCOL.md",
+      "source": "outputs/acquisition_physics_e056/code/attempt3_PROTOCOL.md",
+      "bytes": 6127,
+      "sha256": "3493b3a22fc9a737e245535db59152c22531cef5c74afeeaf6052e171bdf304a"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt3_test_reference.py",
+      "source": "outputs/acquisition_physics_e056/code/attempt3_test_reference.py",
+      "bytes": 1740,
+      "sha256": "ac178e4a00f098434ca8b9f752c781531c59c994be879eb3f62e1e7275a53957"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt4_analyze_physics.py",
+      "source": "outputs/acquisition_physics_e056/code/attempt4_analyze_physics.py",
+      "bytes": 22211,
+      "sha256": "8a9c8ade03a997aadcc1054d8ad73af7613a50447427dfc9b025ce29bcd17544"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt4_check_prefix.py",
+      "source": "outputs/acquisition_physics_e056/code/attempt4_check_prefix.py",
+      "bytes": 2143,
+      "sha256": "5ce9e02f400c401bcdc84a95b4e24b0cd5c433f633eab2fb18eebbe272c287d1"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt4_prepare_sequences.jl",
+      "source": "outputs/acquisition_physics_e056/code/attempt4_prepare_sequences.jl",
+      "bytes": 12656,
+      "sha256": "80a18eb221d30846948fe698c55a28be3c666485773504c9059910b0d34b5a28"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt4_PROTOCOL.md",
+      "source": "outputs/acquisition_physics_e056/code/attempt4_PROTOCOL.md",
+      "bytes": 6287,
+      "sha256": "74d054b0c0a0ae267382336b7fbe26928a9b93bf25ecb0d5e7823ec47ffcdd33"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt4_run_acquisition.jl",
+      "source": "outputs/acquisition_physics_e056/code/attempt4_run_acquisition.jl",
+      "bytes": 5947,
+      "sha256": "b676500b2e987bb6abfebd8fc8e6d803801ce9a0d5fc7a3a38d2e4f2434e2e6f"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt4_test_reference.py",
+      "source": "outputs/acquisition_physics_e056/code/attempt4_test_reference.py",
+      "bytes": 1739,
+      "sha256": "2e08a60d9848c2d86896a1811c6d9e52781fa76597d71578892509b1bbc0b8ab"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt5_analyze_physics.py",
+      "source": "outputs/acquisition_physics_e056/code/attempt5_analyze_physics.py",
+      "bytes": 22211,
+      "sha256": "8a9c8ade03a997aadcc1054d8ad73af7613a50447427dfc9b025ce29bcd17544"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt5_check_prefix.py",
+      "source": "outputs/acquisition_physics_e056/code/attempt5_check_prefix.py",
+      "bytes": 2328,
+      "sha256": "f0acca1585684cb009d4b6ccad11f59003facd831c6ea8e0f8ef22b818c48385"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt5_PROTOCOL.md",
+      "source": "outputs/acquisition_physics_e056/code/attempt5_PROTOCOL.md",
+      "bytes": 6420,
+      "sha256": "c1dca992b7a28958d4e39fcf8afd90b50dec6b95499f60e38c8dcfd9433cfe52"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt5_run_acquisition.jl",
+      "source": "outputs/acquisition_physics_e056/code/attempt5_run_acquisition.jl",
+      "bytes": 6122,
+      "sha256": "eb9ff70136e189ebb605b5b1693a011b4cad1492004e6618e6c10f8b275795b5"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt5_run_e056.ps1",
+      "source": "outputs/acquisition_physics_e056/code/attempt5_run_e056.ps1",
+      "bytes": 2378,
+      "sha256": "e73285606aa6a3f20c8837921d52d3a70e458c2e0f191afcf1541126475bcf58"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt5_test_reference.py",
+      "source": "outputs/acquisition_physics_e056/code/attempt5_test_reference.py",
+      "bytes": 1739,
+      "sha256": "2e08a60d9848c2d86896a1811c6d9e52781fa76597d71578892509b1bbc0b8ab"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt6_analyze_physics.py",
+      "source": "outputs/acquisition_physics_e056/code/attempt6_analyze_physics.py",
+      "bytes": 25651,
+      "sha256": "0891d936bf25ea197f2fda182db400d7f7b48ea0dec999a91b3bf6bbfa763532"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt6_run_acquisition.jl",
+      "source": "outputs/acquisition_physics_e056/code/attempt6_run_acquisition.jl",
+      "bytes": 6439,
+      "sha256": "8933f00c4ea4d6a14041f67af41dbf4a7d58a237d1020609a9686e94a1798775"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt7_analyze_physics.py",
+      "source": "outputs/acquisition_physics_e056/code/attempt7_analyze_physics.py",
+      "bytes": 26151,
+      "sha256": "18c2338bff21afc6546a8d79a3b799e924171a77f105fda1deda79d377d134ee"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/attempt7_check_prefix.py",
+      "source": "outputs/acquisition_physics_e056/code/attempt7_check_prefix.py",
+      "bytes": 2485,
+      "sha256": "e184a5edf1da8b55da5dcddd8062a95d1dcf83f0dd4b2657e8773f230fb1a941"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/audit_static_numerical.py",
+      "source": "outputs/acquisition_physics_e056/code/audit_static_numerical.py",
+      "bytes": 1517,
+      "sha256": "70475813a5ad040e07ae648d6fa86a894c9a156d4e6e1fdf9914090127ed3ed9"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/check_prefix.py",
+      "source": "outputs/acquisition_physics_e056/code/check_prefix.py",
+      "bytes": 2585,
+      "sha256": "ee78d262d1789f3b98933f8b0b727f507f328a9cc8f757641b8882ae6a2c89ad"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/complete_e056.ps1",
+      "source": "outputs/acquisition_physics_e056/code/complete_e056.ps1",
+      "bytes": 2311,
+      "sha256": "898f04393dfba6c5b487457568c211ca1709b05dd24310045b7ec66072b0615d"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/complete_e056_v2.ps1",
+      "source": "outputs/acquisition_physics_e056/code/complete_e056_v2.ps1",
+      "bytes": 2331,
+      "sha256": "95b59406ccb6a04f1b582d0640d165adf8a2645287025a008254a8bd55b10b5c"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/correct_reference_phase.py",
+      "source": "outputs/acquisition_physics_e056/code/correct_reference_phase.py",
+      "bytes": 3804,
+      "sha256": "9bbfbb639447347617e0efe32e47740a1f553493e2ad57a11703c6b882850c3e"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/diagnose_quadrature.py",
+      "source": "outputs/acquisition_physics_e056/code/diagnose_quadrature.py",
+      "bytes": 4645,
+      "sha256": "2e62d43771c15e662ddf60a263d0ad51f3d67245fb65cb5c61f48c3f887d665b"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/inspect_prefix.py",
+      "source": "outputs/acquisition_physics_e056/code/inspect_prefix.py",
+      "bytes": 1785,
+      "sha256": "48cf307668d268ece3737ff4480c8757c239e0dc9ee1de4c569de27e3cfef503"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/inspect_rf_phase_contract.py",
+      "source": "outputs/acquisition_physics_e056/code/inspect_rf_phase_contract.py",
+      "bytes": 1437,
+      "sha256": "30518d7ec79ebfa017fe7bf59e52329c8508a37c06ad4d9288d5f32fa96538d6"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/inspect_saved_static.py",
+      "source": "outputs/acquisition_physics_e056/code/inspect_saved_static.py",
+      "bytes": 1202,
+      "sha256": "0a59ddec9e5c07e2bd6b17cee1376c6fb4d83d56c287d3174472640c096b28b1"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/prepare_inputs.py",
+      "source": "outputs/acquisition_physics_e056/code/prepare_inputs.py",
+      "bytes": 2831,
+      "sha256": "4cdc849cdcbcc63a3d353e4ae00ab9d8fd43a385cbff13e2358ed1c0b21de52a"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/prepare_sequences.jl",
+      "source": "outputs/acquisition_physics_e056/code/prepare_sequences.jl",
+      "bytes": 13205,
+      "sha256": "6fee797eef054406a5e7b3c1ceed62f1e81a3509ab4390c6f3cff9fe5aa9d10c"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/prepare_sequences_v2.jl",
+      "source": "outputs/acquisition_physics_e056/code/prepare_sequences_v2.jl",
+      "bytes": 14772,
+      "sha256": "b19bbc4688937d4641543bc4452e5a87bbfe8060f45bd216def3897ba93fad9e"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/probe_minimum_te.jl",
+      "source": "outputs/acquisition_physics_e056/code/probe_minimum_te.jl",
+      "bytes": 808,
+      "sha256": "1c25f63e034457f7c809e08d1ef9987ebb0d04ca53ea1527fb67eb34ca363695"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/PROTOCOL.md",
+      "source": "outputs/acquisition_physics_e056/code/PROTOCOL.md",
+      "bytes": 7308,
+      "sha256": "285dc57b43f24a1e3b453b6000a3a0c14480ec5ec5bb4b6225c0a86bb875e418"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/resume_e056.ps1",
+      "source": "outputs/acquisition_physics_e056/code/resume_e056.ps1",
+      "bytes": 2469,
+      "sha256": "722a0198e73cb71a38e9f1b97c726176e1827e516bd874055908fccd223f5372"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/run_acquisition.jl",
+      "source": "outputs/acquisition_physics_e056/code/run_acquisition.jl",
+      "bytes": 6541,
+      "sha256": "7e8346bfc16ef911a07248db3f1533448f0698ffcd06ff208ae4f7906544cc90"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/run_e056.ps1",
+      "source": "outputs/acquisition_physics_e056/code/run_e056.ps1",
+      "bytes": 2396,
+      "sha256": "cf8ac4f65032b19c402a47cf9828d49d9068196251968a2cc3010100be5cc0c9"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/run_e056_with_fft.jl",
+      "source": "outputs/acquisition_physics_e056/code/run_e056_with_fft.jl",
+      "bytes": 212,
+      "sha256": "898d4970f614a23b0ac69eca105147daf8d88c20f3eee44409db5c4c43ea8067"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/sequence_helpers/cartesian.jl",
+      "source": "outputs/acquisition_physics_e056/code/sequence_helpers/cartesian.jl",
+      "bytes": 1246,
+      "sha256": "6f343dc97cdf5cbd09d05dc757117583663ffee44e93cc89dc61b9441c792d13"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/sequence_helpers/excitation.jl",
+      "source": "outputs/acquisition_physics_e056/code/sequence_helpers/excitation.jl",
+      "bytes": 7193,
+      "sha256": "1fefc59d7bd681f55b2524a1b69dbe4adfd7dda7c5d49fb10f0dbbdf7426e2a5"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/sequence_helpers/gradient_design.jl",
+      "source": "outputs/acquisition_physics_e056/code/sequence_helpers/gradient_design.jl",
+      "bytes": 1202,
+      "sha256": "1a876b3c0bfeec20edec825ec332aecd296de620ab260ce4f0c40bac20bc773c"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/sequence_helpers/gre.jl",
+      "source": "outputs/acquisition_physics_e056/code/sequence_helpers/gre.jl",
+      "bytes": 16130,
+      "sha256": "0e7b90e9f37ceafa56a0b4496681e50df1354e7369f31eaa76ef3596ab6de43e"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/sequence_helpers/PC.jl",
+      "source": "outputs/acquisition_physics_e056/code/sequence_helpers/PC.jl",
+      "bytes": 26868,
+      "sha256": "5e00682f869e9474dfe69e6018f5d886bdddd29e1c072fef16ea269db2c9ef25"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/sequence_helpers/utils.jl",
+      "source": "outputs/acquisition_physics_e056/code/sequence_helpers/utils.jl",
+      "bytes": 911,
+      "sha256": "5271de7d0365bdaa5e460c85c8db8c07e7ccf4b3ded3cf7560d8c79b1d64fb9d"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/summarize_results.py",
+      "source": "outputs/acquisition_physics_e056/code/summarize_results.py",
+      "bytes": 9222,
+      "sha256": "b890c24c0308f8cf63aaf95b3f9b16c62e5cdf8437ef6c96299c4e872394e219"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/test_reference.py",
+      "source": "outputs/acquisition_physics_e056/code/test_reference.py",
+      "bytes": 1739,
+      "sha256": "2e08a60d9848c2d86896a1811c6d9e52781fa76597d71578892509b1bbc0b8ab"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/test_reference_contract.py",
+      "source": "outputs/acquisition_physics_e056/code/test_reference_contract.py",
+      "bytes": 2831,
+      "sha256": "47a58a44ad81862491841b9968d7951af2d950db7e79698b49357c1f5c968587"
+    },
+    {
+      "path": "experiments/acquisition_physics_e056/code/verify_results.py",
+      "source": "outputs/acquisition_physics_e056/code/verify_results.py",
+      "bytes": 8419,
+      "sha256": "49e9968e2f2753d11d05fbc9f45487a2091f012961e744303f2ec9fcdbc8217a"
+    },
+    {
+      "path": "experiments/step_convergence_e057/code/analyze_ladder.py",
+      "source": "outputs/step_convergence_e057/code/analyze_ladder.py",
+      "bytes": 8999,
+      "sha256": "88512f75faa97a2671839ede9f80af3d0a304090a866a869f94b3c2acb8e37e8"
+    },
+    {
+      "path": "experiments/step_convergence_e057/code/analyze_suite.py",
+      "source": "outputs/step_convergence_e057/code/analyze_suite.py",
+      "bytes": 28343,
+      "sha256": "f74f227ba354cf5142920d13515092c372687da3d18f187d03703b830ce244a5"
+    },
+    {
+      "path": "experiments/step_convergence_e057/code/certify_grid.py",
+      "source": "outputs/step_convergence_e057/code/certify_grid.py",
+      "bytes": 8430,
+      "sha256": "5f3ee5debad928eb9cc1e4df7e45d1788d4b1fac8fd88b4a531a68a272dedc99"
+    },
+    {
+      "path": "experiments/step_convergence_e057/code/e057_common.jl",
+      "source": "outputs/step_convergence_e057/code/e057_common.jl",
+      "bytes": 3761,
+      "sha256": "b1c9973a75eb4332fc7a58422c2a16bb886a06b9793ca44188f0e74e2691195c"
+    },
+    {
+      "path": "experiments/step_convergence_e057/code/e057_env.ps1",
+      "source": "outputs/step_convergence_e057/code/e057_env.ps1",
+      "bytes": 1884,
+      "sha256": "626a0f2938b025f193fc5c070faaec76f62e7f94f0cc05b3269a85ef2812c9b0"
+    },
+    {
+      "path": "experiments/step_convergence_e057/code/precession_step_rule.jl",
+      "source": "outputs/step_convergence_e057/code/precession_step_rule.jl",
+      "bytes": 1177,
+      "sha256": "c488d0b10bac37c02f1763c04a73c0f99c2308a13e2ee673324920cf7e6013ae"
+    },
+    {
+      "path": "experiments/step_convergence_e057/code/preflight_grid.jl",
+      "source": "outputs/step_convergence_e057/code/preflight_grid.jl",
+      "bytes": 5545,
+      "sha256": "891422a5ecbbb07c7e5f014b3bd6ce09b0ae9afd6790e977d60ff170c50a0cc1"
+    },
+    {
+      "path": "experiments/step_convergence_e057/code/PROTOCOL.md",
+      "source": "outputs/step_convergence_e057/code/PROTOCOL.md",
+      "bytes": 6500,
+      "sha256": "f471205463df005bebecbc1b9b75fb1914f12b63bf9afb530c25d1c2fcd092a2"
+    },
+    {
+      "path": "experiments/step_convergence_e057/code/run_ladder.jl",
+      "source": "outputs/step_convergence_e057/code/run_ladder.jl",
+      "bytes": 5424,
+      "sha256": "0d29dae9cc75ed38399b22c82975a92d9f4bc2ba4092a4e7024860bbfdad55e6"
+    },
+    {
+      "path": "experiments/step_convergence_e057/code/run_stage1.ps1",
+      "source": "outputs/step_convergence_e057/code/run_stage1.ps1",
+      "bytes": 503,
+      "sha256": "d117cb61f4d5d78bbe14c6a94b3ded6a29e8e1dc5e0f86fb8991cb242d493f07"
+    },
+    {
+      "path": "experiments/step_convergence_e057/code/run_stage2.ps1",
+      "source": "outputs/step_convergence_e057/code/run_stage2.ps1",
+      "bytes": 702,
+      "sha256": "8899f47ad3c0244ae65d5d0266d37ec7fdcce0559c8c5dd6737e75bba1c6a9ae"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/analyze_real.py",
+      "source": "outputs/paired_acquisition_e058/code/analyze_real.py",
+      "bytes": 14591,
+      "sha256": "3386890b9f0cfda4f41f3f4d43cc18c00da3aef7f01af573fc3c4b99c138815c"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/attempt1_post_hoc_t2.py",
+      "source": "outputs/paired_acquisition_e058/code/attempt1_post_hoc_t2.py",
+      "bytes": 9625,
+      "sha256": "d0e05fb29e244edcd060f384af660d6100c04d90589736c5820ab980cd43c419"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/attempt1_prepare_sequences.jl",
+      "source": "outputs/paired_acquisition_e058/code/attempt1_prepare_sequences.jl",
+      "bytes": 15792,
+      "sha256": "d180ed8c825c2ca709bc991aab366f452a9d50dd166b6157f9cda2566ade3b7c"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/attempt2_prepare_sequences.jl",
+      "source": "outputs/paired_acquisition_e058/code/attempt2_prepare_sequences.jl",
+      "bytes": 16132,
+      "sha256": "50f9f2da9db4b5234548936f009467794616f496580fe7e6fc75cca4bb99531e"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/build_references.py",
+      "source": "outputs/paired_acquisition_e058/code/build_references.py",
+      "bytes": 8980,
+      "sha256": "788a1a424c01d147e8bcf4a0aa8cff32c8c545edb4d42407778cafd61cd2769f"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/e058_env.ps1",
+      "source": "outputs/paired_acquisition_e058/code/e058_env.ps1",
+      "bytes": 1891,
+      "sha256": "895051b4ef4f5de235adc22fbb546285263600d44caa6dbe7175bfab443115c7"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/evaluate_targets.py",
+      "source": "outputs/paired_acquisition_e058/code/evaluate_targets.py",
+      "bytes": 10820,
+      "sha256": "b1f4875ccec68ed4f6c586ab127f8f62f4e3caf31abaa5980bfb12f7be7edecd"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/post_hoc_t2.py",
+      "source": "outputs/paired_acquisition_e058/code/post_hoc_t2.py",
+      "bytes": 9924,
+      "sha256": "e37c77afcfa007cc9d01e099ca88934df8ead02b46ab8952f3cdd43ec39e6330"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/prepare_sequences.jl",
+      "source": "outputs/paired_acquisition_e058/code/prepare_sequences.jl",
+      "bytes": 16863,
+      "sha256": "33ec59317d6ab8bd4a793a25098ec445f4089ad1c8eeb941b0ae28d101ec9d78"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/PROTOCOL.md",
+      "source": "outputs/paired_acquisition_e058/code/PROTOCOL.md",
+      "bytes": 6190,
+      "sha256": "b96bbca02ebbd383e2b7e948441fb1acc6cfe158519a7d2d742ef8603e0ad793"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/run_real.jl",
+      "source": "outputs/paired_acquisition_e058/code/run_real.jl",
+      "bytes": 19206,
+      "sha256": "260a7b497f045e6e9960d00f389dcffbee1799908d06a5fc9a0793fce99bec05"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/run_s1.ps1",
+      "source": "outputs/paired_acquisition_e058/code/run_s1.ps1",
+      "bytes": 515,
+      "sha256": "742395e56b5157615840eb0f01441975f3ae306bf32ae77581d4c9fedca97544"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/run_s2_s3.ps1",
+      "source": "outputs/paired_acquisition_e058/code/run_s2_s3.ps1",
+      "bytes": 1391,
+      "sha256": "1ebf25f019e3ed1ad1c11f9c329b40c12ea5f38509480784ce6225e1af763175"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/run_s2a.ps1",
+      "source": "outputs/paired_acquisition_e058/code/run_s2a.ps1",
+      "bytes": 474,
+      "sha256": "c5466c0a6c1a061bacb5c171c2fc1945c8d5ce038ed2a0473d46b33ac2ed9e59"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/sequence_helpers/cartesian.jl",
+      "source": "outputs/paired_acquisition_e058/code/sequence_helpers/cartesian.jl",
+      "bytes": 1246,
+      "sha256": "6f343dc97cdf5cbd09d05dc757117583663ffee44e93cc89dc61b9441c792d13"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/sequence_helpers/excitation.jl",
+      "source": "outputs/paired_acquisition_e058/code/sequence_helpers/excitation.jl",
+      "bytes": 7193,
+      "sha256": "1fefc59d7bd681f55b2524a1b69dbe4adfd7dda7c5d49fb10f0dbbdf7426e2a5"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/sequence_helpers/gradient_design.jl",
+      "source": "outputs/paired_acquisition_e058/code/sequence_helpers/gradient_design.jl",
+      "bytes": 1202,
+      "sha256": "1a876b3c0bfeec20edec825ec332aecd296de620ab260ce4f0c40bac20bc773c"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/sequence_helpers/gre.jl",
+      "source": "outputs/paired_acquisition_e058/code/sequence_helpers/gre.jl",
+      "bytes": 16130,
+      "sha256": "0e7b90e9f37ceafa56a0b4496681e50df1354e7369f31eaa76ef3596ab6de43e"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/sequence_helpers/PC.jl",
+      "source": "outputs/paired_acquisition_e058/code/sequence_helpers/PC.jl",
+      "bytes": 26868,
+      "sha256": "5e00682f869e9474dfe69e6018f5d886bdddd29e1c072fef16ea269db2c9ef25"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/sequence_helpers/utils.jl",
+      "source": "outputs/paired_acquisition_e058/code/sequence_helpers/utils.jl",
+      "bytes": 911,
+      "sha256": "5271de7d0365bdaa5e460c85c8db8c07e7ccf4b3ded3cf7560d8c79b1d64fb9d"
+    },
+    {
+      "path": "experiments/paired_acquisition_e058/code/TARGETS_AMENDMENT.md",
+      "source": "outputs/paired_acquisition_e058/code/TARGETS_AMENDMENT.md",
+      "bytes": 2436,
+      "sha256": "6dcc7ef75547295a7c656ce99c2e60ee96c7abc692fb5c35042c78ca2cf98d01"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/align_seam_e060.jl",
+      "source": "outputs/scanner_geometry_e060/code/align_seam_e060.jl",
+      "bytes": 5012,
+      "sha256": "68cd750895a1b2a64b2e88bd5f3f27d06a1433078cda95c1b67aa989c1f94029"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/AMENDMENT_A1_TE.md",
+      "source": "outputs/scanner_geometry_e060/code/AMENDMENT_A1_TE.md",
+      "bytes": 1284,
+      "sha256": "85c1a6273862aa89761cefb77c4b5cb7f7e600d2d1d9783782cfc20ca38ad7b7"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/AMENDMENT_A2_SLAB_GPU.md",
+      "source": "outputs/scanner_geometry_e060/code/AMENDMENT_A2_SLAB_GPU.md",
+      "bytes": 2121,
+      "sha256": "127d257ff8a335374f9ed3f08b27bcd3d0e2d8771c096de453eae5de3ebb63db"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/AMENDMENT_A3_SEAM.md",
+      "source": "outputs/scanner_geometry_e060/code/AMENDMENT_A3_SEAM.md",
+      "bytes": 2819,
+      "sha256": "02e907ef93705e81a4d779fe69f3ef952fac0cf75906d2e4ae2b3dbbacc848fd"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/analyze_e060.py",
+      "source": "outputs/scanner_geometry_e060/code/analyze_e060.py",
+      "bytes": 10309,
+      "sha256": "7e48fe9b236f536c4711630fd633df520ed5d15341506ac2c176b26fba2b7f40"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/attempt1_align_seam_e060.jl",
+      "source": "outputs/scanner_geometry_e060/code/attempt1_align_seam_e060.jl",
+      "bytes": 4942,
+      "sha256": "a3a7526e245503fc2a5dbdc6799980eaf704ff746bb22e2a6b28d102db549c9d"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/attempt1_AMENDMENT_A3_SEAM.md",
+      "source": "outputs/scanner_geometry_e060/code/attempt1_AMENDMENT_A3_SEAM.md",
+      "bytes": 2478,
+      "sha256": "7381f959d3d6f4b1a0d0e6dd92642de365124ac696a327d685b5cc62f9172106"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/attempt1_plot_contours_with_noise.py",
+      "source": "outputs/scanner_geometry_e060/code/attempt1_plot_contours_with_noise.py",
+      "bytes": 7690,
+      "sha256": "e29b6699083667af018234b1f7d67f11d3733674abde5295c445c0d3fe28e394"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/attempt1_plot_orthoviews_e060.py",
+      "source": "outputs/scanner_geometry_e060/code/attempt1_plot_orthoviews_e060.py",
+      "bytes": 7628,
+      "sha256": "ca7553380b8d8d6df6a29745ccb0e8424044556962e6c153f6b64c69ea7e27c2"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/attempt1_plot_projection_scan_waveforms.py",
+      "source": "outputs/scanner_geometry_e060/code/attempt1_plot_projection_scan_waveforms.py",
+      "bytes": 8120,
+      "sha256": "4717bbd8ae2b695abfdb799f3f50ecc56a7ceab3113c5646633f22967eae970b"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/attempt1_plot_projection_smooth.py",
+      "source": "outputs/scanner_geometry_e060/code/attempt1_plot_projection_smooth.py",
+      "bytes": 6865,
+      "sha256": "462f36cced33c51a4ff83ecb4ef1903a6bccbe425c2128314a1c4276cde85182"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/attempt1_plot_projection_triptych.py",
+      "source": "outputs/scanner_geometry_e060/code/attempt1_plot_projection_triptych.py",
+      "bytes": 5422,
+      "sha256": "80085061e23e529998b5786d82767c0fa324a7cc69858d2802d081bef7fdd6ae"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/attempt1_prepare_sequences_e060_v2.jl",
+      "source": "outputs/scanner_geometry_e060/code/attempt1_prepare_sequences_e060_v2.jl",
+      "bytes": 15506,
+      "sha256": "044e1aabf390f8b076ca6b11d98e5622ba77eb5c0e264afa93cdbc448f63171d"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/attempt1_run_e060.jl",
+      "source": "outputs/scanner_geometry_e060/code/attempt1_run_e060.jl",
+      "bytes": 22710,
+      "sha256": "77b752e44717e45c6f3527bc8226e2d9b67d8d9dbcc6cdb4eb6bf9401391a842"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/attempt1_run_s2_prefix.ps1",
+      "source": "outputs/scanner_geometry_e060/code/attempt1_run_s2_prefix.ps1",
+      "bytes": 1502,
+      "sha256": "3bd232a0e2637592b7fbcaa28192ce351c9533de7216f6d75f5ab2166c37317f"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/attempt2_plot_contours_with_noise.py",
+      "source": "outputs/scanner_geometry_e060/code/attempt2_plot_contours_with_noise.py",
+      "bytes": 8947,
+      "sha256": "ba80f26638019a83efdad49e3d9b2cb29b2dac5cc7bf707cb593299ce3a32218"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/attempt2_plot_orthoviews_e060.py",
+      "source": "outputs/scanner_geometry_e060/code/attempt2_plot_orthoviews_e060.py",
+      "bytes": 7683,
+      "sha256": "447bc2c6e0dd04d2bed1fe81deafab67d683bac417c822f2e289501a904ff913"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/attempt2_plot_projection_smooth.py",
+      "source": "outputs/scanner_geometry_e060/code/attempt2_plot_projection_smooth.py",
+      "bytes": 7641,
+      "sha256": "27d5df1e1055010e8a2cbbc685edd0861db66a242a18473ba7d29e5349af310c"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/attempt2_run_e060.jl",
+      "source": "outputs/scanner_geometry_e060/code/attempt2_run_e060.jl",
+      "bytes": 24286,
+      "sha256": "1f7f72437cafad50d6f1ad0f5117e96354ffc7d19b2a560631c1a073611fe21c"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/attempt3_plot_projection_smooth.py",
+      "source": "outputs/scanner_geometry_e060/code/attempt3_plot_projection_smooth.py",
+      "bytes": 7925,
+      "sha256": "66554c8fb71c7cf8dc5742148c4f41e21a33b5d4cd6192f657362997586cd888"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/build_references_e060.py",
+      "source": "outputs/scanner_geometry_e060/code/build_references_e060.py",
+      "bytes": 11969,
+      "sha256": "a30ab37a3a61c2220bfe0e5bfa6ac2489437c31b94c8da9379b55a34e8d7c635"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/build_references_e060_v2.py",
+      "source": "outputs/scanner_geometry_e060/code/build_references_e060_v2.py",
+      "bytes": 12539,
+      "sha256": "8538b9b82e622534d1b1425dc4a70d6485625398a39af41db77a2826ca50fe6a"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/e060_env.ps1",
+      "source": "outputs/scanner_geometry_e060/code/e060_env.ps1",
+      "bytes": 1889,
+      "sha256": "3e221e56db67aae664c9616a3eff07bdd4892d5bc530f9d445bf720ffd017f38"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/make_pc_e060.py",
+      "source": "outputs/scanner_geometry_e060/code/make_pc_e060.py",
+      "bytes": 3137,
+      "sha256": "a6ed4ed4e9f4684b08fac6f5a5f915d1cf9371567b0971049a29225850cff01e"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/plot_allbins_scan_e060.py",
+      "source": "outputs/scanner_geometry_e060/code/plot_allbins_scan_e060.py",
+      "bytes": 7912,
+      "sha256": "712b47db27ec1ff545f25c2b6bc13a5b74fe6723b7e4e348f2da9bdeaa0e5d1c"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/plot_comparison_e060.py",
+      "source": "outputs/scanner_geometry_e060/code/plot_comparison_e060.py",
+      "bytes": 16969,
+      "sha256": "e4a8d3c5b14bcfbb50022f8471e71f622daa2d0f7d5a821d881002350aa03ffa"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/plot_contours_circular.py",
+      "source": "outputs/scanner_geometry_e060/code/plot_contours_circular.py",
+      "bytes": 8601,
+      "sha256": "97f8d1a4cce1dde5cc446217fd6f79f9355abfba041dfb0bdb8f30ee97bb70e5"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/plot_contours_publication.py",
+      "source": "outputs/scanner_geometry_e060/code/plot_contours_publication.py",
+      "bytes": 7475,
+      "sha256": "98da4e2abfd0a3905e82cca658bd80ddc4fdf422a4063d9c6e70cb0ff6c27ab4"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/plot_contours_scan_cfd_koma.py",
+      "source": "outputs/scanner_geometry_e060/code/plot_contours_scan_cfd_koma.py",
+      "bytes": 7130,
+      "sha256": "69285367d238092236154b6222adfaa3292d1646b361bdeef7744f2789d508e2"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/plot_contours_with_noise.py",
+      "source": "outputs/scanner_geometry_e060/code/plot_contours_with_noise.py",
+      "bytes": 9537,
+      "sha256": "f4aab461681e2658438adbd15430772618d7de8f110e473c3057815f702a509a"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/plot_e060.py",
+      "source": "outputs/scanner_geometry_e060/code/plot_e060.py",
+      "bytes": 9330,
+      "sha256": "76d027d3e04576d01a3598e6e9b83618a8475ecc1cde69f0826aa45d5c076802"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/plot_longitudinal_profiles_e060.py",
+      "source": "outputs/scanner_geometry_e060/code/plot_longitudinal_profiles_e060.py",
+      "bytes": 6264,
+      "sha256": "0d745096dac8a6d7eb8a51fb1b4ef5d75c12fd98984bdd3b30cb90e9fb4f6a01"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/plot_orthoviews_e060.py",
+      "source": "outputs/scanner_geometry_e060/code/plot_orthoviews_e060.py",
+      "bytes": 7836,
+      "sha256": "a50c5c65f282265baec3016a61caf6ee5bbce26d1797aa730c9bdfb8bd2a4541"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/plot_projection_allbins.py",
+      "source": "outputs/scanner_geometry_e060/code/plot_projection_allbins.py",
+      "bytes": 4184,
+      "sha256": "b30ed10efcb91b7851fafa9a6a8d9a7b2f1f9b2308a53773f658f9bddaa0fdae"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/plot_projection_scan_waveforms.py",
+      "source": "outputs/scanner_geometry_e060/code/plot_projection_scan_waveforms.py",
+      "bytes": 8503,
+      "sha256": "2ca6a3de7587ab420bada565f64373b6901b724a686989d4f3a18987cce8a14b"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/plot_projection_smooth.py",
+      "source": "outputs/scanner_geometry_e060/code/plot_projection_smooth.py",
+      "bytes": 7927,
+      "sha256": "b8823d0ec48c5b892bfbc126d1527c224351c116dea3057d9fb677c6ad415273"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/plot_projection_triptych.py",
+      "source": "outputs/scanner_geometry_e060/code/plot_projection_triptych.py",
+      "bytes": 6013,
+      "sha256": "34e833672d9ed778381232926bc4033a570840317033263d4c8d6cb84162bbb0"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/plot_projection_with_scan.py",
+      "source": "outputs/scanner_geometry_e060/code/plot_projection_with_scan.py",
+      "bytes": 6271,
+      "sha256": "4bc82bde92ad8bb7997c155a7e0f383774d853d4684aed3754412356039167f0"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/plot_scan_waveforms_noise.py",
+      "source": "outputs/scanner_geometry_e060/code/plot_scan_waveforms_noise.py",
+      "bytes": 9044,
+      "sha256": "32bd2dfc447374e024708e13371f5621a8202e474e9b83281d4cbc44fddf6cfb"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/plot_scan_waveforms_noise_concise.py",
+      "source": "outputs/scanner_geometry_e060/code/plot_scan_waveforms_noise_concise.py",
+      "bytes": 8689,
+      "sha256": "ab789c4fec0aa107e01ac31d0ced0da509bbc454065532c74f6a9becc568b18e"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/prepare_phantom_e060.py",
+      "source": "outputs/scanner_geometry_e060/code/prepare_phantom_e060.py",
+      "bytes": 6079,
+      "sha256": "0aacfabeb9278035e16ea9db5cd4519163ed6452dbc6f3c1ea8252c3a7f8b0e1"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/prepare_sequences_e060.jl",
+      "source": "outputs/scanner_geometry_e060/code/prepare_sequences_e060.jl",
+      "bytes": 15408,
+      "sha256": "9f05b384a94fdd42dd72d9253c5531c34ec657a1c1627e3e80f9c26cfb95ceee"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/prepare_sequences_e060_v2.jl",
+      "source": "outputs/scanner_geometry_e060/code/prepare_sequences_e060_v2.jl",
+      "bytes": 16193,
+      "sha256": "53360d5e5bfb60427e2047a7c7b6d11a06080ff9090da744a1c78e5b5584fa58"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/probe_prephaser_e060.jl",
+      "source": "outputs/scanner_geometry_e060/code/probe_prephaser_e060.jl",
+      "bytes": 1789,
+      "sha256": "a26be09ecf165b656b299a2ac795a37240d3a057398476645166521e5bcc396a"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/probe_slab_profile_e060.py",
+      "source": "outputs/scanner_geometry_e060/code/probe_slab_profile_e060.py",
+      "bytes": 1282,
+      "sha256": "cd834ae807f72ad6a8f6f03308552e295854d7b5bcb1dc0a785d82eaa9ab4323"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/probe_slab_tbp_e060.jl",
+      "source": "outputs/scanner_geometry_e060/code/probe_slab_tbp_e060.jl",
+      "bytes": 2243,
+      "sha256": "6b6fc653bbb8f6c8ca683d554f0a200439ce2c4f875a0e93ef9bb5845875cca6"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/probe_te_e060.jl",
+      "source": "outputs/scanner_geometry_e060/code/probe_te_e060.jl",
+      "bytes": 1623,
+      "sha256": "c626e927ee2ef646accf3e55f1d84c556cdbb0766e8c2a2a4606bbe44809cffa"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/PROTOCOL.md",
+      "source": "outputs/scanner_geometry_e060/code/PROTOCOL.md",
+      "bytes": 4014,
+      "sha256": "ee0d343af878623b0f07167f87d4ad379d7adc9a8c3b2631a5eab08b66cc9b76"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/run_e060.jl",
+      "source": "outputs/scanner_geometry_e060/code/run_e060.jl",
+      "bytes": 24563,
+      "sha256": "bebabfe1d3d3fad869df3a76cbea6068760054db5be854440750a6e5fa4b8164"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/run_s2_prefix.ps1",
+      "source": "outputs/scanner_geometry_e060/code/run_s2_prefix.ps1",
+      "bytes": 1674,
+      "sha256": "6f21e134a51a0275d12e85d88be4f166134889c75f6c8ca912817d8f8074aa62"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/run_s2_s3.ps1",
+      "source": "outputs/scanner_geometry_e060/code/run_s2_s3.ps1",
+      "bytes": 1395,
+      "sha256": "48f552555cfc89ca05f91fbbc36c94cdf1a969338acb79eac8f5b088245e903b"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/run_s3_dual.ps1",
+      "source": "outputs/scanner_geometry_e060/code/run_s3_dual.ps1",
+      "bytes": 2177,
+      "sha256": "ddda6533fa7291eafc805002c6317a0477e1d3488247b7eab4bc3613bd779f72"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/S4_ANALYSIS.md",
+      "source": "outputs/scanner_geometry_e060/code/S4_ANALYSIS.md",
+      "bytes": 2926,
+      "sha256": "92358a3ffd5974febf02aeafffecb62e5c1d7e46c6a8fc534425dcf82d53355a"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/sequence_helpers/cartesian.jl",
+      "source": "outputs/scanner_geometry_e060/code/sequence_helpers/cartesian.jl",
+      "bytes": 1246,
+      "sha256": "6f343dc97cdf5cbd09d05dc757117583663ffee44e93cc89dc61b9441c792d13"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/sequence_helpers/excitation.jl",
+      "source": "outputs/scanner_geometry_e060/code/sequence_helpers/excitation.jl",
+      "bytes": 7193,
+      "sha256": "1fefc59d7bd681f55b2524a1b69dbe4adfd7dda7c5d49fb10f0dbbdf7426e2a5"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/sequence_helpers/gradient_design.jl",
+      "source": "outputs/scanner_geometry_e060/code/sequence_helpers/gradient_design.jl",
+      "bytes": 1202,
+      "sha256": "1a876b3c0bfeec20edec825ec332aecd296de620ab260ce4f0c40bac20bc773c"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/sequence_helpers/gre.jl",
+      "source": "outputs/scanner_geometry_e060/code/sequence_helpers/gre.jl",
+      "bytes": 16130,
+      "sha256": "0e7b90e9f37ceafa56a0b4496681e50df1354e7369f31eaa76ef3596ab6de43e"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/sequence_helpers/PC_e060.jl",
+      "source": "outputs/scanner_geometry_e060/code/sequence_helpers/PC_e060.jl",
+      "bytes": 27823,
+      "sha256": "34654772a6a649dceeb4d8bd4068e6b1e30cfe01d1ea4d166026bbb24beb2b3c"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/sequence_helpers/utils.jl",
+      "source": "outputs/scanner_geometry_e060/code/sequence_helpers/utils.jl",
+      "bytes": 911,
+      "sha256": "5271de7d0365bdaa5e460c85c8db8c07e7ccf4b3ded3cf7560d8c79b1d64fb9d"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/slab_profile.py",
+      "source": "outputs/scanner_geometry_e060/code/slab_profile.py",
+      "bytes": 3065,
+      "sha256": "2404723d747b92523d58fe011221b0b865cb7b1d4ea0bc194c84ebafb30fc688"
+    },
+    {
+      "path": "experiments/scanner_geometry_e060/code/slab_profile_v2.py",
+      "source": "outputs/scanner_geometry_e060/code/slab_profile_v2.py",
+      "bytes": 3091,
+      "sha256": "379238edacbf9ffd7ee92c0788b9e8c306eb2ea0292cdbaed652b42e03bec43d"
+    },
+    {
+      "path": "experiments/venc_unwrap_e061/code/analyze_e061.py",
+      "source": "outputs/venc_unwrap_e061/code/analyze_e061.py",
+      "bytes": 7499,
+      "sha256": "807080ff89d5a6e5276cede418902fa4f81156b7f98ece2c41a33ba7f387b5ad"
+    },
+    {
+      "path": "experiments/venc_unwrap_e061/code/build_references_e061.py",
+      "source": "outputs/venc_unwrap_e061/code/build_references_e061.py",
+      "bytes": 13015,
+      "sha256": "5be6c712c0046a07f276665d7bed637665de1e2bc2c642a5afe560c0b5e4cd2a"
+    },
+    {
+      "path": "experiments/venc_unwrap_e061/code/e061_env.ps1",
+      "source": "outputs/venc_unwrap_e061/code/e061_env.ps1",
+      "bytes": 1884,
+      "sha256": "15e1337325d8eeef588eb47a84d0829a4212881bdeaeadb2ef257e4bdc33d3c4"
+    },
+    {
+      "path": "experiments/venc_unwrap_e061/code/post_hoc_t2_diagnostic.py",
+      "source": "outputs/venc_unwrap_e061/code/post_hoc_t2_diagnostic.py",
+      "bytes": 2145,
+      "sha256": "a4d228578e434633a1cf7b74814e63d5008eeebd4dabff36c86f29e38d43ee8e"
+    },
+    {
+      "path": "experiments/venc_unwrap_e061/code/prepare_sequences_e061.jl",
+      "source": "outputs/venc_unwrap_e061/code/prepare_sequences_e061.jl",
+      "bytes": 17784,
+      "sha256": "5f9cfea65a21e4839098cc6e265e4e76da94979fc9cb0d8ccf6ccc48ace8dbca"
+    },
+    {
+      "path": "experiments/venc_unwrap_e061/code/PROTOCOL.md",
+      "source": "outputs/venc_unwrap_e061/code/PROTOCOL.md",
+      "bytes": 2854,
+      "sha256": "4a2f96c075651447551263af97dc6fa6de092b3a71e5dfa9bb73d134c1dc0f9d"
+    },
+    {
+      "path": "experiments/venc_unwrap_e061/code/run_e061.jl",
+      "source": "outputs/venc_unwrap_e061/code/run_e061.jl",
+      "bytes": 18198,
+      "sha256": "e08a07754b6d5f8ee7c2bc505c9cbbfa3a0406995c82d6ceed379186d5108f0f"
+    },
+    {
+      "path": "experiments/venc_unwrap_e061/code/sequence_helpers/cartesian.jl",
+      "source": "outputs/venc_unwrap_e061/code/sequence_helpers/cartesian.jl",
+      "bytes": 1246,
+      "sha256": "6f343dc97cdf5cbd09d05dc757117583663ffee44e93cc89dc61b9441c792d13"
+    },
+    {
+      "path": "experiments/venc_unwrap_e061/code/sequence_helpers/excitation.jl",
+      "source": "outputs/venc_unwrap_e061/code/sequence_helpers/excitation.jl",
+      "bytes": 7193,
+      "sha256": "1fefc59d7bd681f55b2524a1b69dbe4adfd7dda7c5d49fb10f0dbbdf7426e2a5"
+    },
+    {
+      "path": "experiments/venc_unwrap_e061/code/sequence_helpers/gradient_design.jl",
+      "source": "outputs/venc_unwrap_e061/code/sequence_helpers/gradient_design.jl",
+      "bytes": 1202,
+      "sha256": "1a876b3c0bfeec20edec825ec332aecd296de620ab260ce4f0c40bac20bc773c"
+    },
+    {
+      "path": "experiments/venc_unwrap_e061/code/sequence_helpers/gre.jl",
+      "source": "outputs/venc_unwrap_e061/code/sequence_helpers/gre.jl",
+      "bytes": 16130,
+      "sha256": "0e7b90e9f37ceafa56a0b4496681e50df1354e7369f31eaa76ef3596ab6de43e"
+    },
+    {
+      "path": "experiments/venc_unwrap_e061/code/sequence_helpers/PC_e060.jl",
+      "source": "outputs/venc_unwrap_e061/code/sequence_helpers/PC_e060.jl",
+      "bytes": 27823,
+      "sha256": "34654772a6a649dceeb4d8bd4068e6b1e30cfe01d1ea4d166026bbb24beb2b3c"
+    },
+    {
+      "path": "experiments/venc_unwrap_e061/code/sequence_helpers/utils.jl",
+      "source": "outputs/venc_unwrap_e061/code/sequence_helpers/utils.jl",
+      "bytes": 911,
+      "sha256": "5271de7d0365bdaa5e460c85c8db8c07e7ccf4b3ded3cf7560d8c79b1d64fb9d"
+    },
+    {
+      "path": "experiments/aorta_20bin_e062/code/analyze_e062.py",
+      "source": "outputs/aorta_20bin_e062/code/analyze_e062.py",
+      "bytes": 8439,
+      "sha256": "fa04270853c3bbf246d7e8afa07558875eba4e44551aead3558f368714ffefbd"
+    },
+    {
+      "path": "experiments/aorta_20bin_e062/code/audit_sequences_e062.py",
+      "source": "outputs/aorta_20bin_e062/code/audit_sequences_e062.py",
+      "bytes": 3983,
+      "sha256": "9a22d15219196425b03429e025a72c38aa2ab6b3a64e72547893404e23efdcaa"
+    },
+    {
+      "path": "experiments/aorta_20bin_e062/code/e062_env.ps1",
+      "source": "outputs/aorta_20bin_e062/code/e062_env.ps1",
+      "bytes": 1283,
+      "sha256": "af753257fd37d7920ad6a7b456291b4fed0e627431e4c70fd0d73c23cc917321"
+    },
+    {
+      "path": "experiments/aorta_20bin_e062/code/generate_e062.jl",
+      "source": "outputs/aorta_20bin_e062/code/generate_e062.jl",
+      "bytes": 9582,
+      "sha256": "01f99255e6bd620d3abbe63a57f144e3abb832e6d52196f84379df549b0ba552"
+    },
+    {
+      "path": "experiments/aorta_20bin_e062/code/PROTOCOL.md",
+      "source": "outputs/aorta_20bin_e062/code/PROTOCOL.md",
+      "bytes": 4781,
+      "sha256": "90a19d5cc787d3bf478a58131d02736db3eff77c3e16fc47b404ff9f78c20e8d"
+    },
+    {
+      "path": "experiments/aorta_20bin_e062/code/run_e062.ps1",
+      "source": "outputs/aorta_20bin_e062/code/run_e062.ps1",
+      "bytes": 3829,
+      "sha256": "f5fc33fd3c8d32429370394c2389bf93bc94492354b2e2f147e0b346ff9d7f99"
+    },
+    {
+      "path": "experiments/static_background_e063/code/AMENDMENT_A1_AORTA_GATE.md",
+      "source": "outputs/static_background_e063/code/AMENDMENT_A1_AORTA_GATE.md",
+      "bytes": 1255,
+      "sha256": "94e4c2e6bfa4a1d16ddfa6f7410ddf7346ed8ae58395ee83d736426dabd73e48"
+    },
+    {
+      "path": "experiments/static_background_e063/code/attempt1_build_static_geometry_e063.py",
+      "source": "outputs/static_background_e063/code/attempt1_build_static_geometry_e063.py",
+      "bytes": 7369,
+      "sha256": "a67fe815e1229bce6d11842e9aaca268fe052565a1a1e0122025b2d0b34328e0"
+    },
+    {
+      "path": "experiments/static_background_e063/code/attempt1_combine_e063.py",
+      "source": "outputs/static_background_e063/code/attempt1_combine_e063.py",
+      "bytes": 14718,
+      "sha256": "a74c80f1b10f41b668754e7453678146ba4815229ca3051516a73fd78600226c"
+    },
+    {
+      "path": "experiments/static_background_e063/code/attempt1_plot_phantom_candycane_e063.py",
+      "source": "outputs/static_background_e063/code/attempt1_plot_phantom_candycane_e063.py",
+      "bytes": 10204,
+      "sha256": "3f15adecb6c312df03dfe6d63d7043c7d4bb61b2deb0efff3996dccb68404b13"
+    },
+    {
+      "path": "experiments/static_background_e063/code/attempt3_build_static_geometry_e063.py",
+      "source": "outputs/static_background_e063/code/attempt3_build_static_geometry_e063.py",
+      "bytes": 7418,
+      "sha256": "cf6f6263f6557d22c73b3d742f4f84b7be8d4ca763ac2c0288dd627262ad4e37"
+    },
+    {
+      "path": "experiments/static_background_e063/code/build_aorta_static_phantom_e063.jl",
+      "source": "outputs/static_background_e063/code/build_aorta_static_phantom_e063.jl",
+      "bytes": 1438,
+      "sha256": "b78a50aa950af1f8be1bfa9b7ac5d058f9ae56c1625af0156363cc89a0af43fc"
+    },
+    {
+      "path": "experiments/static_background_e063/code/build_static_geometry_e063.py",
+      "source": "outputs/static_background_e063/code/build_static_geometry_e063.py",
+      "bytes": 7436,
+      "sha256": "7a91d5e5fa91c79ec201258d930a039a5e4b04cbc27bfa2f923098992392cfc5"
+    },
+    {
+      "path": "experiments/static_background_e063/code/combine_e063.py",
+      "source": "outputs/static_background_e063/code/combine_e063.py",
+      "bytes": 15083,
+      "sha256": "b7d71a9c541996c214fb12d96aad81a4021b649b1cd49e23c84eb2b75d38799d"
+    },
+    {
+      "path": "experiments/static_background_e063/code/e063_env.ps1",
+      "source": "outputs/static_background_e063/code/e063_env.ps1",
+      "bytes": 1890,
+      "sha256": "859b7c3f5826753c8c30366522b90f812469c1798dc95f436248546a22fba352"
+    },
+    {
+      "path": "experiments/static_background_e063/code/plot_aorta_candycane_e063.py",
+      "source": "outputs/static_background_e063/code/plot_aorta_candycane_e063.py",
+      "bytes": 9821,
+      "sha256": "3a569ff5050b04381b7c8056a3d367d808e292698359c19182709627e4948817"
+    },
+    {
+      "path": "experiments/static_background_e063/code/plot_phantom_candycane_e063.py",
+      "source": "outputs/static_background_e063/code/plot_phantom_candycane_e063.py",
+      "bytes": 10663,
+      "sha256": "fbc56299ebd8cc2519928f1deb9c1f8dda80699f0876a8f80eb7436f30818a1d"
+    },
+    {
+      "path": "experiments/static_background_e063/code/plot_phantom_flow_only.py",
+      "source": "outputs/static_background_e063/code/plot_phantom_flow_only.py",
+      "bytes": 9401,
+      "sha256": "ec51baf8b8c128aee68a2e95bfbb42e361dc25b894489d5af25323f6298991bf"
+    },
+    {
+      "path": "experiments/static_background_e063/code/PROTOCOL.md",
+      "source": "outputs/static_background_e063/code/PROTOCOL.md",
+      "bytes": 3992,
+      "sha256": "1f4084cac6700da68eb7a1da4ec6692c813b8e19c153033dfe4841ffe18c31d5"
+    },
+    {
+      "path": "experiments/static_background_e063/code/run_e063.ps1",
+      "source": "outputs/static_background_e063/code/run_e063.ps1",
+      "bytes": 4551,
+      "sha256": "f3b5e6fc2d11abb8bdf518da5dd8a4566a8044d78d53d1fb4f3818f1640e85fe"
+    },
+    {
+      "path": "experiments/static_background_e063/code/run_static_e063.jl",
+      "source": "outputs/static_background_e063/code/run_static_e063.jl",
+      "bytes": 19274,
+      "sha256": "5e478b3b0e4c16e80540a4d5cfadd3e964d348132286aca512f934b328984355"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/attempt11_plot_e064.py",
+      "source": "outputs/aorta_aligned_e064/code/attempt11_plot_e064.py",
+      "bytes": 13799,
+      "sha256": "3cf6ecea20aeb41cdbd0641900286d4ecdb2717aed46636cca5c5881cdaab317"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/attempt1_plot_e064.py",
+      "source": "outputs/aorta_aligned_e064/code/attempt1_plot_e064.py",
+      "bytes": 8893,
+      "sha256": "4b593994aeccd8a43c7e48c81a930943b37c07f1e5a870e945e96e1ccff308e8"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/attempt3_plot_e064.py",
+      "source": "outputs/aorta_aligned_e064/code/attempt3_plot_e064.py",
+      "bytes": 10468,
+      "sha256": "23cd9097558f73f80364b576bcf4b2a6f10d10305324da0cb2131ec7829412c2"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/attempt4_plot_e064.py",
+      "source": "outputs/aorta_aligned_e064/code/attempt4_plot_e064.py",
+      "bytes": 10649,
+      "sha256": "bc8ec8a5247067075cb8732556a6a1b539b702f55026b2f4ba43553206143093"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/attempt5_plot_e064.py",
+      "source": "outputs/aorta_aligned_e064/code/attempt5_plot_e064.py",
+      "bytes": 11573,
+      "sha256": "2a1628f110071c43020b9830ddcb80cf01e83d97ea0a14efc4e6d47f39e8770a"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/attempt6_plot_e064.py",
+      "source": "outputs/aorta_aligned_e064/code/attempt6_plot_e064.py",
+      "bytes": 12135,
+      "sha256": "5abc5d63de736275cade5ad687e5f3bbf9999a0c6289ab792ea52594fb988d41"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/attempt7_plot_e064.py",
+      "source": "outputs/aorta_aligned_e064/code/attempt7_plot_e064.py",
+      "bytes": 13506,
+      "sha256": "1508162d3d32670fc461b5988477d8c6d77af2d2316c423bd2314e1ffa47010f"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/attempt8_plot_e064.py",
+      "source": "outputs/aorta_aligned_e064/code/attempt8_plot_e064.py",
+      "bytes": 13725,
+      "sha256": "6470ee9f9d501a6b7960b5b7857aa3e2526aff37702e6fa9e159bbb1fddbc856"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/attempt9_plot_e064.py",
+      "source": "outputs/aorta_aligned_e064/code/attempt9_plot_e064.py",
+      "bytes": 13798,
+      "sha256": "6cb0d8106e0466f86e8f8d90eef4e2fc51ca3ee5ef89b0f5a0f3161bc1d01345"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/audit_sequences_e064.py",
+      "source": "outputs/aorta_aligned_e064/code/audit_sequences_e064.py",
+      "bytes": 4017,
+      "sha256": "9f4b34fe7399ae4953582402a1a6003cc32bc36c5eb4ba12373ef110b9cea89a"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/build_frame_e064.py",
+      "source": "outputs/aorta_aligned_e064/code/build_frame_e064.py",
+      "bytes": 4012,
+      "sha256": "e938fa0464616827b76cb1a726509d2ef3b3dd8122aca1e249940b5db2e27824"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/build_tissue_phantom_e064.jl",
+      "source": "outputs/aorta_aligned_e064/code/build_tissue_phantom_e064.jl",
+      "bytes": 1444,
+      "sha256": "fa626b6ecba07312c2d74c725f45c15936ba0a6b22c2ead23ad796daa1e9739e"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/e064_env.ps1",
+      "source": "outputs/aorta_aligned_e064/code/e064_env.ps1",
+      "bytes": 1285,
+      "sha256": "e996a268d67099c7f8e8309d127a90458ddcb611003403bf67b9803e7c2b6edd"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/generate_e064.jl",
+      "source": "outputs/aorta_aligned_e064/code/generate_e064.jl",
+      "bytes": 10112,
+      "sha256": "e4e3b3522d718aaac8f0062cc968ac96951ce773a57fda3a82ab4c305aff07fe"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/plot_e064.py",
+      "source": "outputs/aorta_aligned_e064/code/plot_e064.py",
+      "bytes": 13907,
+      "sha256": "84bdab0f3250145a16cdaa29cfbbf566677e28e5e1f175ac09b103daccf77fcd"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/PROTOCOL.md",
+      "source": "outputs/aorta_aligned_e064/code/PROTOCOL.md",
+      "bytes": 3289,
+      "sha256": "0965c2ff7fe32bcafa0dc45e7408cb1d1f400218a6883565796a7e119b629cab"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/rotate_phantom_e064.jl",
+      "source": "outputs/aorta_aligned_e064/code/rotate_phantom_e064.jl",
+      "bytes": 3368,
+      "sha256": "caad4a797f8abd3a0541f8b8277b1a1dc0d1d32a5dd938f16552120a286ad351"
+    },
+    {
+      "path": "experiments/aorta_aligned_e064/code/run_e064.ps1",
+      "source": "outputs/aorta_aligned_e064/code/run_e064.ps1",
+      "bytes": 4285,
+      "sha256": "a51bda301b4060248fc30e51d868045fa6242e7a9526b5b83397862fa19aa58e"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/align_seam_e065.jl",
+      "source": "outputs/dp122_native_e065/code/align_seam_e065.jl",
+      "bytes": 5259,
+      "sha256": "a9d2b568ddc813e49b04cc37e9cc1aac64b05d9ab613ca9af1d1b806bde3c103"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/analyze_e065.py",
+      "source": "outputs/dp122_native_e065/code/analyze_e065.py",
+      "bytes": 14285,
+      "sha256": "d674a65a57657a0585c651b4a6804c70bafa8d7e40e9fea8a64b367cab10831b"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/analyze_extended_e065.py",
+      "source": "outputs/dp122_native_e065/code/analyze_extended_e065.py",
+      "bytes": 18361,
+      "sha256": "939de7d7481cc2a33b1dea034aa9c85b5bce42de7a1019fe6bbac6b6c5845981"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/attempt1_plot_scan_cfd_koma_e065.py",
+      "source": "outputs/dp122_native_e065/code/attempt1_plot_scan_cfd_koma_e065.py",
+      "bytes": 10541,
+      "sha256": "e8891c2e0e84061e2d429a8864117edf9f6c9b1db31afd00b7db8ef4104a8426"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/attempt2_plot_scan_cfd_koma_e065.py",
+      "source": "outputs/dp122_native_e065/code/attempt2_plot_scan_cfd_koma_e065.py",
+      "bytes": 10669,
+      "sha256": "fe41eaa49519552bffa1ecf1537d6b3048e6721739f003c694ae6099f62ed2d7"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/bland_altman_scan_e065.py",
+      "source": "outputs/dp122_native_e065/code/bland_altman_scan_e065.py",
+      "bytes": 8143,
+      "sha256": "90abccffebb47cefa0fe216d8dfe8bfc81408c557648f890597e18014c748c3c"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/build_dp122_mri_static.py",
+      "source": "outputs/dp122_native_e065/code/build_dp122_mri_static.py",
+      "bytes": 13168,
+      "sha256": "67a351511d8c221903d2fbb67a45c7243b2af3fef36319942c2e0b9aed70f4ad"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/build_dp122_periodic_flow.py",
+      "source": "outputs/dp122_native_e065/code/build_dp122_periodic_flow.py",
+      "bytes": 9858,
+      "sha256": "5ed7ae1d0aa114f6e36d7ccae75c44b83fe9579d95b73d7028244e690e8a639d"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/build_references_e065.py",
+      "source": "outputs/dp122_native_e065/code/build_references_e065.py",
+      "bytes": 5154,
+      "sha256": "b59227a4f29b3ac0ed20537209240af02f83c7bf93970069455b2f61d45c03db"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/convert_dp122_fluent_cff.py",
+      "source": "outputs/dp122_native_e065/code/convert_dp122_fluent_cff.py",
+      "bytes": 17048,
+      "sha256": "90cd28b37edeb0aa9105f30bd708d228f1fedb0283a3ff4eabedd3d1d96aaeb8"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/e065_env.ps1",
+      "source": "outputs/dp122_native_e065/code/e065_env.ps1",
+      "bytes": 232,
+      "sha256": "d93e5e71475e8deee1e62c8629713e259c3ffdd18bb638c8e864cee20fdb2587"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/export_300k_e065.py",
+      "source": "outputs/dp122_native_e065/code/export_300k_e065.py",
+      "bytes": 6200,
+      "sha256": "0fb041a9d67c05be067fe6ca92af91c4e9e4aaf401b4855de9b817cf7fdf63ba"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/plot_orthoviews_e065.py",
+      "source": "outputs/dp122_native_e065/code/plot_orthoviews_e065.py",
+      "bytes": 3244,
+      "sha256": "f4b2d08f347205fc7b27a8831ea033f547f423cac858bc58ca5d03dfd60cbfc4"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/plot_peak_systole_e065.py",
+      "source": "outputs/dp122_native_e065/code/plot_peak_systole_e065.py",
+      "bytes": 9596,
+      "sha256": "842935067a87b5267b5a32ef866c2cc69caafe21ed807299d4aa582122d2505f"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/plot_scan_cfd_koma_e065.py",
+      "source": "outputs/dp122_native_e065/code/plot_scan_cfd_koma_e065.py",
+      "bytes": 10909,
+      "sha256": "b527a6d5d18595d7e67d11ab6d6c46d7c99ab545700edbbd627408b21d60028c"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/prepare_sequences_e065.jl",
+      "source": "outputs/dp122_native_e065/code/prepare_sequences_e065.jl",
+      "bytes": 16822,
+      "sha256": "6e52efa344811c2b3eb0e950aa1f36eb7bbc8abe0aa629fdf158427bc5203371"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/PROTOCOL.md",
+      "source": "outputs/dp122_native_e065/code/PROTOCOL.md",
+      "bytes": 1057,
+      "sha256": "c2a4152e77d46786b5639bd32af2dfc8350c694a66eed567124c65f3801c9305"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/run_e065.jl",
+      "source": "outputs/dp122_native_e065/code/run_e065.jl",
+      "bytes": 23949,
+      "sha256": "ea022e63a8ce19c2172aea1732fc4e67e7d38b91582382c8996506e4f2821cef"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/run_prefix_e065.ps1",
+      "source": "outputs/dp122_native_e065/code/run_prefix_e065.ps1",
+      "bytes": 1268,
+      "sha256": "19603572804445b64d986c814e014d3becdfb86ad6011e36d07169b1081cefae"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/section_flows_e065.py",
+      "source": "outputs/dp122_native_e065/code/section_flows_e065.py",
+      "bytes": 1407,
+      "sha256": "76df13594e7cb949147ba31fb108735089375a7a73d28c0cb57ae0c21c63c9ea"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/track_dp122_mri_full.py",
+      "source": "outputs/dp122_native_e065/code/track_dp122_mri_full.py",
+      "bytes": 23742,
+      "sha256": "79ac437d68ec908ef15ac408ebd4f5ab73459c83f0613c368a74e737b81601c6"
+    },
+    {
+      "path": "experiments/dp122_native_e065/code/validate_dp122_tracking_convergence.py",
+      "source": "outputs/dp122_native_e065/code/validate_dp122_tracking_convergence.py",
+      "bytes": 18460,
+      "sha256": "a00f76d0d3839933fa57ba9bffb6fd41aebbf7db1dcabc788249dca30c6e416d"
+    },
+    {
+      "path": "experiments/dp122_1m_slab_e066/code/attempt1_export_restricted_e066.py",
+      "source": "outputs/dp122_1m_slab_e066/code/attempt1_export_restricted_e066.py",
+      "bytes": 6476,
+      "sha256": "d83802b0f10756fcb1a83c050ed5d65b916406545a182e680b94de019a4d009e"
+    },
+    {
+      "path": "experiments/dp122_1m_slab_e066/code/attempt2_export_restricted_e066.py",
+      "source": "outputs/dp122_1m_slab_e066/code/attempt2_export_restricted_e066.py",
+      "bytes": 6691,
+      "sha256": "d42aabef84cb9d126a31f2fd71d3cb0516fdd911d1ed003d6d28a87327f3cc74"
+    },
+    {
+      "path": "experiments/dp122_1m_slab_e066/code/e066_env.ps1",
+      "source": "outputs/dp122_1m_slab_e066/code/e066_env.ps1",
+      "bytes": 194,
+      "sha256": "58ca1e3c067d5aad33ba2cbfaca1ef43e2dd435e3f18d8a68e5e9f8ae65880e5"
+    },
+    {
+      "path": "experiments/dp122_1m_slab_e066/code/export_restricted_e066.py",
+      "source": "outputs/dp122_1m_slab_e066/code/export_restricted_e066.py",
+      "bytes": 8434,
+      "sha256": "4ffe69fffff3172e8c7c8291232c4e108cc76b575552d765e75aad50542bd06f"
+    },
+    {
+      "path": "experiments/dp122_1m_slab_e066/code/PROTOCOL.md",
+      "source": "outputs/dp122_1m_slab_e066/code/PROTOCOL.md",
+      "bytes": 1455,
+      "sha256": "b26642fd944f432121ec9ea018ce82d297c8ae8c37357f5b382848034a5ee1c6"
+    },
+    {
+      "path": "experiments/dp122_1m_slab_e066/code/run_e066.jl",
+      "source": "outputs/dp122_1m_slab_e066/code/run_e066.jl",
+      "bytes": 26200,
+      "sha256": "9b14cc78484d323291f546a738e9c94bcff3c7d814b65fc6fc0fd4553b6ac111"
+    },
+    {
+      "path": "experiments/dp122_1m_slab_e066/code/slab_profile_wide_e066.py",
+      "source": "outputs/dp122_1m_slab_e066/code/slab_profile_wide_e066.py",
+      "bytes": 1879,
+      "sha256": "661727c0e8bfbd195b6c894b6d192c49b6f8aa4921a9711e78c25079209f4bc6"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/aorta_common.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/aorta_common.py",
+      "bytes": 8208,
+      "sha256": "c22b07eebf4358e94005340065e2a057c08281880500c710b0b439f08b799479"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/aorta_secondary_flow.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/aorta_secondary_flow.py",
+      "bytes": 11609,
+      "sha256": "d6d3202e4c6c14e96937a6c32119062ffe4189f773b32c0689c0cc7c323be71f"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt10_plot_aorta_20bin.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt10_plot_aorta_20bin.py",
+      "bytes": 21590,
+      "sha256": "d2552fc39540ccc8bad88575f7ef4546151a078a2f9403e022952538277f10db"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt11_plot_aorta_20bin.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt11_plot_aorta_20bin.py",
+      "bytes": 21802,
+      "sha256": "c1536420a0afe86ee66b0dbd71e028b20397e98ee0e6a2653a2f72ea41980956"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt1_aorta_secondary_flow.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt1_aorta_secondary_flow.py",
+      "bytes": 10193,
+      "sha256": "95dac6617d9b4574565fab270e9de07102bca9707c056248e340ec3a0a089d54"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt1_plot_aorta_20bin.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt1_plot_aorta_20bin.py",
+      "bytes": 15114,
+      "sha256": "f3e5934b0eedf26d91b80625ae68ebec8bae29c0f88d33cd14607b184934c6d4"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt1_plot_aorta_highres.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt1_plot_aorta_highres.py",
+      "bytes": 16489,
+      "sha256": "4b27771a258eb4dfc0522977b157bc44bb3ff3ab98ecede706170f132ad7297f"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt1_plot_aorta_noise_waveforms.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt1_plot_aorta_noise_waveforms.py",
+      "bytes": 8693,
+      "sha256": "bf5bc7be3c734aa6a1e1c4c22ad56a7527d62413b5bbe14bad58fd71d329f762"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt1_plot_aorta_orthoviews.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt1_plot_aorta_orthoviews.py",
+      "bytes": 9797,
+      "sha256": "f5f6b98cb22919586ff9eafb4e68d9e4a8d105a98283dc41e5a28234c8869210"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt2_aorta_secondary_flow.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt2_aorta_secondary_flow.py",
+      "bytes": 10981,
+      "sha256": "36fbe8790d8aecdc6ce83ea077d363b5a15e0b3a017c538193d2ab7997c558b2"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt2_plot_aorta_20bin.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt2_plot_aorta_20bin.py",
+      "bytes": 16926,
+      "sha256": "eb6c0e7205be6025f7e98e822fa16f574900d0fbeeffcc1ccc60b1f01a9d9153"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt2_plot_aorta_highres.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt2_plot_aorta_highres.py",
+      "bytes": 16540,
+      "sha256": "28d6b8d45154c180d77e93fe3e5d7b6a29d0b7d365343a6a13a80f66cc54ac73"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt2_plot_aorta_noise_waveforms.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt2_plot_aorta_noise_waveforms.py",
+      "bytes": 9650,
+      "sha256": "b2c2186b5eb16413772b74f763d0ec1e2a283b43c37bc530304de0e7a0cad882"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt3_aorta_secondary_flow.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt3_aorta_secondary_flow.py",
+      "bytes": 11114,
+      "sha256": "92a90b1b2a3bbac120f18aaa812888493876f667679bc02baaa7560242d39729"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt3_plot_aorta_20bin.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt3_plot_aorta_20bin.py",
+      "bytes": 17656,
+      "sha256": "a2897aca41868bad8d15fcdaba8d611766e61e94625039c03a67c3cf52f10732"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt3_plot_aorta_highres.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt3_plot_aorta_highres.py",
+      "bytes": 17556,
+      "sha256": "ce018cfba52c00ed5380eae561b8e913a40be0559f6f17882bd2114cf62d3e71"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt4_aorta_secondary_flow.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt4_aorta_secondary_flow.py",
+      "bytes": 11111,
+      "sha256": "adb3e4353338593da11004c3b2e4e4d40a6848bc9f75ae1aa22f596368e676d6"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt4_plot_aorta_20bin.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt4_plot_aorta_20bin.py",
+      "bytes": 17657,
+      "sha256": "c87952c460d3ef1a020f95d004549597c8a0918e2ae0c612e44e4446cac47ac6"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt5_aorta_secondary_flow.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt5_aorta_secondary_flow.py",
+      "bytes": 11538,
+      "sha256": "2d291b8bbaf732fd0008fcd6b3cbbe3086f9fa25515afec56b1f71bcdac33109"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt5_plot_aorta_20bin.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt5_plot_aorta_20bin.py",
+      "bytes": 18385,
+      "sha256": "b45c1be86c6884cfe36c02eda60ddf119e9018b71940737dee497ded02bb44e4"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt6_plot_aorta_20bin.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt6_plot_aorta_20bin.py",
+      "bytes": 18363,
+      "sha256": "271d9fd62c0ccf580ab5f29907d6dd585d41176daa46928877c14298d2bdb0c9"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt7_plot_aorta_20bin.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt7_plot_aorta_20bin.py",
+      "bytes": 17100,
+      "sha256": "385420f0fa5264cf057ec01adb3e1147cd32676508b2e5dca41d3049b954861b"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt8_plot_aorta_20bin.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt8_plot_aorta_20bin.py",
+      "bytes": 18812,
+      "sha256": "6de3bcf66065889c8ee3e53d6d99599eb02a3dfc0393635a739e157d2a064a93"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/attempt9_plot_aorta_20bin.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/attempt9_plot_aorta_20bin.py",
+      "bytes": 19274,
+      "sha256": "1c95524a40d557e3f0beb1b70ae54796c97700e0aa3bebbf31cce9620c97e4c1"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/plot_aorta_20bin.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/plot_aorta_20bin.py",
+      "bytes": 21867,
+      "sha256": "191d4104d47de1b20ba361bfe51390d8c77ff9b99ef31191996a25740bc37935"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/plot_aorta_allbins20.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/plot_aorta_allbins20.py",
+      "bytes": 9577,
+      "sha256": "1df9f63af86cb980ecd49e87cf3909b31ee0428fd0445f0bc2ee00e5d352088d"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/plot_aorta_highres.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/plot_aorta_highres.py",
+      "bytes": 17784,
+      "sha256": "a534bf7f0d992adeff497e316cfa367e5984a40fb7353687c5697c8cb2e6d999"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/plot_aorta_noise_waveforms.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/plot_aorta_noise_waveforms.py",
+      "bytes": 10341,
+      "sha256": "72c3afbc4d3ca0d0f909fe1c4cd70826276d83120761b11490d3b6312fd33a99"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/plot_aorta_orthoviews_snr12_v1.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/plot_aorta_orthoviews_snr12_v1.py",
+      "bytes": 14586,
+      "sha256": "605c428d4f7f705041c454778558649a954bc1fe4d7b897c575e520fb579a587"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/plot_aorta_orthoviews_v1.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/plot_aorta_orthoviews_v1.py",
+      "bytes": 9797,
+      "sha256": "f5f6b98cb22919586ff9eafb4e68d9e4a8d105a98283dc41e5a28234c8869210"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/plot_aorta_orthoviews_v2.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/plot_aorta_orthoviews_v2.py",
+      "bytes": 10743,
+      "sha256": "86d99426c1a0cfedf74906bc118a91139937b2b8b2fd4499f76f9f38ec028465"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/verify_magnitude_orthoviews_snr12_v1.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/verify_magnitude_orthoviews_snr12_v1.py",
+      "bytes": 5658,
+      "sha256": "aee9cf77f751b8ca1a2a5da41f4d35d93d87b6f12b0ee7e7ff6d9b05911ea158"
+    },
+    {
+      "path": "experiments/aorta_presentation_2026-10-25/code/verify_magnitude_orthoviews_v1.py",
+      "source": "outputs/aorta_presentation_2026-10-25/code/verify_magnitude_orthoviews_v1.py",
+      "bytes": 3112,
+      "sha256": "4547fe8dcd82df2a691afbfb29ff38920440e62197b73cc821ff9a6373c30b49"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/attempt1_cfd_inlet_waveform.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/attempt1_cfd_inlet_waveform.py",
+      "bytes": 7924,
+      "sha256": "20cf5dce27a8eecc733823b46044f4ff3eda30b2a7dec8363918742d572332a2"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/attempt1_plot_aorta_candycane.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/attempt1_plot_aorta_candycane.py",
+      "bytes": 7311,
+      "sha256": "213744c98feec9215ad4832e8474d3703c57546ffdb7356054bb47dd33398433"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/attempt1_plot_magnitude_views.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/attempt1_plot_magnitude_views.py",
+      "bytes": 4279,
+      "sha256": "067e3444c89b1471dec6d8111e36d917d873914748b551972820e5d1b82ba1ad"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/attempt1_plot_phantom_mag_phase.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/attempt1_plot_phantom_mag_phase.py",
+      "bytes": 4384,
+      "sha256": "a1a4a726c7b461440526390c697f33ea1963ed09081d0457ea5142bfa82602aa"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/attempt1_plot_phase_views.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/attempt1_plot_phase_views.py",
+      "bytes": 5076,
+      "sha256": "7810e6a0c3252a7669ce847ae7171fab623e45fb506693a38a123e38639fc479"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/attempt1_plot_typical_4dflow_views.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/attempt1_plot_typical_4dflow_views.py",
+      "bytes": 5541,
+      "sha256": "c90f9881d55751cf2165bd83ffa3dba8e204cfd13e1f587bb089b3a9c85a823c"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/attempt2_plot_aorta_candycane.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/attempt2_plot_aorta_candycane.py",
+      "bytes": 7969,
+      "sha256": "70afa440ce38ceee0a54e9c4fbc77ffffb30dc264aaebb0405b60ef996078fab"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/attempt2_plot_magnitude_views.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/attempt2_plot_magnitude_views.py",
+      "bytes": 4400,
+      "sha256": "37986ad89c75803b8e8b33b0f0d2de7b91b0a6cfe8fb2cf4cafb24bb29d1b3b9"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/attempt3_plot_aorta_candycane.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/attempt3_plot_aorta_candycane.py",
+      "bytes": 8081,
+      "sha256": "e860da3b7fd544535e33e104d5a1f73fea1dee7a872898216f712ae3658ab851"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/bland_altman.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/bland_altman.py",
+      "bytes": 8028,
+      "sha256": "e6ede5820f17032afad223e377686bd60d6cd4c98a89a18ebd980c18855c1b0a"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/bland_altman_case_titles_v2.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/bland_altman_case_titles_v2.py",
+      "bytes": 6497,
+      "sha256": "ab9f5b60d4664d25769085aaef54ca433867e1f6e6948cecb68a678869b07fef"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/bland_altman_consistent_legends_v6.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/bland_altman_consistent_legends_v6.py",
+      "bytes": 9568,
+      "sha256": "be6803c17b22f9f99383875160d1bdc45f7e912908d48bc59b1a70bb08515828"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/bland_altman_final_titles_v4.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/bland_altman_final_titles_v4.py",
+      "bytes": 7287,
+      "sha256": "e759bef7456d149b5dbe8082fc8546b5d8d5b9c34fc91d575bed219532959960"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/bland_altman_large_font_v3.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/bland_altman_large_font_v3.py",
+      "bytes": 7061,
+      "sha256": "1feca83dfce11c864c178ac58bc7e542d410ee143bab888f13b3ab089c6b76cc"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/bland_altman_uniform_markers_v5.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/bland_altman_uniform_markers_v5.py",
+      "bytes": 8307,
+      "sha256": "6585bea3e7409bb1dd7d89ebfaabc38c50e4b2e3e15ebf437e95dd5cb191d726"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/cfd_inlet_waveform.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/cfd_inlet_waveform.py",
+      "bytes": 8121,
+      "sha256": "46461cba4599bdbc76f4938080b909ec6eb32dff4301de71c22c222fd47826e7"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/energy_ke_el.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/energy_ke_el.py",
+      "bytes": 12904,
+      "sha256": "3d8aa349abe6a731922cca47649779b5eef6d4ac744a922f15bdb6196a65f7f5"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/plot_aorta_candycane.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/plot_aorta_candycane.py",
+      "bytes": 8172,
+      "sha256": "ecb590e99de039bd4f3f141595c70a2e274cc6c8c6b5d843e7005f3b9f35ef99"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/plot_magnitude_views.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/plot_magnitude_views.py",
+      "bytes": 4660,
+      "sha256": "805a859fe21dff9cb8376a1748076cdfcfd60c9bc65e4490ea49f61762cb804b"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/plot_phantom_mag_phase.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/plot_phantom_mag_phase.py",
+      "bytes": 5538,
+      "sha256": "731b5bb2b0ee2483ac76b938400c74df47bebe097ddf90b993d8d528ef93b488"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/plot_phase_views.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/plot_phase_views.py",
+      "bytes": 6064,
+      "sha256": "869be1285bdbc9dca320f71fe638e4e45f06acd66d7645f7f51777d09bba4559"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/plot_phase_views_v3.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/plot_phase_views_v3.py",
+      "bytes": 5688,
+      "sha256": "7d9aee2126f7d61cf115313fc0c05bb207b503bf18aa13c0179be06235b8d466"
+    },
+    {
+      "path": "experiments/presentation_hemodynamics_2026-10-25/code/plot_typical_4dflow_views.py",
+      "source": "outputs/presentation_hemodynamics_2026-10-25/code/plot_typical_4dflow_views.py",
+      "bytes": 7567,
+      "sha256": "59499d49b3236c58a7d207422209ecfa347fabdd826ac97d48f5c7bf92728dad"
+    },
+    {
+      "path": "experiments/magnitude_layout_2026-10-27/code/attempt1_organize_magnitude.py",
+      "source": "outputs/magnitude_layout_2026-10-27/code/attempt1_organize_magnitude.py",
+      "bytes": 9023,
+      "sha256": "b61d12fe5cf0b19aac5f24467ff0724f7fc61ef6da9d924953d372c08b0f6f92"
+    },
+    {
+      "path": "experiments/magnitude_layout_2026-10-27/code/inspect_phase_panels_v1.py",
+      "source": "outputs/magnitude_layout_2026-10-27/code/inspect_phase_panels_v1.py",
+      "bytes": 636,
+      "sha256": "bde5943f32a7b8b072ba33ad998e5ca5a43ae56c19cc3650101e289850b990b6"
+    },
+    {
+      "path": "experiments/magnitude_layout_2026-10-27/code/organize_attached_phase_v2.py",
+      "source": "outputs/magnitude_layout_2026-10-27/code/organize_attached_phase_v2.py",
+      "bytes": 15524,
+      "sha256": "edcf4019ee0d41e9079dd7996576b77213543eea17de0b67b73284dce3c020ab"
+    },
+    {
+      "path": "experiments/magnitude_layout_2026-10-27/code/organize_attached_phase_v3.py",
+      "source": "outputs/magnitude_layout_2026-10-27/code/organize_attached_phase_v3.py",
+      "bytes": 15522,
+      "sha256": "1e1a4ac859afb57fa4ca5374b103ddc3a202b9b6746b11e2344a7d2d0c40852c"
+    },
+    {
+      "path": "experiments/magnitude_layout_2026-10-27/code/organize_attached_phase_v4.py",
+      "source": "outputs/magnitude_layout_2026-10-27/code/organize_attached_phase_v4.py",
+      "bytes": 15709,
+      "sha256": "4dbac329c350664dadbea634966577cfb06ae85bbfdb01c8129ede7deea7c266"
+    },
+    {
+      "path": "experiments/magnitude_layout_2026-10-27/code/organize_attached_phase_v5.py",
+      "source": "outputs/magnitude_layout_2026-10-27/code/organize_attached_phase_v5.py",
+      "bytes": 15550,
+      "sha256": "9fa5ce03a1d5e4a72971a1e11fb7c0614872d16b47c3a7922216db6a3d747382"
+    },
+    {
+      "path": "experiments/magnitude_layout_2026-10-27/code/organize_attached_phase_v6.py",
+      "source": "outputs/magnitude_layout_2026-10-27/code/organize_attached_phase_v6.py",
+      "bytes": 18173,
+      "sha256": "ada6573d4b3d56227bbef96e0860da0c97fb66e15b08c738837a82156e4d96d7"
+    },
+    {
+      "path": "experiments/magnitude_layout_2026-10-27/code/organize_magnitude_phase_v1.py",
+      "source": "outputs/magnitude_layout_2026-10-27/code/organize_magnitude_phase_v1.py",
+      "bytes": 13812,
+      "sha256": "f0d3b9ee8d0b58a7307e58c18fae1670c538e4013579b2b614613b1ea06db41c"
+    },
+    {
+      "path": "experiments/magnitude_layout_2026-10-27/code/organize_magnitude_v1.py",
+      "source": "outputs/magnitude_layout_2026-10-27/code/organize_magnitude_v1.py",
+      "bytes": 9023,
+      "sha256": "b61d12fe5cf0b19aac5f24467ff0724f7fc61ef6da9d924953d372c08b0f6f92"
+    },
+    {
+      "path": "experiments/magnitude_layout_2026-10-27/code/organize_magnitude_v2.py",
+      "source": "outputs/magnitude_layout_2026-10-27/code/organize_magnitude_v2.py",
+      "bytes": 8988,
+      "sha256": "241c6dd95ec227c9b27209dcb062f7eacec4d5f74c9a212570ca6b7e15572707"
+    },
+    {
+      "path": "experiments/magnitude_layout_2026-10-27/code/organize_magnitude_v3.py",
+      "source": "outputs/magnitude_layout_2026-10-27/code/organize_magnitude_v3.py",
+      "bytes": 8975,
+      "sha256": "eb9de2ef630d175b2c7dc4d7b8a72bbe834e696455a898abcca115e9d59d35f1"
+    },
+    {
+      "path": "experiments/magnitude_layout_2026-10-27/code/organize_magnitude_v4.py",
+      "source": "outputs/magnitude_layout_2026-10-27/code/organize_magnitude_v4.py",
+      "bytes": 10085,
+      "sha256": "e00e536e0b7337ca38055cafabbe7a55b78bd216460131a8c12cec7e43940f90"
+    },
+    {
+      "path": "experiments/slice_comparison_e055_v1/code/plot_orthoviews.py",
+      "source": "outputs/slice_comparison_e055_v1/code/plot_orthoviews.py",
+      "bytes": 8074,
+      "sha256": "b99d859fb98cedef8dea89d6b38f55cec2efcef51c460b2f08dbf0e0ec0a2be0"
+    },
+    {
+      "path": "experiments/slice_comparison_e055_v1/code/plot_slices.py",
+      "source": "outputs/slice_comparison_e055_v1/code/plot_slices.py",
+      "bytes": 10889,
+      "sha256": "62a437f46c0065fe4ef3c7e2991326f6a9ec980ced5d76d5fe232730fe184800"
+    },
+    {
+      "path": "figure_tools/magnitude_layout_2026-10-27/attempt1_organize_magnitude.py",
+      "source": "presentation_controls/magnitude_layout_2026-10-27/attempt1_organize_magnitude.py",
+      "bytes": 9023,
+      "sha256": "b61d12fe5cf0b19aac5f24467ff0724f7fc61ef6da9d924953d372c08b0f6f92"
+    },
+    {
+      "path": "figure_tools/magnitude_layout_2026-10-27/attempt3_organize_magnitude.py",
+      "source": "presentation_controls/magnitude_layout_2026-10-27/attempt3_organize_magnitude.py",
+      "bytes": 8975,
+      "sha256": "eb9de2ef630d175b2c7dc4d7b8a72bbe834e696455a898abcca115e9d59d35f1"
+    },
+    {
+      "path": "figure_tools/magnitude_layout_2026-10-27/inspect_phase_panels_v1.py",
+      "source": "presentation_controls/magnitude_layout_2026-10-27/inspect_phase_panels_v1.py",
+      "bytes": 636,
+      "sha256": "bde5943f32a7b8b072ba33ad998e5ca5a43ae56c19cc3650101e289850b990b6"
+    },
+    {
+      "path": "figure_tools/magnitude_layout_2026-10-27/organize_attached_phase_v2.py",
+      "source": "presentation_controls/magnitude_layout_2026-10-27/organize_attached_phase_v2.py",
+      "bytes": 15524,
+      "sha256": "edcf4019ee0d41e9079dd7996576b77213543eea17de0b67b73284dce3c020ab"
+    },
+    {
+      "path": "figure_tools/magnitude_layout_2026-10-27/organize_attached_phase_v3.py",
+      "source": "presentation_controls/magnitude_layout_2026-10-27/organize_attached_phase_v3.py",
+      "bytes": 15522,
+      "sha256": "1e1a4ac859afb57fa4ca5374b103ddc3a202b9b6746b11e2344a7d2d0c40852c"
+    },
+    {
+      "path": "figure_tools/magnitude_layout_2026-10-27/organize_attached_phase_v4.py",
+      "source": "presentation_controls/magnitude_layout_2026-10-27/organize_attached_phase_v4.py",
+      "bytes": 15709,
+      "sha256": "4dbac329c350664dadbea634966577cfb06ae85bbfdb01c8129ede7deea7c266"
+    },
+    {
+      "path": "figure_tools/magnitude_layout_2026-10-27/organize_attached_phase_v5.py",
+      "source": "presentation_controls/magnitude_layout_2026-10-27/organize_attached_phase_v5.py",
+      "bytes": 15550,
+      "sha256": "9fa5ce03a1d5e4a72971a1e11fb7c0614872d16b47c3a7922216db6a3d747382"
+    },
+    {
+      "path": "figure_tools/magnitude_layout_2026-10-27/organize_attached_phase_v6.py",
+      "source": "presentation_controls/magnitude_layout_2026-10-27/organize_attached_phase_v6.py",
+      "bytes": 18173,
+      "sha256": "ada6573d4b3d56227bbef96e0860da0c97fb66e15b08c738837a82156e4d96d7"
+    },
+    {
+      "path": "figure_tools/magnitude_layout_2026-10-27/organize_magnitude_phase_v1.py",
+      "source": "presentation_controls/magnitude_layout_2026-10-27/organize_magnitude_phase_v1.py",
+      "bytes": 13812,
+      "sha256": "f0d3b9ee8d0b58a7307e58c18fae1670c538e4013579b2b614613b1ea06db41c"
+    },
+    {
+      "path": "figure_tools/magnitude_layout_2026-10-27/organize_magnitude_v1.py",
+      "source": "presentation_controls/magnitude_layout_2026-10-27/organize_magnitude_v1.py",
+      "bytes": 9023,
+      "sha256": "b61d12fe5cf0b19aac5f24467ff0724f7fc61ef6da9d924953d372c08b0f6f92"
+    },
+    {
+      "path": "figure_tools/magnitude_layout_2026-10-27/organize_magnitude_v2.py",
+      "source": "presentation_controls/magnitude_layout_2026-10-27/organize_magnitude_v2.py",
+      "bytes": 8988,
+      "sha256": "241c6dd95ec227c9b27209dcb062f7eacec4d5f74c9a212570ca6b7e15572707"
+    },
+    {
+      "path": "figure_tools/magnitude_layout_2026-10-27/organize_magnitude_v3.py",
+      "source": "presentation_controls/magnitude_layout_2026-10-27/organize_magnitude_v3.py",
+      "bytes": 8975,
+      "sha256": "eb9de2ef630d175b2c7dc4d7b8a72bbe834e696455a898abcca115e9d59d35f1"
+    },
+    {
+      "path": "figure_tools/magnitude_layout_2026-10-27/organize_magnitude_v4.py",
+      "source": "presentation_controls/magnitude_layout_2026-10-27/organize_magnitude_v4.py",
+      "bytes": 10085,
+      "sha256": "e00e536e0b7337ca38055cafabbe7a55b78bd216460131a8c12cec7e43940f90"
+    },
+    {
+      "path": "figure_tools/bland_altman_titles_2026-10-27/label_cases_v1.py",
+      "source": "presentation_controls/bland_altman_titles_2026-10-27/label_cases_v1.py",
+      "bytes": 6497,
+      "sha256": "ab9f5b60d4664d25769085aaef54ca433867e1f6e6948cecb68a678869b07fef"
+    },
+    {
+      "path": "figure_tools/bland_altman_titles_2026-10-27/label_cases_v2.py",
+      "source": "presentation_controls/bland_altman_titles_2026-10-27/label_cases_v2.py",
+      "bytes": 7061,
+      "sha256": "1feca83dfce11c864c178ac58bc7e542d410ee143bab888f13b3ab089c6b76cc"
+    },
+    {
+      "path": "figure_tools/bland_altman_titles_2026-10-27/label_cases_v3.py",
+      "source": "presentation_controls/bland_altman_titles_2026-10-27/label_cases_v3.py",
+      "bytes": 7287,
+      "sha256": "e759bef7456d149b5dbe8082fc8546b5d8d5b9c34fc91d575bed219532959960"
+    },
+    {
+      "path": "figure_tools/bland_altman_titles_2026-10-27/label_cases_v4.py",
+      "source": "presentation_controls/bland_altman_titles_2026-10-27/label_cases_v4.py",
+      "bytes": 8307,
+      "sha256": "6585bea3e7409bb1dd7d89ebfaabc38c50e4b2e3e15ebf437e95dd5cb191d726"
+    },
+    {
+      "path": "figure_tools/bland_altman_titles_2026-10-27/label_cases_v5.py",
+      "source": "presentation_controls/bland_altman_titles_2026-10-27/label_cases_v5.py",
+      "bytes": 9568,
+      "sha256": "be6803c17b22f9f99383875160d1bdc45f7e912908d48bc59b1a70bb08515828"
+    },
+    {
+      "path": "figure_tools/aorta_orthoviews_1m_2026-10-25/attempt1_plot_aorta_orthoviews.py",
+      "source": "presentation_controls/aorta_orthoviews_1m_2026-10-25/attempt1_plot_aorta_orthoviews.py",
+      "bytes": 9797,
+      "sha256": "f5f6b98cb22919586ff9eafb4e68d9e4a8d105a98283dc41e5a28234c8869210"
+    },
+    {
+      "path": "figure_tools/aorta_orthoviews_1m_2026-10-25/plot_aorta_orthoviews_snr12_v1.py",
+      "source": "presentation_controls/aorta_orthoviews_1m_2026-10-25/plot_aorta_orthoviews_snr12_v1.py",
+      "bytes": 14586,
+      "sha256": "605c428d4f7f705041c454778558649a954bc1fe4d7b897c575e520fb579a587"
+    },
+    {
+      "path": "figure_tools/aorta_orthoviews_1m_2026-10-25/plot_aorta_orthoviews_v1.py",
+      "source": "presentation_controls/aorta_orthoviews_1m_2026-10-25/plot_aorta_orthoviews_v1.py",
+      "bytes": 9797,
+      "sha256": "f5f6b98cb22919586ff9eafb4e68d9e4a8d105a98283dc41e5a28234c8869210"
+    },
+    {
+      "path": "figure_tools/aorta_orthoviews_1m_2026-10-25/plot_aorta_orthoviews_v2.py",
+      "source": "presentation_controls/aorta_orthoviews_1m_2026-10-25/plot_aorta_orthoviews_v2.py",
+      "bytes": 10743,
+      "sha256": "86d99426c1a0cfedf74906bc118a91139937b2b8b2fd4499f76f9f38ec028465"
+    },
+    {
+      "path": "figure_tools/aorta_orthoviews_1m_2026-10-25/verify_magnitude_orthoviews_snr12_v1.py",
+      "source": "presentation_controls/aorta_orthoviews_1m_2026-10-25/verify_magnitude_orthoviews_snr12_v1.py",
+      "bytes": 5658,
+      "sha256": "aee9cf77f751b8ca1a2a5da41f4d35d93d87b6f12b0ee7e7ff6d9b05911ea158"
+    },
+    {
+      "path": "figure_tools/aorta_orthoviews_1m_2026-10-25/verify_magnitude_orthoviews_v1.py",
+      "source": "presentation_controls/aorta_orthoviews_1m_2026-10-25/verify_magnitude_orthoviews_v1.py",
+      "bytes": 3112,
+      "sha256": "4547fe8dcd82df2a691afbfb29ff38920440e62197b73cc821ff9a6373c30b49"
+    },
+    {
+      "path": "experiments/LICENSE_JULIAHEALTH",
+      "source": "existing_repository/koma/seq/LICENSE",
+      "bytes": 1068,
+      "sha256": "1156260b75c30c98bb0e74182a5d0319f6412d3bc86a64d231c47a1b3ea6dfba"
+    },
+    {
+      "path": "experiments/LICENSE_MRSIMTRACKS",
+      "source": "MRSimTracks/LICENSE",
+      "bytes": 1093,
+      "sha256": "3a4a213f805eb0f911bbb5df3ad188f5734483a0083b4fcf90783dc2d5b93fba"
+    }
+  ]
+}

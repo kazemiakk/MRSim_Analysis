@@ -1,0 +1,15 @@
+include(joinpath(@__DIR__,"inlet_replenishment_pilot.jl"))
+phantom=read_phantom(ARGS[1]);sequence=read_seq(joinpath(SEQDIR,"ref.seq");verbose=false)
+reset_schedule!(phantom.motion,sequence)
+schedule=vec(any(phantom.motion.action.spin_reset;dims=1));z=zeros(Float32,1,length(schedule))
+probe=Motion(action=FlowPath(dx=z,dy=z,dz=z,spin_reset=reshape(schedule,1,:)),time=phantom.motion.time,spins=AllSpins())
+params=KomaMRICore.default_sim_params(Dict{String,Any}("sim_method"=>BlochWithPerfectSpoiling(),"Δt"=>Inf))
+rule=KomaMRICore.simulation_sampling_rule(params["sim_method"],params)
+s=discretize(sequence;sampling_rule=rule,motion=probe,freq_in_phase=params["freq_in_phase"])
+parts,flags=KomaMRICore.get_sim_ranges(s;max_block_length=512)
+println("KEYS_FIRST=",RESET_KEYTIMES[][1:15])
+println("DISCRETE_FIRST=",s.t[1:25])
+for (r,f) in zip(parts,flags)
+    s.t[first(r)]>.012 && break
+    println("PART=",s.t[first(r)]," -> ",s.t[last(r)]," RF=",f)
+end

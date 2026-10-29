@@ -1,0 +1,30 @@
+project_sha256 = "7e94dca6f95b08800900926b4e93d0ca46df52b160b0b50adca7f79179355978"
+julia_version = "1.12.7"
+status = "PASS_ISOLATED_UPSTREAM_INSTALL"
+legacy_read_through_depot = "C:\\Users\\lambda-3\\.julia"
+primary_depot = "C:\\Users\\lambda-3\\Desktop\\MRSim\\MRSIM\\MRSimTracks\\outputs\\upstream_migration_e046\\depot"
+manifest_sha256 = "c8ef1e476db1ae2de86239b28bb682b58795058dd35b22f2745a7b466d0c60a6"
+
+[packages.CUDA]
+source = "C:\\Users\\lambda-3\\Desktop\\MRSim\\MRSIM\\MRSimTracks\\outputs\\upstream_migration_e046\\depot\\packages\\CUDA\\3Opfa"
+version = "6.4.2"
+
+[packages.KomaMRIFiles]
+source = "C:\\Users\\lambda-3\\Desktop\\MRSim\\MRSIM\\MRSimTracks\\outputs\\upstream_migration_e046\\depot\\packages\\KomaMRIFiles\\bpjWo"
+version = "0.12.0"
+
+[packages.KomaMRIBase]
+source = "C:\\Users\\lambda-3\\Desktop\\MRSim\\MRSIM\\MRSimTracks\\outputs\\upstream_migration_e046\\depot\\packages\\KomaMRIBase\\57zBt"
+version = "0.15.2"
+
+[packages.KomaMRIPlots]
+source = "C:\\Users\\lambda-3\\Desktop\\MRSim\\MRSIM\\MRSimTracks\\outputs\\upstream_migration_e046\\depot\\packages\\KomaMRIPlots\\FjD1J"
+version = "0.14.0"
+
+[packages.KomaMRI]
+source = "C:\\Users\\lambda-3\\Desktop\\MRSim\\MRSIM\\MRSimTracks\\outputs\\upstream_migration_e046\\depot\\packages\\KomaMRI\\Hzjuv"
+version = "0.15.0"
+
+[packages.KomaMRICore]
+source = "C:\\Users\\lambda-3\\Desktop\\MRSim\\MRSIM\\MRSimTracks\\outputs\\upstream_migration_e046\\depot\\packages\\KomaMRICore\\PMbeb"
+version = "0.14.0"

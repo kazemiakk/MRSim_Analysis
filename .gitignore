@@ -22,3 +22,52 @@ __pycache__/
 
 # MacOS
 .DS_Store
+
+# Project-only source release: never add private data, generated results or secrets.
+*.dcm
+*.dicom
+*.DCM
+*.rtf
+*.csv
+*.vtk
+*.vti
+*.vtr
+*.vts
+*.vtu
+*.vtp
+*.pvd
+*.stl
+*.obj
+*.ply
+*.nii
+*.nii.gz
+*.hdf5
+*.cgns
+*.bin
+*.log
+*.pid
+*.pem
+*.key
+*.pfx
+*.docx
+*.xlsx
+private_inputs/
+external_inputs/
+external_inputs_e065/
+outputs/
+node_modules/
+depot/
+docs_env/
+.claude/
+.codex/
+.gemini/
+.env.*
+
+# Separate TB/cerebral-aneurysm/angiography project: never add its sources here.
+cfd_20261029/
+cfd-followup-*/
+cfd-extended-*/
+TB*/
+tb-cfd*/
+run_aneurysm_tracking.py
+visualize_aneurysm.py

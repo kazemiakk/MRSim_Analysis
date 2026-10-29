@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MRSim image review</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f2f4f7;color:#18212d;font:15px system-ui,sans-serif}header{padding:16px 24px;background:white;border-bottom:1px solid #cdd3dc}h1{font-size:22px;margin:0 0 6px}p{margin:6px 0;color:#47566a}.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:14px}button,input,select,a.file{font:inherit;border:1px solid #aeb7c5;border-radius:5px;padding:8px 11px;background:white;color:#172331}button{cursor:pointer}button:disabled{opacity:.45;cursor:default}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #4b86c9;outline-offset:2px}input[type=search]{width:min(440px,100%)}input[type=number]{width:95px}.stage{display:flex;justify-content:center;align-items:center;min-height:400px;height:68vh;background:white;margin:16px 24px;border:1px solid #d8dde4;overflow:auto}.stage img{display:block;max-width:100%;max-height:100%;object-fit:contain}.stage.actual{display:block}.stage.actual img{max-width:none;max-height:none}.meta{padding:0 24px 24px;overflow-wrap:anywhere}#filename{font-size:17px;font-weight:600}#state{font-weight:600;margin-right:8px}label{display:inline-flex;align-items:center;gap:5px}#status{font-weight:600;color:#174b70}#source{font-family:ui-monospace,monospace;font-size:12px}a{color:#15598f}.warning{color:#805509}.bottom{display:flex;gap:12px;align-items:center;flex-wrap:wrap}@media(max-width:650px){header{padding:12px}.stage{margin:12px;height:55vh;min-height:250px}.meta{padding:0 12px 18px}.controls{gap:6px}}
+</style><style>
+.controls label{max-width:100%;min-width:0;flex-wrap:wrap}.controls select{max-width:100%;min-width:0}.controls input{min-width:0}.controls a.file{max-width:100%;overflow-wrap:anywhere}.stage{min-width:0}
+</style></head><body>
+<header><h1>MRSim — all saved research images</h1><p id="summary"></p><p>Unchanged originals copied for local review. Old, pilot and rejected-era figures are included; inclusion does not mean scientific approval.</p>
+<div class="controls"><button id="prev">← Previous</button><button id="next">Next →</button><span id="state" aria-live="polite"></span><label>Image ID <input id="jump" type="number" min="1"></label><button id="go">Go</button><button id="fit" aria-pressed="false">Actual pixels</button><a class="file" id="open" target="_blank" rel="noopener">Open original-size copy</a></div>
+<div class="controls"><input id="search" type="search" placeholder="Search original filename or source folder" aria-label="Search images"><label>Format <select id="format"><option value="">All</option></select></label><label>Context <select id="context"><option value="">All</option></select></label><label><input id="unique" type="checkbox">Hide exact duplicates</label><span id="status"></span></div>
+</header>
+<main><div class="stage" id="stage"><img id="image" alt=""></div><div class="meta"><div id="filename"></div><p id="detail"></p><p id="source"></p><p id="contextNote" class="warning"></p><div class="bottom"><a href="IMAGE_INDEX.csv">Full CSV index</a><a href="MANIFEST.json">Full provenance and metadata</a><a href="README.md">Scope and caveats</a></div></div></main>
+<script id="data" type="application/json">__IMAGE_MANIFEST__</script>
+<script>
+'use strict';const M=JSON.parse(document.getElementById('data').textContent),all=M.images,$=id=>document.getElementById(id);let shown=all.slice(),pos=0;
+$('summary').textContent=`${all.length.toLocaleString()} images · ${M.summary.unique_content.toLocaleString()} unique contents · ${M.summary.gif_files} GIFs · originals unchanged`;
+for(const [id,key] of [['format','format'],['context','context']])for(const value of [...new Set(all.map(x=>x[key]))].sort()){const o=document.createElement('option');o.value=value;o.textContent=value;$(id).append(o);}
+function render(){const r=shown[pos];$('prev').disabled=!r||pos===0;$('next').disabled=!r||pos===shown.length-1;$('status').textContent=`${shown.length.toLocaleString()} matching copies`;
+ if(!r){$('image').removeAttribute('src');$('state').textContent='No matches';$('filename').textContent='No images match these filters.';$('detail').textContent='';$('source').textContent='';$('contextNote').textContent='';$('open').removeAttribute('href');return;}
+ const url=encodeURIComponent(r.copy);$('image').src=url;$('image').alt=`${r.id}: ${r.source_relative}`;$('open').href=url;$('state').textContent=`${pos+1} / ${shown.length}`;$('jump').value=r.id;$('jump').max=all.length;
+ $('filename').textContent=`#${r.id} — ${r.copy}`;$('source').textContent='Original: '+r.source_relative;
+ $('detail').textContent=`${r.format} · ${r.width??'?'} × ${r.height??'?'} · ${r.frames??'?'} frame(s)${r.animated?' — animated, original bytes preserved':''} · ${(r.bytes/1048576).toFixed(2)} MiB${r.duplicate_of?' · exact duplicate of image #'+r.duplicate_of:''}`;
+ $('contextNote').textContent=r.context+(r.metadata_error?' · Metadata warning: '+r.metadata_error:'');
+}
+function filter(){const prior=shown[pos]?.id,q=$('search').value.toLowerCase();shown=all.filter(r=>(!q||(r.source_relative+' '+r.copy).toLowerCase().includes(q))&&(!$('format').value||r.format===$('format').value)&&(!$('context').value||r.context===$('context').value)&&(!$('unique').checked||!r.duplicate_of));pos=Math.max(0,shown.findIndex(r=>r.id===prior));render();}
+$('prev').onclick=()=>{if(pos>0){pos--;render();}};$('next').onclick=()=>{if(pos<shown.length-1){pos++;render();}};
+$('go').onclick=()=>{const id=Number($('jump').value),i=shown.findIndex(r=>r.id===id);if(i>=0){pos=i;render();}else $('status').textContent='That ID is excluded by the current filters, or is unavailable.';};
+$('fit').onclick=()=>{const actual=$('stage').classList.toggle('actual');$('fit').textContent=actual?'Fit to window':'Actual pixels';$('fit').setAttribute('aria-pressed',String(actual));};
+for(const id of ['search','format','context','unique'])$(id).addEventListener(id==='search'?'input':'change',filter);
+document.addEventListener('keydown',e=>{if(['INPUT','SELECT','TEXTAREA'].includes(document.activeElement.tagName))return;if(e.key==='ArrowLeft'){$('prev').click();e.preventDefault();}if(e.key==='ArrowRight'){$('next').click();e.preventDefault();}});
+$('image').onerror=()=>{$('status').textContent='Browser cannot display this format; the unchanged copy is retained.';};render();
+</script></body></html>

@@ -1,0 +1,33 @@
+ENV["DP150_SEQUENCE_DIR"] = @__DIR__
+ENV["DP150_SIMULATION_WRAPPER_FILE"] = @__FILE__
+ENV["DP150_RUN_NAME"] = get(
+    ENV,
+    "DP150_RUN_NAME",
+    "motion_100k_scanner_matched_venc5",
+)
+ENV["DP150_PHANTOM"] = get(
+    ENV,
+    "DP150_PHANTOM",
+    normpath(joinpath(
+        @__DIR__,
+        "..",
+        "..",
+        "outputs",
+        "dp150_mri_pipeline",
+        "koma",
+        "pilot_100k",
+        "dp150_motion_100k.phantom",
+    )),
+)
+ENV["DP150_B0_T"] = get(ENV, "DP150_B0_T", "3.0")
+ENV["DP150_RESCALE_MOTION_TO_SEQUENCE_RR"] = get(
+    ENV,
+    "DP150_RESCALE_MOTION_TO_SEQUENCE_RR",
+    "true",
+)
+ENV["DP150_BATCH_SIZE"] = get(ENV, "DP150_BATCH_SIZE", "20000")
+ENV["DP150_REUSE_RESULTS"] = get(ENV, "DP150_REUSE_RESULTS", "true")
+ENV["DP150_ENCODINGS"] = get(ENV, "DP150_ENCODINGS", "REF,X,Y,Z")
+ENV["DP150_EXPECTED_PARTICLE_COUNT"] = "100000"
+
+include(joinpath(dirname(@__DIR__), "simulate_pc.jl"))

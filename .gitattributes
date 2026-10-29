@@ -1,0 +1,4 @@
+# Preserve byte-identical historical source snapshots and their recorded hashes.
+project_source/** -text
+experiments/** -text
+figure_tools/** -text
